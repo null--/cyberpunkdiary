@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-  
   def validate_params
     # params.require(:article).permit(:title, :abstract, :body)
     # params.require(:article).permit(:title, :abstract, :body)
@@ -19,6 +18,20 @@ class ArticlesController < ApplicationController
     }
   end
 
+  def redirect_to_index
+    respond_to do |format|
+      format.html { redirect_to( articles_url ) }
+      format.xml { head :ok }
+    end
+  end
+
+  def redirect_to_article
+    respond_to do |format|
+      format.html { redirect_to article_path( @article ) }
+      format.xml { head :ok }
+    end
+  end
+
   def index
     @articles = Article.all
   end
@@ -31,6 +44,10 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def edit
+    @article = Article.find( params[:id] )
+  end
+
   def create
     # @article = Article.new
 
@@ -41,7 +58,22 @@ class ArticlesController < ApplicationController
     @article = Article.new( validate_params )
     @article.save
 
-    redirect_to article_path(@article)
+    redirect_to_article
   end
 
+  def update
+    @article = Article.find( params[:id] )
+    @article.update_attributes( validate_params )
+    
+    # flash.notice = "Article '#{@article.title}' Updated!"
+
+    redirect_to_article
+  end
+
+  def destroy
+    @article = Article.find( params[:id] )
+    @article.destroy
+
+    redirect_to_index
+  end
 end

@@ -10033,3 +10033,1487 @@ Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 17:51:23) [GET]
 Rendering template within layouts/application
 Rendering articles/index
 Completed in 11ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 17:53:03) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/18]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 17:53:05) [GET]
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 17:53:09) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/articles/18]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 17:53:17) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/articles/18]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 17:53:19) [GET]
+  [4;36;1mArticle Load (1.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 22ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 17:53:37) [GET]
+  [4;35;1mArticle Load (1.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 16ms (View: 8, DB: 2) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 17:53:39) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 18ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/articles/18]
+
+
+Processing ArticlesController#index to #<article:0x7fc5f2653b18> (for 127.0.0.1 at 2013-09-13 17:53:40) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index to #<article:0x7fc5f2653b18> (for 127.0.0.1 at 2013-09-13 17:55:42) [GET]
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index to #<article:0x7fc5f2653b18> (for 127.0.0.1 at 2013-09-13 17:55:42) [GET]
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index to #<article:0x7fc5f2653b18> (for 127.0.0.1 at 2013-09-13 17:55:45) [GET]
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index to #<article:0x7fc5f2653b18> (for 127.0.0.1 at 2013-09-13 17:56:01) [GET]
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 17:56:08) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering articles/show
+ERROR: compiling _run_erb_app47views47articles47show46html46erb RAISED compile error
+/media/null/project/RoR/blogger/app/views/articles/show.html.erb:5: syntax error, unexpected ':', expecting ')'
+...ticles_path(@article), method: :delete ).to_s); @output_buff...
+                              ^
+Function body:           def _run_erb_app47views47articles47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>"; @output_buffer.concat(( @article.title ).to_s); @output_buffer.concat "</h1>\n<h2>"
+; @output_buffer.concat(( @article.abstract ).to_s); @output_buffer.concat "</h2>\n<p>"
+; @output_buffer.concat(( @article.body ).to_s); @output_buffer.concat "</p>\n<br>"
+; @output_buffer.concat(( link_to "[back]", articles_path ).to_s); @output_buffer.concat "\n<br>"
+; @output_buffer.concat(( link_to "[X] delete", articles_path(@article), method: :delete ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /media/null/project/RoR/blogger/app/views/articles/show.html.erb:9:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/commands/server.rb:111
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/media/null/project/RoR/blogger/app/views/articles/show.html.erb:5: syntax error, unexpected ':', expecting ')'
+...ticles_path(@article), method: :delete ).to_s); @output_buff...
+                              ^) on line #5 of app/views/articles/show.html.erb:
+2: <h2><%= @article.abstract %></h2>
+3: <p><%= @article.body %></p>
+4: <br><%= link_to "[back]", articles_path %>
+5: <br><%= link_to "[X] delete", articles_path(@article), method: :delete %>
+
+    app/views/articles/show.html.erb:9:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 17:56:27) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #5 of app/views/articles/show.html.erb:
+2: <h2><%= @article.abstract %></h2>
+3: <p><%= @article.body %></p>
+4: <br><%= link_to "[back]", articles_path %>
+5: <br><%= link_to "[X] delete", articles_path(@article), method => :delete %>
+
+    app/views/articles/show.html.erb:5:in `method'
+    app/views/articles/show.html.erb:5
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 17:56:33) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering articles/show
+ERROR: compiling _run_erb_app47views47articles47show46html46erb RAISED compile error
+/media/null/project/RoR/blogger/app/views/articles/show.html.erb:5: syntax error, unexpected ':', expecting ')'
+...ticles_path(@article), method: :delete ).to_s); @output_buff...
+                              ^
+Function body:           def _run_erb_app47views47articles47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>"; @output_buffer.concat(( @article.title ).to_s); @output_buffer.concat "</h1>\n<h2>"
+; @output_buffer.concat(( @article.abstract ).to_s); @output_buffer.concat "</h2>\n<p>"
+; @output_buffer.concat(( @article.body ).to_s); @output_buffer.concat "</p>\n<br>"
+; @output_buffer.concat(( link_to "[back]", articles_path ).to_s); @output_buffer.concat "\n<br>"
+; @output_buffer.concat(( link_to "[X] delete", articles_path(@article), method: :delete ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /media/null/project/RoR/blogger/app/views/articles/show.html.erb:9:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/commands/server.rb:111
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/media/null/project/RoR/blogger/app/views/articles/show.html.erb:5: syntax error, unexpected ':', expecting ')'
+...ticles_path(@article), method: :delete ).to_s); @output_buff...
+                              ^) on line #5 of app/views/articles/show.html.erb:
+2: <h2><%= @article.abstract %></h2>
+3: <p><%= @article.body %></p>
+4: <br><%= link_to "[back]", articles_path %>
+5: <br><%= link_to "[X] delete", articles_path(@article), method: :delete %>
+
+    app/views/articles/show.html.erb:9:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 17:58:38) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/articles/18]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-09-13 17:58:43) [DELETE]
+  Parameters: {"authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+
+ActionController::MethodNotAllowed (Only get and post requests are allowed.):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (13.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 17:59:26) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined local variable or method `article' for #<ActionView::Base:0x7fc5f2622d60>) on line #5 of app/views/articles/show.html.erb:
+2: <h2><%= @article.abstract %></h2>
+3: <p><%= @article.body %></p>
+4: <br><%= link_to "[back]", articles_path %>
+5: <br><%= link_to "[X] delete", article,
+6:         :confirm => 'Are you sure?', :method => :delete %>
+
+    app/views/articles/show.html.erb:5
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 17:59:42) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 68ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/articles/18]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2013-09-13 17:59:45) [DELETE]
+  Parameters: {"id"=>"18", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, index, new, show, and validate_params):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2013-09-13 18:02:05) [DELETE]
+  Parameters: {"id"=>"18", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+  [4;35;1mArticle Destroy (0.6ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 18[0m
+Redirected to http://127.0.0.1:3000/articles/18
+Completed in 303ms (DB: 1) | 302 Found [http://127.0.0.1/articles/18]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:02:05) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=18):
+  app/controllers/articles_controller.rb:27:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (17.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:02:18) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=18):
+  app/controllers/articles_controller.rb:27:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (80.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2013-09-13 18:02:22) [DELETE]
+  Parameters: {"id"=>"18", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=18):
+  app/controllers/articles_controller.rb:48:in `destroy'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (20.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:02:27) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 18) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=18):
+  app/controllers/articles_controller.rb:27:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (17.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 18:02:31) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:02:33) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/articles/17]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2013-09-13 18:02:35) [DELETE]
+  Parameters: {"id"=>"17", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 17) [0m
+  [4;35;1mArticle Destroy (0.7ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 17[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 391ms (DB: 1) | 302 Found [http://127.0.0.1/articles/17]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 18:02:35) [GET]
+  [4;36;1mArticle Load (1.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 22ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-09-13 18:10:25) [GET]
+
+SyntaxError (/media/null/project/RoR/blogger/app/controllers/articles_controller.rb:29: formal argument cannot be an instance variable
+  def redirect_to_article( @article )
+                                   ^
+/media/null/project/RoR/blogger/app/controllers/articles_controller.rb:79: syntax error, unexpected $end, expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (15.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-09-13 18:10:50) [GET]
+
+SyntaxError (/media/null/project/RoR/blogger/app/controllers/articles_controller.rb:79: syntax error, unexpected $end, expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 18:11:11) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:11:28) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/articles/13]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2013-09-13 18:11:30) [DELETE]
+  Parameters: {"id"=>"13", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 13) [0m
+  [4;36;1mArticle Destroy (0.5ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 13[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 354ms (DB: 1) | 302 Found [http://127.0.0.1/articles/13]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 18:11:30) [GET]
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 22ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:11:35) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:13:28) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:13:36) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2013-09-13 18:13:38) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+
+ActionView::MissingTemplate (Missing template articles/edit.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2013-09-13 18:13:58) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+
+ActionView::MissingTemplate (Missing template articles/edit.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:14:01) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:14:20) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2013-09-13 18:14:22) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+
+ActionView::MissingTemplate (Missing template articles/edit.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2013-09-13 18:16:44) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+ERROR: compiling _run_erb_app47views47articles47edit46html46erb RAISED compile error
+/media/null/project/RoR/blogger/app/views/articles/edit.html.erb:3: syntax error, unexpected ':', expecting ')'
+...uffer.concat(( render partial: 'form' ).to_s); @output_buffe...
+                              ^
+Function body:           def _run_erb_app47views47articles47edit46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Edit Article</h1>\n\n"
+
+; @output_buffer.concat(( render partial: 'form' ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /media/null/project/RoR/blogger/app/views/articles/edit.html.erb:7:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/commands/server.rb:111
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/media/null/project/RoR/blogger/app/views/articles/edit.html.erb:3: syntax error, unexpected ':', expecting ')'
+...uffer.concat(( render partial: 'form' ).to_s); @output_buffe...
+                              ^) on line #3 of app/views/articles/edit.html.erb:
+1: <h1>Edit Article</h1>
+2: 
+3: <%= render partial: 'form' %>
+
+    app/views/articles/edit.html.erb:7:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2013-09-13 18:17:04) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (11.5ms)
+Completed in 31ms (View: 23, DB: 0) | 200 OK [http://127.0.0.1/articles/8/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2013-09-13 18:17:22) [PUT]
+  Parameters: {"article"=>{"body"=>".0\r\n12345678910\r\n11121314151617181920\r\n21222324252627282930\r\n31323334353637383940\r\n41424344454647484950\r\n51525354555657585960\r\n61626364656667686970\r\n71727374757677787980\r\n81828384858687888990\r\n919293949596979899100\r\n101102103104105106107108109110\r\n111112113114115116117118119120\r\n121122123124125126127128129130\r\n131132133134135136137138139140\r\n141142143144145146147148149150\r\n151152153154155156157158159160\r\n161162163164165166167168169170\r\n171172173174175176177178179180\r\n181182183184185186187188189190\r\n191192193194195196197198199200\r\n201202203204205206207208209210\r\n211212213214215216217218219220\r\n221222223224225226227228229230\r\n231232233234235236237238239240\r\n241242243244245246247248249250\r\n251252253254255256257258259260\r\n261262263264265266267268269270\r\n271272273274275276277278279280\r\n281282283284285286287288289290\r\n291292293294295296297298299300\r\n301302303304305306307308309310\r\n311312313314315316317318319320\r\n321322323324325326327328329330\r\n331332333334335336337338339340\r\n341342343344345346347348349350\r\n351352353354355356357358359360\r\n361362363364365366367368369370\r\n371372373374375376377378379380\r\n381382383384385386387388389390\r\n391392393394395396397398399400\r\n401402403404405406407408409410\r\n411412413414415416417418419420\r\n421422423424425426427428429430\r\n431432433434435436437438439440\r\n441442443444445446447448449450\r\n451452453454455456457458459460\r\n461462463464465466467468469470\r\n471472473474475476477478479480\r\n481482483484485486487488489490\r\n491492493494495496497498499500\r\n501502503504505506507508509510\r\n511", "abstract"=>"Abstract 6 666666666666666666666666666666666666666666666666666666666666", "title"=>"Sample 6"}, "commit"=>"Save changes", "id"=>"8", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+
+NoMethodError (Attempt to call private method):
+  app/controllers/articles_controller.rb:67:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (17.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2013-09-13 18:18:02) [PUT]
+  Parameters: {"article"=>{"body"=>".0\r\n12345678910\r\n11121314151617181920\r\n21222324252627282930\r\n31323334353637383940\r\n41424344454647484950\r\n51525354555657585960\r\n61626364656667686970\r\n71727374757677787980\r\n81828384858687888990\r\n919293949596979899100\r\n101102103104105106107108109110\r\n111112113114115116117118119120\r\n121122123124125126127128129130\r\n131132133134135136137138139140\r\n141142143144145146147148149150\r\n151152153154155156157158159160\r\n161162163164165166167168169170\r\n171172173174175176177178179180\r\n181182183184185186187188189190\r\n191192193194195196197198199200\r\n201202203204205206207208209210\r\n211212213214215216217218219220\r\n221222223224225226227228229230\r\n231232233234235236237238239240\r\n241242243244245246247248249250\r\n251252253254255256257258259260\r\n261262263264265266267268269270\r\n271272273274275276277278279280\r\n281282283284285286287288289290\r\n291292293294295296297298299300\r\n301302303304305306307308309310\r\n311312313314315316317318319320\r\n321322323324325326327328329330\r\n331332333334335336337338339340\r\n341342343344345346347348349350\r\n351352353354355356357358359360\r\n361362363364365366367368369370\r\n371372373374375376377378379380\r\n381382383384385386387388389390\r\n391392393394395396397398399400\r\n401402403404405406407408409410\r\n411412413414415416417418419420\r\n421422423424425426427428429430\r\n431432433434435436437438439440\r\n441442443444445446447448449450\r\n451452453454455456457458459460\r\n461462463464465466467468469470\r\n471472473474475476477478479480\r\n481482483484485486487488489490\r\n491492493494495496497498499500\r\n501502503504505506507508509510\r\n511", "abstract"=>"Abstract 6 666666666666666666666666666666666666666666666666666666666666", "title"=>"Sample 6"}, "commit"=>"Save changes", "id"=>"8", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+
+NoMethodError (Attempt to call private method):
+  app/controllers/articles_controller.rb:67:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (19.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2013-09-13 18:20:22) [PUT]
+  Parameters: {"article"=>{"body"=>".0\r\n12345678910\r\n11121314151617181920\r\n21222324252627282930\r\n31323334353637383940\r\n41424344454647484950\r\n51525354555657585960\r\n61626364656667686970\r\n71727374757677787980\r\n81828384858687888990\r\n919293949596979899100\r\n101102103104105106107108109110\r\n111112113114115116117118119120\r\n121122123124125126127128129130\r\n131132133134135136137138139140\r\n141142143144145146147148149150\r\n151152153154155156157158159160\r\n161162163164165166167168169170\r\n171172173174175176177178179180\r\n181182183184185186187188189190\r\n191192193194195196197198199200\r\n201202203204205206207208209210\r\n211212213214215216217218219220\r\n221222223224225226227228229230\r\n231232233234235236237238239240\r\n241242243244245246247248249250\r\n251252253254255256257258259260\r\n261262263264265266267268269270\r\n271272273274275276277278279280\r\n281282283284285286287288289290\r\n291292293294295296297298299300\r\n301302303304305306307308309310\r\n311312313314315316317318319320\r\n321322323324325326327328329330\r\n331332333334335336337338339340\r\n341342343344345346347348349350\r\n351352353354355356357358359360\r\n361362363364365366367368369370\r\n371372373374375376377378379380\r\n381382383384385386387388389390\r\n391392393394395396397398399400\r\n401402403404405406407408409410\r\n411412413414415416417418419420\r\n421422423424425426427428429430\r\n431432433434435436437438439440\r\n441442443444445446447448449450\r\n451452453454455456457458459460\r\n461462463464465466467468469470\r\n471472473474475476477478479480\r\n481482483484485486487488489490\r\n491492493494495496497498499500\r\n501502503504505506507508509510\r\n511", "abstract"=>"Abstract 6 666666666666666666666666666666666666666666666666666666666666", "title"=>"Sample 6"}, "commit"=>"Save changes", "id"=>"8", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+
+NoMethodError (Attempt to call private method):
+  app/controllers/articles_controller.rb:67:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2013-09-13 18:23:09) [PUT]
+  Parameters: {"article"=>{"body"=>".0\r\n12345678910\r\n11121314151617181920\r\n21222324252627282930\r\n31323334353637383940\r\n41424344454647484950\r\n51525354555657585960\r\n61626364656667686970\r\n71727374757677787980\r\n81828384858687888990\r\n919293949596979899100\r\n101102103104105106107108109110\r\n111112113114115116117118119120\r\n121122123124125126127128129130\r\n131132133134135136137138139140\r\n141142143144145146147148149150\r\n151152153154155156157158159160\r\n161162163164165166167168169170\r\n171172173174175176177178179180\r\n181182183184185186187188189190\r\n191192193194195196197198199200\r\n201202203204205206207208209210\r\n211212213214215216217218219220\r\n221222223224225226227228229230\r\n231232233234235236237238239240\r\n241242243244245246247248249250\r\n251252253254255256257258259260\r\n261262263264265266267268269270\r\n271272273274275276277278279280\r\n281282283284285286287288289290\r\n291292293294295296297298299300\r\n301302303304305306307308309310\r\n311312313314315316317318319320\r\n321322323324325326327328329330\r\n331332333334335336337338339340\r\n341342343344345346347348349350\r\n351352353354355356357358359360\r\n361362363364365366367368369370\r\n371372373374375376377378379380\r\n381382383384385386387388389390\r\n391392393394395396397398399400\r\n401402403404405406407408409410\r\n411412413414415416417418419420\r\n421422423424425426427428429430\r\n431432433434435436437438439440\r\n441442443444445446447448449450\r\n451452453454455456457458459460\r\n461462463464465466467468469470\r\n471472473474475476477478479480\r\n481482483484485486487488489490\r\n491492493494495496497498499500\r\n501502503504505506507508509510\r\n511", "abstract"=>"Abstract 6 666666666666666666666666666666666666666666666666666666666666", "title"=>"Sample 6"}, "commit"=>"Save changes", "id"=>"8", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+
+NoMethodError (Attempt to call private method):
+  app/controllers/articles_controller.rb:67:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (19.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-09-13 18:25:20) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (8.2ms)
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2013-09-13 18:25:25) [POST]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;36;1mArticle Create (1.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "body", "title", "abstract", "created_at") VALUES('2013-09-13 13:55:25', 'jhkhg jkh', 'test multiline', 'ljkhkljh hkjh kh k', '2013-09-13 13:55:25')[0m
+Redirected to http://127.0.0.1:3000/articles.%23%3Carticle:0x7fc5f2431ab0%3E
+Completed in 855ms (DB: 1) | 302 Found [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index to #<article:0x7fc5f2431ab0> (for 127.0.0.1 at 2013-09-13 18:25:26) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index to #<article:0x7fc5f2431ab0> (for 127.0.0.1 at 2013-09-13 18:25:47) [GET]
+  [4;36;1mArticle Load (1.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2013-09-13 18:25:51) [POST]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;35;1mArticle Create (1.1ms)[0m   [0mINSERT INTO "articles" ("updated_at", "body", "title", "abstract", "created_at") VALUES('2013-09-13 13:55:51', 'jhkhg jkh', 'test multiline', 'ljkhkljh hkjh kh k', '2013-09-13 13:55:51')[0m
+Redirected to http://127.0.0.1:3000/articles.%23%3Carticle:0x7fc5f26436c8%3E
+Completed in 601ms (DB: 1) | 302 Found [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index to #<article:0x7fc5f26436c8> (for 127.0.0.1 at 2013-09-13 18:25:52) [GET]
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2013-09-13 18:26:41) [POST]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;35;1mArticle Create (1.2ms)[0m   [0mINSERT INTO "articles" ("updated_at", "body", "title", "abstract", "created_at") VALUES('2013-09-13 13:56:41', 'jhkhg jkh', 'test multiline', 'ljkhkljh hkjh kh k', '2013-09-13 13:56:41')[0m
+
+NameError (undefined local variable or method `article' for #<ArticlesController:0x7fc5f2523018>):
+  app/controllers/articles_controller.rb:62:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (16.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2013-09-13 18:27:30) [POST]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;36;1mArticle Create (0.8ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "body", "title", "abstract", "created_at") VALUES('2013-09-13 13:57:30', 'jhkhg jkh', 'test multiline', 'ljkhkljh hkjh kh k', '2013-09-13 13:57:30')[0m
+Redirected to http://127.0.0.1:3000/articles.%23%3Carticle:0x7fc5f2786620%3E
+Completed in 313ms (DB: 1) | 302 Found [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index to #<article:0x7fc5f2786620> (for 127.0.0.1 at 2013-09-13 18:27:30) [GET]
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-09-13 18:27:50) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (7.4ms)
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2013-09-13 18:27:52) [POST]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;36;1mArticle Create (0.7ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "body", "title", "abstract", "created_at") VALUES('2013-09-13 13:57:52', 'jhkhg jkh', 'test multiline', 'ljkhkljh hkjh kh k', '2013-09-13 13:57:52')[0m
+
+NameError (undefined local variable or method `article' for #<ArticlesController:0x7fc5f257c668>):
+  app/controllers/articles_controller.rb:62:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (17.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2013-09-13 18:29:11) [POST]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+
+SyntaxError (/media/null/project/RoR/blogger/app/controllers/articles_controller.rb:28: formal argument cannot be an instance variable
+  def redirect_to_article( @article = Article.new )
+                                   ^
+/media/null/project/RoR/blogger/app/controllers/articles_controller.rb:28: syntax error, unexpected '=', expecting ')'
+  def redirect_to_article( @article = Article.new )
+                                     ^
+/media/null/project/RoR/blogger/app/controllers/articles_controller.rb:28: syntax error, unexpected ')', expecting kEND
+/media/null/project/RoR/blogger/app/controllers/articles_controller.rb:79: syntax error, unexpected kEND, expecting $end):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (16.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2013-09-13 18:29:16) [GET]
+
+SyntaxError (/media/null/project/RoR/blogger/app/controllers/articles_controller.rb:28: formal argument cannot be an instance variable
+  def redirect_to_article( @article = Article.new )
+                                   ^
+/media/null/project/RoR/blogger/app/controllers/articles_controller.rb:28: syntax error, unexpected '=', expecting ')'
+  def redirect_to_article( @article = Article.new )
+                                     ^
+/media/null/project/RoR/blogger/app/controllers/articles_controller.rb:28: syntax error, unexpected ')', expecting kEND
+/media/null/project/RoR/blogger/app/controllers/articles_controller.rb:79: syntax error, unexpected kEND, expecting $end):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (18.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-09-13 18:30:16) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (9.1ms)
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2013-09-13 18:30:17) [POST]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;35;1mArticle Create (0.9ms)[0m   [0mINSERT INTO "articles" ("updated_at", "body", "title", "abstract", "created_at") VALUES('2013-09-13 14:00:17', 'jhkhg jkh', 'test multiline', 'ljkhkljh hkjh kh k', '2013-09-13 14:00:17')[0m
+Redirected to http://127.0.0.1:3000/articles.%23%3Carticle:0x7fc5f240a2d0%3E
+Completed in 479ms (DB: 1) | 302 Found [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index to #<article:0x7fc5f240a2d0> (for 127.0.0.1 at 2013-09-13 18:30:18) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2013-09-13 18:30:43) [POST]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;35;1mArticle Create (1.2ms)[0m   [0mINSERT INTO "articles" ("updated_at", "body", "title", "abstract", "created_at") VALUES('2013-09-13 14:00:43', 'jhkhg jkh', 'test multiline', 'ljkhkljh hkjh kh k', '2013-09-13 14:00:43')[0m
+Redirected to http://127.0.0.1:3000/articles.%23%3Carticle:0x7fc5f26ee9d8%3E
+Completed in 449ms (DB: 1) | 302 Found [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index to #<article:0x7fc5f26ee9d8> (for 127.0.0.1 at 2013-09-13 18:30:43) [GET]
+  [4;36;1mArticle Load (1.9ms)[0m   [0;1mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2013-09-13 18:30:55) [POST]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;35;1mArticle Create (1.1ms)[0m   [0mINSERT INTO "articles" ("updated_at", "body", "title", "abstract", "created_at") VALUES('2013-09-13 14:00:55', 'jhkhg jkh', 'test multiline', 'ljkhkljh hkjh kh k', '2013-09-13 14:00:55')[0m
+Redirected to http://127.0.0.1:3000/articles/27
+Completed in 415ms (DB: 1) | 302 Found [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:30:56) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/articles/27]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 18:31:00) [GET]
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:31:05) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/articles/27]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2013-09-13 18:31:06) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (5.4ms)
+Completed in 67ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/articles/27/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2013-09-13 18:31:08) [PUT]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "id"=>"27", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+
+NoMethodError (Attempt to call private method):
+  app/controllers/articles_controller.rb:66:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2013-09-13 18:33:56) [PUT]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "id"=>"27", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+
+NoMethodError (undefined method `notice=' for {}:ActionController::Flash::FlashHash):
+  app/controllers/articles_controller.rb:68:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (15.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2013-09-13 18:34:33) [PUT]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "id"=>"27", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+
+NoMethodError (undefined method `notice=' for {}:ActionController::Flash::FlashHash):
+  app/controllers/articles_controller.rb:68:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (17.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2013-09-13 18:38:45) [PUT]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline"}, "commit"=>"Save changes", "id"=>"27", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+Redirected to http://127.0.0.1:3000/articles/27
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/articles/27]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:38:45) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/articles/27]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2013-09-13 18:38:47) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (9.9ms)
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/articles/27/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2013-09-13 18:38:52) [PUT]
+  Parameters: {"article"=>{"body"=>"jhkhg jkh", "abstract"=>"ljkhkljh hkjh kh k", "title"=>"test multiline khj"}, "commit"=>"Save changes", "id"=>"27", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+  [4;35;1mArticle Update (0.8ms)[0m   [0mUPDATE "articles" SET "title" = 'test multiline khj', "updated_at" = '2013-09-13 14:08:52' WHERE "id" = 27[0m
+Redirected to http://127.0.0.1:3000/articles/27
+Completed in 387ms (DB: 1) | 302 Found [http://127.0.0.1/articles/27]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 18:38:53) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 75ms (View: 66, DB: 0) | 200 OK [http://127.0.0.1/articles/27]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2013-09-13 18:38:57) [DELETE]
+  Parameters: {"id"=>"27", "authenticity_token"=>"Deba0irG1wFl+KvUFeYE4AIANKB1mGY95J0UUQPnfzs="}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+  [4;36;1mArticle Destroy (1.0ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 27[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 518ms (DB: 1) | 302 Found [http://127.0.0.1/articles/27]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 18:38:58) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-09-13 18:57:54) [GET]
+  Parameters: {"1301401396"=>nil}
+
+ActionController::RoutingError (No route matches "/images/button_bg.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-09-13 18:59:34) [GET]
+  Parameters: {"1301401396"=>nil}
+
+ActionController::RoutingError (No route matches "/images/button_bg.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 19:00:01) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-09-13 19:01:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-13 19:01:19) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles]

@@ -2,3 +2,6 @@
 <h2><%= @article.abstract %></h2>
 <p><%= @article.body %></p>
 <br><%= link_to "[back]", articles_path %>
+<br><br><%= link_to "[Edit]", edit_article_path(@edit) %>
+<%= link_to "[Delete]", @article,
+        :confirm => 'Are you sure?', :method => :delete %>
