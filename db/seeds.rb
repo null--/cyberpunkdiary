@@ -7,5 +7,5 @@ str = "."
 end
 
 10.times do |i|
-  Article.create(:title => "Sample #{i}", :abstract => "Abstract #{i} #{i.to_s * i * 2}", :body => str)
+  Article.create(:title => "Sample #{i}", :abstract => "Abstract #{i} #{i.to_s * i * 10}", :body => str)
 end
