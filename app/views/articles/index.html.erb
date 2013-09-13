@@ -4,6 +4,8 @@
   <% @articles.each do |article| %>
     <li>
       <%= link_to article.title, article_path(article) %>
+      <p><%= article.abstract %></p>
+      <br><i>up: <%= article.updated_at %></i>
       <!-- <%#
          <%= link_to "Create a New Article" new_article_path %>
       %> -->

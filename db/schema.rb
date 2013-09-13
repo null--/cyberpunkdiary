@@ -13,7 +13,8 @@ ActiveRecord::Schema.define(:version => 20130913053428) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
-    t.string   "body"
+    t.string   "abstract"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
