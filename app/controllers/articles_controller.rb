@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
     # params.require(:article).permit(:title, :abstract, :body)
     if not params[:article] or 
         not params[:article][:title] or 
-        not params[:article][:body] 
+        not params[:article][:body]
     then
       # => TODO: fail is not cool!
       fail
@@ -13,8 +13,9 @@ class ArticlesController < ApplicationController
     # => TODO: SQLi, XSS Validation    
     { 
       :title => params[:article][:title], 
-      :abstract => params[:article][:abstract], 
-      :body => params[:article][:body]
+      :abstract => params[:article][:abstract],
+      :body => params[:article][:body],
+      :tag_list => params[:article][:tag_list]
     }
   end
 

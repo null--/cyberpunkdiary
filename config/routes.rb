@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :articles
+  map.resources :tags
 
   map.resources :articles do |articles_map|
     articles_map.resources :comments
