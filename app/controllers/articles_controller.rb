@@ -69,7 +69,7 @@ class ArticlesController < ApplicationController
     @article = Article.find( params[:id] )
     @article.update_attributes( validate_params )
     
-    # flash.notice = "Article '#{@article.title}' Updated!"
+    flash[:notice] = "Article '#{@article.title}' Updated!"
 
     redirect_to_article
   end

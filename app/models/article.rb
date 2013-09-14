@@ -3,6 +3,8 @@ class Article < ActiveRecord::Base
   has_many :taggings
   has_many :tags, :through => :taggings
 
+  belongs_to :user
+
   def tag_list
     # self.tags.collect do |t|
     #   t.name

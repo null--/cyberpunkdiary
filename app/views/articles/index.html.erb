@@ -4,6 +4,7 @@
   <% @articles.each do |article| %>
     <li>
       <%= link_to article.title, article_path(article) %>
+      <i>by <%= link_to article.user.nickname, user_path(article.user) %> </i>
       <p><%= article.abstract %></p>
       <br><i>up: <%= article.updated_at %> | Comments(<%= article.comments.size %>)</i>
       <!-- <%#
@@ -13,4 +14,3 @@
   <% end %>
 </ul>
 
-    

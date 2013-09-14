@@ -1,21 +1,20 @@
 <h1><%= @article.title %></h1>
+<p class='flash'><%= flash[:notice] %></p>
 <h2><%= @article.abstract %></h2>
 <p><%= @article.body %></p>
 
 <%= render :partial => 'comments/form' %>
 
-<p>
+<p><i>
   Tags:
   <% @article.tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
-</p>
-
-<br><%= link_to "[back]", articles_path %>
-<br><br><%= link_to "[Edit]", edit_article_path(@edit) %>
+</i></p>
+<p><%= link_to "[Edit]", edit_article_path(@edit) %>
 <%= link_to "[Delete]", @article,
         :confirm => 'Are you sure?', :method => :delete %>
-
+</p>
 <h3>Comments (<%= @article.comments.size %>)</h3>
 
 <%= render :partial => 'articles/comment', :collection => @article.comments %>

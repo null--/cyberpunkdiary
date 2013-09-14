@@ -6,6 +6,18 @@
         <%= stylesheet_link_tag "style" %>
     </head>
     <body>
+      <header>
+        <div class = "nav ph-dot-nav">
+          <a href="#">Index</a>
+          <a href=<%=articles_path%>>Articles</a>
+          <a href=<%=tags_path%>>Tags</a>
+          <div class="effect"></div>
+        </div>
+        <profile>
+          <a href="#"> Login </a>
+          <a href="#"> Register </a>
+        </profile>
+      </header>
         <%= "<h1>#{@page_title}</h1>" if @page_title %>
         <%= yield %>
     </body>

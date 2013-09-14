@@ -1,5 +1,6 @@
+
 @charset "UTF-8";
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+html, body, header, profile, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     border: 0 none;
     font-family: inherit;
     font-size: 100%;
@@ -67,11 +68,123 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
     font-family: "Yanone Kaffeesatz",sans;
 }
 html {
-    background: -moz-linear-gradient(left top , rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0)) repeat scroll 0 0 / 80px 80px #D3DD8A;
+    background: none repeat scroll 0 0 #1A1A1A;
 }
+.nav {
+    background: none;
+    overflow: hidden;
+    position: relative;
+    width: 30em;
+    top: -0.5em;
+    left: 0.5em;
+}
+.nav a {
+    color: #FFFAFA;
+    display: block;
+    float: left;
+    padding: 1em 0 2em;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.7s ease 0s;
+    width: 25%;
+}
+.nav a:hover {
+    color: #000000;
+}
+.effect {
+    left: -12.5%;
+    position: absolute;
+    transition: all 0.7s ease-in-out 0s;
+}
+.nav a:nth-child(1):hover ~ .effect {
+    left: 12.5%;
+}
+.nav a:nth-child(2):hover ~ .effect {
+    left: 37.5%;
+}
+.nav a:nth-child(3):hover ~ .effect {
+    left: 62.5%;
+}
+.nav a:nth-child(4):hover ~ .effect {
+    left: 87.5%;
+}
+.ph-dot-nav:after {
+    bottom: 40px;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    width: 100%;
+}
+.ph-dot-nav a:after {
+    background: none repeat scroll 0 0 snow;
+    border-radius: 100% 100% 100% 100%;
+    bottom: 38px;
+    content: "";
+    height: 4px;
+    left: 50%;
+    margin-left: -2px;
+    position: absolute;
+    width: 4px;
+}
+.ph-dot-nav .effect {
+    background: none repeat scroll 0 0 snow;
+    border-radius: 100% 100% 100% 100%;
+    bottom: 36px;
+    height: 10px;
+    margin-left: -5px;
+    width: 10px;
+}
+header {
+    background-image: linear-gradient(#42678D, #223447);
+    border: 1px solid #42678D;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px white;
+    height: 2.2em;
+    margin: 0px auto;
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    right: 0em;
+    z-index: 99;
+}
+profile {
+    /*
+      background-image: linear-gradient(#42678D, #223447);
+      border: 1px solid #42678D;
+      border-radius: 6px 6px 6px 6px;
+      box-shadow: 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px white;
+      */
+    /* height: 3.3em; */
+    /* margin: 2em auto; */
+    /* position: fixed; */
+    position: absolute;
+    right: 1em;
+    top: -0.5em;
+    color: snow;
+    width: auto;
+    z-index: 99;
+}
+
+profile a {
+    color: #FFFAFA;
+    display: block;
+    float: left;
+    /* padding: 1em 0 2em; */
+    padding: 0.8em 2em;
+    position: relative;
+    /* text-decoration: underline; */
+    transition: all 0.7s ease 0s;
+    /* width: 50%; */
+}
+
+profile a:hover {
+    color: #000000;
+}
+
 body {
     -moz-box-sizing: border-box;
-    background: none repeat scroll 0 0 padding-box #FFFFFF;
+    background: none repeat scroll 0 0 padding-box silver;
     border-radius: 6px 6px 6px 6px;
     color: #2D4159;
     font-family: "Helvetica Neue",Helvetica,Arial,sans;
@@ -95,6 +208,7 @@ body:before {
     right: 8px;
     top: 8px;
     transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
     z-index: -2;
 }
 body:after {
@@ -116,18 +230,12 @@ a:hover {
     color: #233245;
 }
 p.flash {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    -moz-box-sizing: border-box;
     background-clip: padding-box;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+    background-image: linear-gradient(rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.7));
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-    border-color: -moz-use-text-color rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.7) rgba(255, 255, 255, 0.5);
     border-image: none;
-    border-right: 3px solid rgba(255, 255, 255, 0.5);
     border-style: none solid solid;
     border-width: 0 3px 3px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
@@ -138,8 +246,8 @@ p.flash {
     position: absolute;
     text-align: center;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
-    top: -51px;
     width: 100%;
+    top: -0.8em;
 }
 p.flash:empty {
     background: none repeat scroll 0 0 transparent;
@@ -380,7 +488,7 @@ form label {
 }
 form textarea {
     font-size: 1.1em;
-    height: 12em;
+    height: 8em;
 }
 input[type="submit"] {
     background-clip: padding-box;
