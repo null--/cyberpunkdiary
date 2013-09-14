@@ -26,6 +26,9 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find( params[:id] )
     
+    @article.hits = @article.hits + 1
+    @article.save
+
     @comment = Comment.new
     @comment.article_id = @article.id 
   end
@@ -49,7 +52,7 @@ class ArticlesController < ApplicationController
     
     u = User.get_current_user session
     
-    if u and u == @articel.user_id then
+    if u then # and u.id == @article.user_id then
       @article.user_id = u.id
       @article.save
 
