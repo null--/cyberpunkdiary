@@ -1,0 +1,18 @@
+<h1>Login</h1>
+<% form_for @user, :url => {:action => 'authenticate'} do |f| %>
+  <ul>
+  <% @user.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.submit 'Login'%>
+  </p>
+<% end %>
