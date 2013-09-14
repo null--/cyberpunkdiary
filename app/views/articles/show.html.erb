@@ -1,19 +1,32 @@
 <h1><%= @article.title %></h1>
-<h2><%= @article.abstract %></h2>
+<h2>Author <%= User.find(@article.user_id).nickname %></h2>
+<p><%= @article.created_at %>
+<% if @article.abstract and @article.abstract.length > 0 then %>
+  <h2>Abstract</h2>
+  <p><%= @article.abstract %></p>
+<% end %>
+<br>
+<h2>Full Story</h2>
 <p><%= @article.body %></p>
-
-<%= render :partial => 'comments/form' %>
-
+<br>
 <p><i>
   Tags:
   <% @article.tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 </i></p>
+<%
+   u = User.get_current_user session
+   if u and u.id == @article.user_id then
+%>
 <p><%= link_to "[Edit]", edit_article_path(@edit) %>
 <%= link_to "[Delete]", @article,
         :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
 </p>
 <h3>Comments (<%= @article.comments.size %>)</h3>
-
 <%= render :partial => 'articles/comment', :collection => @article.comments %>
+
+<% if User.is_authorized session then %>
+  <%= render :partial => 'comments/form' %>
+<% end %>

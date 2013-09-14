@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
        params[:action] == 'delete' or
        params[:action] == 'destroy'
     then
-      if not User.is_authorized(session[:session_id]) then
+      if not User.is_authorized session then
         flash[:error] = 'Sound the Alarm!'
         redirect_to_index
       end
@@ -33,6 +33,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def redirect_to_index_error
+    flash[:error] = 'Don\'t mess with me!'
+    respond_to do |format|
+      format.html { redirect_to( articles_url ) }
+      format.xml { head :ok }
+    end
+  end
+  
   def redirect_to_login
     respond_to do |format|
       format.html { redirect_to :controller => 'users', :action => 'login' }

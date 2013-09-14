@@ -9,7 +9,7 @@
       <header>
         <div class = "nav ph-dot-nav">
           <a href="/index">Index</a>
-          <% if User.is_authorized( session[:session_id] ) then %>
+          <% if User.is_authorized session then %>
              <a href="/articles/new">New</a>
           <% end %>
           <a href=<%=articles_path%>>Articles</a>
@@ -18,8 +18,8 @@
           <div class="effect"></div>
         </div>
         <profile>
-          <% if User.is_authorized( session[:session_id] ) then %>
-            <%= link_to "Logout", "/users/logout", :confirm => 'Are you sure?', :method => :logout %>
+          <% if User.is_authorized session then %>
+            <%= link_to "Logout (" + (User.get_current_user session).nickname + ")", "/users/logout", :confirm => 'Are you sure?', :method => :logout %>
           <% else %>
             <a href="/users/login"> Login </a>
             <a href="/users/register"> Register </a>

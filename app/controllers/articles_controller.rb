@@ -46,18 +46,31 @@ class ArticlesController < ApplicationController
     # @article.body = params[:article][:body]
     
     @article = Article.new( validate_params )
-    @article.save
+    
+    u = User.get_current_user session
+    
+    if u and u == @articel.user_id then
+      @article.user_id = u.id
+      @article.save
 
-    redirect_to_article
+      redirect_to_article
+    else
+      redirect_to_index_error
+    end
   end
 
   def update
     @article = Article.find( params[:id] )
-    @article.update_attributes( validate_params )
-    
-    flash[:notice] = "Article '#{@article.title}' Updated!"
 
-    redirect_to_article
+    u = User.get_current_user session
+
+    if u and u.id == @article.user_id then
+      @article.update_attributes( validate_params )
+      flash[:notice] = "Hey #{u.nickname}, Article is '#{@article.title}' Updated!"
+      redirect_to_article
+    else
+      redirect_to_index_error
+    end
   end
 
   def destroy
