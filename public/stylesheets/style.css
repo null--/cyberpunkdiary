@@ -86,7 +86,7 @@ html {
     position: relative;
     text-decoration: none;
     transition: all 0.7s ease 0s;
-    width: 25%;
+    width: 20%;
 }
 .nav a:hover {
     color: #000000;
@@ -97,16 +97,19 @@ html {
     transition: all 0.7s ease-in-out 0s;
 }
 .nav a:nth-child(1):hover ~ .effect {
-    left: 12.5%;
+    left: 16%;
 }
 .nav a:nth-child(2):hover ~ .effect {
-    left: 37.5%;
+    left: 36%;
 }
 .nav a:nth-child(3):hover ~ .effect {
-    left: 62.5%;
+    left: 56%;
 }
 .nav a:nth-child(4):hover ~ .effect {
-    left: 87.5%;
+    left: 76%;
+}
+.nav a:nth-child(5):hover ~ .effect {
+    left: 96%;
 }
 .ph-dot-nav:after {
     bottom: 40px;
@@ -122,7 +125,7 @@ html {
     bottom: 38px;
     content: "";
     height: 4px;
-    left: 50%;
+    left: 80%;
     margin-left: -2px;
     position: absolute;
     width: 4px;
@@ -229,7 +232,7 @@ a {
 a:hover {
     color: #233245;
 }
-p.flash {
+flash {
     background-clip: padding-box;
     background-image: linear-gradient(rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.7));
     border-bottom-left-radius: 6px;
@@ -250,7 +253,12 @@ p.flash {
     top: -0.8em;
     z-index: 90;
 }
-p.flash:empty {
+
+flash error {
+    background-image: linear-gradient(rgba(250, 1, 1, 0.7), rgba(250, 0, 0, 0.1));
+}
+
+flash:empty {
     background: none repeat scroll 0 0 transparent;
     border-width: 0;
     box-shadow: none;

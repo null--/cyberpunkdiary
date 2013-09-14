@@ -8,9 +8,13 @@
     <body>
       <header>
         <div class = "nav ph-dot-nav">
-          <a href="#">Index</a>
+          <a href="/index">Index</a>
+          <% if User.is_authorized( session[:session_id] ) then %>
+             <a href="/articles/new">New</a>
+          <% end %>
           <a href=<%=articles_path%>>Articles</a>
           <a href=<%=tags_path%>>Tags</a>
+          <a href=<%=articles_path%>>About</a>
           <div class="effect"></div>
         </div>
         <profile>
@@ -22,8 +26,10 @@
           <% end %>
         </profile>
       </header>
-      <p class='flash'><%= flash[:notice] %></p>
-      <p class='flash'><%= flash[:error] %></p>
+      <flash><%= flash[:notice] %></flash>
+      <% if flash[:error] then %>
+        <flash><error><%= flash[:error] %></error></flash>
+      <% end %>
         <%= "<h1>#{@page_title}</h1>" if @page_title %>
         <%= yield %>
     </body>

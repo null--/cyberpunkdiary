@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
        params[:action] == 'destroy'
     then
       if not User.is_authorized(session[:session_id]) then
-        flash[:error] = session[:session_id] + ' [Unathorized Access]'
+        flash[:error] = 'Sound the Alarm!'
         redirect_to_index
       end
       return
