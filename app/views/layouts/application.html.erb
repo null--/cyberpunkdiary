@@ -14,10 +14,16 @@
           <div class="effect"></div>
         </div>
         <profile>
-          <a href="#"> Login </a>
-          <a href="#"> Register </a>
+          <% if User.is_authorized( session[:session_id] ) then %>
+            <%= link_to "Logout", "/users/logout", :confirm => 'Are you sure?', :method => :logout %>
+          <% else %>
+            <a href="/users/login"> Login </a>
+            <a href="/users/register"> Register </a>
+          <% end %>
         </profile>
       </header>
+      <p class='flash'><%= flash[:notice] %></p>
+      <p class='flash'><%= flash[:error] %></p>
         <%= "<h1>#{@page_title}</h1>" if @page_title %>
         <%= yield %>
     </body>

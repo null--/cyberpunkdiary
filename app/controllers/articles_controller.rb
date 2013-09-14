@@ -19,20 +19,6 @@ class ArticlesController < ApplicationController
     }
   end
 
-  def redirect_to_index
-    respond_to do |format|
-      format.html { redirect_to( articles_url ) }
-      format.xml { head :ok }
-    end
-  end
-
-  def redirect_to_article
-    respond_to do |format|
-      format.html { redirect_to article_path( @article ) }
-      format.xml { head :ok }
-    end
-  end
-
   def index
     @articles = Article.all
   end
