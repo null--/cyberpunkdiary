@@ -58,4 +58,7 @@ class UsersController < ApplicationController
     end
     redirect_to_index
   end
+
+  def edit
+  end
 end

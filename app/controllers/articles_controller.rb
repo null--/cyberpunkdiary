@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
   def validate_params
+    # params[:article][:body] = params[:article][:body].gsub(/(?:\n\r?|\r\n?)/, '<br>')
+
     # params.require(:article).permit(:title, :abstract, :body)
     # params.require(:article).permit(:title, :abstract, :body)
     if not params[:article] or 
@@ -69,7 +71,7 @@ class ArticlesController < ApplicationController
 
     if u and u.id == @article.user_id then
       @article.update_attributes( validate_params )
-      flash[:notice] = "Hey #{u.nickname}, Article is '#{@article.title}' Updated!"
+      flash[:notice] = "Hey #{u.nickname}, '#{@article.title}' is Updated!"
       redirect_to_article
     else
       redirect_to_index_error

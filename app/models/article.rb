@@ -16,6 +16,12 @@ class Article < ActiveRecord::Base
   end
 
   def tag_list=(tags_string)
-    tags_string.split(",").collect{|s| s.strip.downcase}.uniq
+    tag_names = tags_string.split(",").collect{|s| s.strip.downcase}.uniq
+
+    new_or_found_tags = tag_names.collect do |name| 
+      Tag.find(:first, :conditions => {:name => name})
+    end
+
+    self.tags = new_or_found_tags
   end
 end
