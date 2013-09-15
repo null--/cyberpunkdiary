@@ -1,3 +1,9 @@
+/*
+Developed by _null_
+Some lines of the following code may belong to:
+   http://pepsized.com/css-only-lavalamp-like-fancy-menu-effect/
+   http://tutorials.jumpstartlab.com/assets/blogger/screen.css
+*/
 
 @charset "UTF-8";
 html, body, header, profile, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
@@ -11,33 +17,41 @@ html, body, header, profile, div, span, applet, object, iframe, h1, h2, h3, h4, 
     padding: 0;
     vertical-align: baseline;
 }
+
 body {
     background: none repeat scroll 0 0 white;
     color: #000000;
     line-height: 1;
 }
+
 ol, ul {
     list-style: none outside none;
 }
+
 table {
     border-collapse: separate;
     border-spacing: 0;
     vertical-align: middle;
 }
+
 caption, th, td {
     font-weight: normal;
     text-align: left;
     vertical-align: middle;
 }
+
 q, blockquote {
     quotes: "" "";
 }
+
 q:before, q:after, blockquote:before, blockquote:after {
     content: "";
 }
+
 a img {
     border: medium none;
 }
+
 .fancy-button-reset-base-class, input[type="submit"] {
     background: url("/images/button_bg.png?1301401396") repeat-x scroll left bottom transparent;
     border-style: solid;
@@ -50,13 +64,16 @@ a img {
     text-decoration: none;
     width: auto;
 }
+
 .fancy-button-reset-base-class::-moz-focus-inner, input[type="submit"]::-moz-focus-inner {
     border: medium none;
     padding: 0;
 }
+
 .fancy-button-reset-base-class:focus, input[type="submit"]:focus {
     outline: medium none;
 }
+
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
     border: 0 none;
     display: block;
@@ -64,20 +81,24 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
     outline: 0 none;
     padding: 0;
 }
+
 .headings, h1 {
     font-family: "Yanone Kaffeesatz",sans;
 }
+
 html {
     background: none repeat scroll 0 0 #1A1A1A;
 }
+
 .nav {
     background: none;
     overflow: hidden;
     position: relative;
-    width: 30em;
+    width: 90em;
     top: -0.5em;
     left: 0.5em;
 }
+
 .nav a {
     color: #FFFAFA;
     display: block;
@@ -86,31 +107,51 @@ html {
     position: relative;
     text-decoration: none;
     transition: all 0.7s ease 0s;
-    width: 20%;
+    width: 10%;
 }
+
 .nav a:hover {
     color: #000000;
 }
+
 .effect {
     left: -12.5%;
     position: absolute;
     transition: all 0.7s ease-in-out 0s;
 }
+
 .nav a:nth-child(1):hover ~ .effect {
-    left: 16%;
+    left: 8%;
 }
+
 .nav a:nth-child(2):hover ~ .effect {
-    left: 36%;
+    left: 18%;
 }
+
 .nav a:nth-child(3):hover ~ .effect {
-    left: 56%;
+    left: 28%;
 }
+
 .nav a:nth-child(4):hover ~ .effect {
-    left: 76%;
+    left: 38%;
 }
+
 .nav a:nth-child(5):hover ~ .effect {
-    left: 96%;
+    left: 48%;
 }
+
+.nav a:nth-child(6):hover ~ .effect {
+    left: 58%;
+}
+
+.nav a:nth-child(7):hover ~ .effect {
+    left: 68%;
+}
+
+.nav a:nth-child(8):hover ~ .effect {
+    left: 78%;
+}
+
 .ph-dot-nav:after {
     bottom: 40px;
     content: "";
@@ -119,6 +160,7 @@ html {
     position: absolute;
     width: 100%;
 }
+
 .ph-dot-nav a:after {
     background: none repeat scroll 0 0 snow;
     border-radius: 100% 100% 100% 100%;
@@ -130,6 +172,7 @@ html {
     position: absolute;
     width: 4px;
 }
+
 .ph-dot-nav .effect {
     background: none repeat scroll 0 0 snow;
     border-radius: 100% 100% 100% 100%;
@@ -138,6 +181,7 @@ html {
     margin-left: -5px;
     width: 10px;
 }
+
 header {
     background-image: linear-gradient(#42678D, #223447);
     border: 1px solid #42678D;
@@ -151,38 +195,43 @@ header {
     right: 0em;
     z-index: 99;
 }
+
 profile {
-    /*
-      background-image: linear-gradient(#42678D, #223447);
-      border: 1px solid #42678D;
-      border-radius: 6px 6px 6px 6px;
-      box-shadow: 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px white;
-      */
-    /* height: 3.3em; */
-    /* margin: 2em auto; */
-    /* position: fixed; */
-    position: absolute;
+    color: #FFFAFA;
+    /* position: absolute; */
     right: 1em;
     top: -0.5em;
-    color: snow;
     width: auto;
     z-index: 99;
+    float: center
 }
 
 profile a {
     color: #FFFAFA;
     display: block;
-    float: left;
-    /* padding: 1em 0 2em; */
-    padding: 0.8em 2em;
-    position: relative;
-    /* text-decoration: underline; */
+    float: center;
+    /* padding: 0.8em 2em; */
     transition: all 0.7s ease 0s;
-    /* width: 50%; */
 }
 
 profile a:hover {
     color: #000000;
+}
+
+panel {
+    background-image: linear-gradient(#42678D, #223447);
+    border: 1px solid #42678D;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px white;
+    
+    float: right;
+    margin: auto -22em;
+    margin-top: -1.5em;
+    background-image: linear-gradient(#42678D, #223447);
+    display: block;
+    width: 20em;
+    min-height: 30em;
+    text-align: center;
 }
 
 body {
@@ -198,8 +247,10 @@ body {
     min-width: 600px;
     padding: 20px;
     position: relative;
-    width: 85%;
+    width: 60em;
+    float: left;
 }
+
 body:before {
     background: none repeat scroll 0 0 padding-box #2B445C;
     border-radius: 6px 6px 6px 6px;
@@ -214,6 +265,7 @@ body:before {
     -webkit-transform: rotate(-2deg);
     z-index: -2;
 }
+
 body:after {
     background: none repeat scroll 0 0 #000000;
     border-radius: 6px 6px 6px 6px;
@@ -226,12 +278,15 @@ body:after {
     top: 0;
     z-index: -1;
 }
+
 a {
     color: #2D4159;
 }
+
 a:hover {
     color: #233245;
 }
+
 flash {
     background-clip: padding-box;
     background-image: linear-gradient(rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.7));
@@ -266,6 +321,7 @@ flash:empty {
     overflow: hidden;
     padding: 0;
 }
+
 h1 {
     background-image: linear-gradient(#42678D, #223447);
     border-top-left-radius: 6px;
@@ -280,6 +336,7 @@ h1 {
     position: relative;
     text-shadow: 0 -2px #192836;
 }
+
 h1:after {
     background-image: linear-gradient(rgba(170, 170, 170, 0.5), rgba(255, 255, 255, 0));
     border-top: 1px solid #E5E5E5;
@@ -291,12 +348,14 @@ h1:after {
     right: 0;
     z-index: 1;
 }
+
 h2, h3, h4 {
     color: #2D4159;
     font-size: 1.3em;
     line-height: 1.5em;
     margin: 0.2em 0 0.5em;
 }
+
 .comment {
     background: none repeat scroll 0 0 #F5F5F5;
     border-bottom: 1px dashed #DDDDDD;
@@ -305,10 +364,12 @@ h2, h3, h4 {
     font-size: 0.9em;
     padding: 1em 0;
 }
+
 .comment p {
     border-left: 5px solid rgba(45, 65, 89, 0.5);
     padding-left: 12px;
 }
+
 .comment p:first-child {
     border: 0 none;
     color: #2D4159;
@@ -316,19 +377,24 @@ h2, h3, h4 {
     padding-bottom: 1em;
     padding-left: 0;
 }
+
 .comment + .comment {
     border-top: medium none;
 }
+
 .comment + h3, .comment + h4 {
     margin: 0 0 0.5em;
 }
+
 .comment:nth-last-of-type(1) {
     border-bottom: 1px solid #DDDDDD;
     margin-bottom: 2em;
 }
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
+
 .top-button, a.new_article, .article_actions a[href$="edit"], .article_actions a[data-method="delete"] {
     background-image: linear-gradient(#FFFFFF, #CCCCCC);
     border-radius: 1.2em 1.2em 1.2em 1.2em;
@@ -343,18 +409,23 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 0 1px #FFFFFF;
     top: 26px;
 }
+
 .top-button:hover, a.new_article:hover, .article_actions a[href$="edit"]:hover, .article_actions a[data-method="delete"]:hover {
     color: #555555;
 }
+
 .top-button:active, a.new_article:active, .article_actions a[href$="edit"]:active, .article_actions a[data-method="delete"]:active {
     background-image: linear-gradient(#D9D9D9, #F5F5F5);
 }
+
 #sidebar + ul {
     padding-right: 180px;
 }
+
 #sidebar + ul li {
     padding-right: 30px;
 }
+
 #sidebar + ul:after {
     background: none repeat scroll 0 0 #E5E5E5;
     bottom: 0;
@@ -364,6 +435,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     width: 1px;
 }
+
 #articles {
     -moz-box-sizing: border-box;
     border-bottom-left-radius: 6px;
@@ -374,6 +446,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 20px;
     position: relative;
 }
+
 #articles li {
     border-bottom: 1px dashed #E5E5E5;
     font-size: 1.2em;
@@ -381,16 +454,19 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1em 0 0.8em;
     position: relative;
 }
+
 #articles li:last-child {
     border-bottom: 0 none;
     border-bottom-left-radius: 6px;
 }
+
 #articles li > a:first-child {
     color: #2D4159;
     display: block;
     font-weight: bold;
     padding-bottom: 0.1em;
 }
+
 #articles .actions {
     border-left: 1px dotted #DDDDDD;
     line-height: 1em;
@@ -399,18 +475,22 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     top: 2px;
 }
+
 #articles .actions a {
     opacity: 0.2;
 }
+
 #articles .actions a:hover {
     opacity: 0.4;
 }
+
 #articles .tag_list {
     color: #999999;
     display: inline-block;
     font-size: 0.8em;
     padding-top: 0.5em;
 }
+
 .article_actions {
     border-bottom: 1px dashed #DDDDDD;
     font-size: 0.9em;
@@ -419,27 +499,33 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 0.7em;
     text-align: right;
 }
+
 .article_actions a {
     color: #999999;
     float: left;
 }
+
 .article_actions a:hover img {
     opacity: 0.6;
 }
+
 .article_actions img {
     opacity: 0.2;
     position: relative;
     top: 2px;
 }
+
 .article_actions a[href$="edit"], .article_actions a[data-method="delete"] {
     float: none;
     margin-left: 0.5em;
     padding: 4px 12px 3px 8px;
     text-decoration: none;
 }
+
 .article_actions a[data-method="delete"] {
     right: 90px;
 }
+
 p.tag_list {
     border-top: 1px dashed #DDDDDD;
     color: #999999;
@@ -447,6 +533,7 @@ p.tag_list {
     margin: 1em 0;
     padding-top: 0.5em;
 }
+
 #sidebar {
     float: right;
     font-weight: bold;
@@ -456,13 +543,16 @@ p.tag_list {
     width: 150px;
     z-index: 1;
 }
+
 #sidebar ul {
     font-weight: normal;
     margin: 0.5em 0;
 }
+
 #sidebar ul a {
     color: #6C7C9A;
 }
+
 .input, form input[type="text"], form input[type="password"], form textarea {
     -moz-box-sizing: border-box;
     background-color: #F5F5F5;
@@ -473,19 +563,23 @@ p.tag_list {
     padding: 0.3em 0.4em;
     width: 100%;
 }
+
 .input:focus, form input[type="text"]:focus, form input[type="password"]:focus, form textarea:focus {
     background-color: #FFFFFF;
     border-color: #81B1DF;
     box-shadow: 0 0 5px 1px rgba(129, 177, 223, 0.7) inset;
     outline: 0 none;
 }
+
 form input[type="text"], form input[type="password"] {
     margin: 0;
 }
+
 form p {
     margin-bottom: 0.6em;
     padding: 0;
 }
+
 form label {
     color: #6C7C9A;
     display: inline-block;
@@ -495,10 +589,12 @@ form label {
     padding-bottom: 0.2em;
     text-transform: uppercase;
 }
+
 form textarea {
     font-size: 1.1em;
     height: 8em;
 }
+
 input[type="submit"] {
     background-clip: padding-box;
     background-color: #134E89;
@@ -512,33 +608,39 @@ input[type="submit"] {
     padding: 0.3em 1em;
     text-shadow: 0 1px 1px #030E19;
 }
+
 input[type="submit"], input[type="submit"]:visited {
     color: #FFFFFF;
 }
+
 input[type="submit"]:hover, input[type="submit"]:focus {
     background-color: #11467C;
     background-image: linear-gradient(#769BBF, #466D94 10%, #283F55 50%, #23374B 50%, #34516D);
     border-color: #15202C;
     text-shadow: 0 1px 1px #02070C;
 }
+
 input[type="submit"]:hover, input[type="submit"]:hover:visited, input[type="submit"]:focus, input[type="submit"]:focus:visited {
     color: #FFFFFF;
 }
+
 input[type="submit"]:active {
     background-color: #0F3F6E;
     background-image: linear-gradient(#283F55, #2B445C 30%, #253A4E 50%, #203244 50%, #355371);
     border-color: #101821;
     box-shadow: 0 0.08em 0.2em 1px #192836 inset;
 }
+
 input[type="submit"]:active, input[type="submit"]:active:visited {
     color: #FFFFFF;
 }
+
 div.field_with_errors label {
     color: #FF0000;
     font-weight: bold;
 }
+
 div.field_with_errors input {
     border: 3px solid red;
 }
 
-    
