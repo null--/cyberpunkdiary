@@ -52,8 +52,8 @@ a img {
     border: medium none;
 }
 
+/*
 .fancy-button-reset-base-class, input[type="submit"] {
-    background: url("/images/button_bg.png?1301401396") repeat-x scroll left bottom transparent;
     border-style: solid;
     cursor: pointer;
     display: inline-block;
@@ -73,6 +73,7 @@ a img {
 .fancy-button-reset-base-class:focus, input[type="submit"]:focus {
     outline: medium none;
 }
+*/
 
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
     border: 0 none;
@@ -235,13 +236,12 @@ panel {
 }
 
 body {
-    -moz-box-sizing: border-box;
-    background: none repeat scroll 0 0 padding-box silver;
+    background: none repeat scroll 0 0 padding-box #E5E5E5;
     border-radius: 6px 6px 6px 6px;
     color: #2D4159;
     font-family: "Helvetica Neue",Helvetica,Arial,sans;
     line-height: 1.25em;
-    margin: 50px auto 30px;
+    margin: 4em 1em;
     max-width: 1250px;
     min-height: 280px;
     min-width: 600px;
@@ -357,17 +357,17 @@ h2, h3, h4 {
 }
 
 .comment {
-    background: none repeat scroll 0 0 #F5F5F5;
+    background: none repeat scroll 0 0 #A5A5A5;
     border-bottom: 1px dashed #DDDDDD;
     border-top: 1px solid #DDDDDD;
-    color: #6C7C9A;
+    color: #101010;
     font-size: 0.9em;
-    padding: 1em 0;
+    /* padding: 1em 0; */
 }
 
 .comment p {
     border-left: 5px solid rgba(45, 65, 89, 0.5);
-    padding-left: 12px;
+    /* padding-left: 12px; */
 }
 
 .comment p:first-child {
@@ -388,13 +388,14 @@ h2, h3, h4 {
 
 .comment:nth-last-of-type(1) {
     border-bottom: 1px solid #DDDDDD;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
+/*
 .top-button, a.new_article, .article_actions a[href$="edit"], .article_actions a[data-method="delete"] {
     background-image: linear-gradient(#FFFFFF, #CCCCCC);
     border-radius: 1.2em 1.2em 1.2em 1.2em;
@@ -417,6 +418,7 @@ h1, h2, h3, h4, h5, h6 {
 .top-button:active, a.new_article:active, .article_actions a[href$="edit"]:active, .article_actions a[data-method="delete"]:active {
     background-image: linear-gradient(#D9D9D9, #F5F5F5);
 }
+*/
 
 #sidebar + ul {
     padding-right: 180px;
@@ -603,10 +605,15 @@ input[type="submit"] {
     border-radius: 6px 6px 6px 6px;
     border-width: 1px;
     box-shadow: 0 0 0.1em 1px rgba(255, 255, 255, 0.306) inset;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.2em;
-    padding: 0.3em 1em;
+    /* padding: 0.3em 1em; */
     text-shadow: 0 1px 1px #030E19;
+    min-width: 9em;
+    display: inline-block;
+    min-width: 9em;
+    float: left;
+    z-index: 10;
 }
 
 input[type="submit"], input[type="submit"]:visited {
@@ -644,3 +651,31 @@ div.field_with_errors input {
     border: 3px solid red;
 }
 
+rate {
+    color: black;
+}
+
+info {
+    color: brown;
+    font-style: italic;
+}
+
+hr {
+    color: black;
+}
+
+article {
+    color: green;
+}
+
+author {
+    color: red;
+}
+
+abstract {
+    color: white;
+}
+
+comment {
+    color: navy;
+}

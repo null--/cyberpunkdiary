@@ -5,14 +5,16 @@
     <li>
       <%= link_to article.title, article_path(article) %>
       <i>by <%= link_to article.user.nickname, user_path(article.user) %> </i>
+      <br>
+      <rate><%= "Hits(" + article.hits.to_s + ") 1337(" + article.leet.to_s + ") lame(" + article.lame.to_s + ")"%></rate>
+      <br>
+      <br>
       <p><%= article.abstract %></p>
-      <p>Hits: <%= article.hits %></p>
-      <br><i>up: <%= article.created_at %> | Comments(<%= article.comments.size %>)</i>
+      <info>up: <%= article.created_at %> | Comments(<%= article.comments.size %>)</info>
       <!-- <%#
          <%= link_to "Create a New Article" new_article_path %>
       %> -->
     </li>
-    <hr>
   <% end %>
 </ul>
 

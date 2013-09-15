@@ -6,11 +6,9 @@
 %>
   <%= button_to "1337 (" + @article.leet.to_s + ")", {:controller => 'votes', :action => 'edit', :score => '1337', :article_id => @article.id}%>
   <%= button_to "lame (" + @article.lame.to_s + ")", {:controller => 'votes', :action => 'edit', :score => 'lame', :article_id => @article.id}%>
+  <br><hr>
 <% end %>
 </p>
-
-<hr>
-
 <p>
 <%
    if u and u.id == @article.user_id then
@@ -18,42 +16,48 @@
   <%= button_to "Edit", {:controller => 'articles', :action => 'edit', :id => @article.id}%>
   <%= button_to "Delete", @article,
     :confirm => 'Are you sure?', :method => :delete %>
+<br><hr>
 <% end %>
 </p>
 
-<hr>
-
-<h2>Author <%= User.find(@article.user_id).nickname %></h2>
-<p><%= @article.created_at %> </p>
-<p><i>
-  Tags:
-  <% @article.tags.each do |tag| %>
+<h2> Author </h2>
+<author><%=h User.find(@article.user_id).nickname %></author>
+<p>
+  <info><%= @article.created_at %></info>
+  <br>
+  <info>
+    Tags:
+    <% @article.tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
-  <% end %>
-</i></p>
+    <% end %>
+  </info>
+</p>
+
 <% if @article.abstract and @article.abstract.length > 0 then %>
   <h2>Abstract</h2>
-  <p><%= @article.abstract %></p>
+  <abstract><%=h @article.abstract %></abstract>
 <% end %>
 <br>
 
 <h2>Full Story</h2>
-<p><%= @article.body %></p>
+<article>
+  <%= h(@article.body).gsub("\n","<br>") %>
+</article>
 <hr>
 
 <%
    if u then
 %>
   <%= button_to "1337 (" + @article.leet.to_s + ")", {:controller => 'votes', :action => 'edit', :score => '1337', :article_id => @article.id}%>
-  <%= button_to "lame (" + @article.leet.to_s + ")", {:controller => 'votes', :action => 'edit', :score => 'lame', :article_id => @article.id}%>
+  <%= button_to "lame (" + @article.lame.to_s + ")", {:controller => 'votes', :action => 'edit', :score => 'lame', :article_id => @article.id}%>
+<br><hr>
 <% end %>
 </p>
 
-<hr>
-
 <h3>Comments (<%= @article.comments.size %>)</h3>
-<%= render :partial => 'articles/comment', :collection => @article.comments %>
 <hr>
+<%= render :partial => 'articles/comment', :collection => @article.comments %>
+
 <% if User.is_authorized session then %>
   <%= render :partial => 'comments/form' %>
 <% end %>

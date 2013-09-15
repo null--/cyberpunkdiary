@@ -1,7 +1,10 @@
 <div>
-  <p><%= User.find(comment.user_id).nickname %> said:</p>
-  <p class="comment"><%= comment.body %></p>
-  <p><i>up: <%= comment.created_at %> later</i></p>
+  <p> <%= User.find(comment.user_id).nickname %> said:</p>
+  <comment>
+    <%= h(comment.body).gsub("\n","<br>") %>
+  </comment>
   <br>
+  <info>up: <%= distance_of_time_in_words(Time.now, comment.created_at)%> ago </info>
+  <hr>
 </div>
 
