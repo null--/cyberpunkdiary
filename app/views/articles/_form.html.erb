@@ -5,19 +5,19 @@
   <% end %>
   <p>
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%=h f.text_field :title %>
   </p>
   <p>
     <%= f.label :tag_list %><br />
-    <%= f.text_field :tag_list %>
+    <%=h f.text_field :tag_list %>
   </p>
   <p>
     <%= f.label :abstract %><br />
-    <%= f.text_area :abstract %>
+    <%=h f.text_area :abstract %>
   </p>
   <p>
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%=h f.text_area :body %>
   </p>
   <p>
     <%= f.submit "Save"%>

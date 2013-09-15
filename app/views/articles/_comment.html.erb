@@ -1,5 +1,5 @@
 <div>
-  <p> <%= User.find(comment.user_id).nickname %> said:</p>
+  <p> <%=h User.find(comment.user_id).nickname %> said:</p>
   <comment>
     <%= h(comment.body).gsub("\n","<br>") %>
   </comment>

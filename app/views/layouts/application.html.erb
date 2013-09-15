@@ -12,7 +12,7 @@
         <profile>
           <% if User.is_authorized session then
              %>
-            <%= link_to 'Profile (' + u.nickname + ')', '/users/' + u.id.to_s %>
+            <%= link_to 'Profile (' + h(u.nickname) + ')', '/users/' + u.id.to_s %>
           <% end %>
         </profile>
       </panel>
@@ -35,9 +35,9 @@
           <div class="effect"></div>
         </div>
       </header>
-      <flash><%= flash[:notice] %></flash>
+      <flash><%=h flash[:notice] %></flash>
       <% if flash[:error] then %>
-      <flash><error><%= flash[:error] %></error></flash>
+      <flash><error><%=h flash[:error] %></error></flash>
       <% end %>
       <%= "<h1>#{@page_title}</h1>" if @page_title %>
         <%= yield %>

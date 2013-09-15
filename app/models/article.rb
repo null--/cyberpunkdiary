@@ -16,12 +16,29 @@ class Article < ActiveRecord::Base
   end
 
   def tag_list=(tags_string)
+    # split tags
     tag_names = tags_string.split(",").collect{|s| s.strip.downcase}.uniq
-
-    new_or_found_tags = tag_names.collect do |name| 
-      Tag.find(:first, :conditions => {:name => name})
+    
+    # create new tags
+    article_tags = []
+    tag_names.each do |tag|
+      atag = Tag.find(:first, :conditions => {:name => tag})
+      if atag.nil? then
+        atag = Tag.new(:name => tag)
+        atag.save
+      end
+      article_tags << atag
     end
 
-    self.tags = new_or_found_tags
+    # add tags to article
+    # self.tags.create if not self.tags
+    self.tags = article_tags if article_tags
+    
+    save
+
+    # remove empty tags
+    Tag.all.each do |tag|
+      Tag.destroy tag if tag.articles.empty?
+    end
   end
 end

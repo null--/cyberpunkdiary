@@ -3,8 +3,8 @@
 <ul id="articles" >
   <% @articles.each do |article| %>
     <li>
-      <%= link_to article.title, article_path(article) %>
-      <i>by <%= link_to article.user.nickname, user_path(article.user) %> </i>
+      <%= link_to h(article.title), article_path(article) %>
+      <i>by <%= link_to h(article.user.nickname), user_path(article.user) %> </i>
       <br>
       <rate><%= "Hits(" + article.hits.to_s + ") 1337(" + article.leet.to_s + ") lame(" + article.lame.to_s + ")"%></rate>
       <br>
@@ -14,6 +14,7 @@
       <!-- <%#
          <%= link_to "Create a New Article" new_article_path %>
       %> -->
+      <hr>
     </li>
   <% end %>
 </ul>

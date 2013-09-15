@@ -1,4 +1,4 @@
 <h1>#whoami<h1>
-<h2><%= @user.nickname %></h2>
-<p>#login: <%= @user.username %> </p>
-<p>#whereis: <%= @user.email %> </p>
+<h2><%=h @user.nickname %></h2>
+<p>#login: <%=h @user.username %> </p>
+<p>#whereis: <%=h @user.email %> </p>
