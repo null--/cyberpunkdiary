@@ -2,7 +2,7 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title><%= @page_title || 'Blogger' %></title>
+        <title><%= @page_title || '[CPD]' %></title>
         <%= stylesheet_link_tag "style" %>
     </head>
     <body>
@@ -12,7 +12,7 @@
           <% if User.is_authorized session then %>
              <a href="/articles/new">New</a>
           <% end %>
-          <a href=<%=articles_path%>>Articles</a>
+          <a href=<%=articles_path%>>Diary</a>
           <a href=<%=tags_path%>>Tags</a>
           <a href=<%=articles_path%>>About</a>
           <div class="effect"></div>

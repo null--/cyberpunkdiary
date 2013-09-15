@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :articles
   has_many :comments
+  has_many :vote
 
   def self.is_authorized session
     if not session[ :session_id ] then
