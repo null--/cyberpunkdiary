@@ -1,16 +1,19 @@
 <h1>Diary</h1>
 
-<ul id="articles" >
+<ul>
   <% @articles.each do |article| %>
-    <li>
+    <li class = "article-list">
       <%= link_to h(article.title), article_path(article) %>
-      <i>by <%= link_to h(article.user.nickname), user_path(article.user) %> </i>
+      <br><i>by <%= link_to h(article.user.nickname), user_path(article.user) %> </i>
       <br>
-      <rate><%= "Hits(" + article.hits.to_s + ") 1337(" + article.leet.to_s + ") lame(" + article.lame.to_s + ")"%></rate>
+      <% if article.abstract then %>
+         <p class = "abstract"><%=h article.abstract %></p>
+      <% end %>
       <br>
-      <br>
-      <p><%= article.abstract %></p>
-      <info>up: <%= article.created_at %> | Comments(<%= article.comments.size %>)</info>
+      <p class="rate">
+        <%= "Hits(" + article.hits.to_s + ") 1337(" + article.leet.to_s + ") lame(" + article.lame.to_s + ")"%>
+      </p>
+      <p class = "info">up: <%= article.created_at %> | Comments(<%= article.comments.size %>)</p>
       <!-- <%#
          <%= link_to "Create a New Article" new_article_path %>
       %> -->

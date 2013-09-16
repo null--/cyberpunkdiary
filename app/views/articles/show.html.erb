@@ -9,6 +9,9 @@
   <br><hr>
 <% end %>
 </p>
+<p class="rate" font-style="bold">
+        <%= "Hits: " + @article.hits.to_s + " | 1337: " + @article.leet.to_s + " | lame: " + @article.lame.to_s %>
+</p>
 <p>
 <%
    if u and u.id == @article.user_id then
@@ -21,30 +24,25 @@
 </p>
 
 <h2> Author </h2>
-<author><%=h User.find(@article.user_id).nickname %></author>
-<p>
-  <info><%= @article.created_at %></info>
-  <br>
-  <info>
-    Tags:
-    <% @article.tags.each do |tag| %>
-    <%= link_to tag.name, tag_path(tag) %>
-    <% end %>
-  </info>
-</p>
+<p class="author"><%=h User.find(@article.user_id).nickname %></p>
 
 <% if @article.abstract and @article.abstract.length > 0 then %>
   <h2>Abstract</h2>
-  <abstract><%=h @article.abstract %></abstract>
+  <p class = "abstract"><%=h @article.abstract %></p>
 <% end %>
 <br>
 
 <h2>Full Story</h2>
-<article>
+<p class = "article">
   <%= h(@article.body).gsub("\n","<br>") %>
-</article>
-<hr>
-
+<p>
+<p class = "info"><%= @article.created_at %></p>
+  <p class = "info">
+    Tags:
+    <% @article.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+    <% end %>
+  </p>
 <%
    if u then
 %>

@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect "/", :controller => "mypage", :action => "index"
 
   map.connect "captcha/generate", :controller => 'captcha', :action => 'generate'
+  
   map.connect "users/login", :controller => 'users', :action => 'login'
   map.connect "users/logout", :controller => 'users', :action => 'logout'
   map.connect "users/register", :controller => 'users', :action => 'register'

@@ -651,31 +651,62 @@ div.field_with_errors input {
     border: 3px solid red;
 }
 
-rate {
+.rate {
     color: black;
 }
 
-info {
+.info {
     color: brown;
     font-style: italic;
+    font-size: 0.9em;
+    text-align: right;
 }
 
-hr {
+.hr {
     color: black;
 }
 
-article {
-    color: green;
+.article {
+    color: #283F55;
+    border: solid;
+    background: #F5f5f5;
+    border-width: 0.1em;
+    border-radius: 0.5em;
+    border-color: #0099e6;
 }
 
-author {
-    color: red;
+.article-list {
+    color: #283F55;
+    border: solid;
+    background: #D0D0D0;
+    border-width: 0.1em;
+    border-radius: 0.5em;
+    border-color: black;
 }
 
-abstract {
-    color: white;
+.author {
+    color: #676760;
+    border: solid;
+    background: #F5f5f5;
+    border-width: 0.1em;
+    border-radius: 0.5em;
+    border-color: #0099e6;
 }
 
-comment {
+.abstract {
+    color: #454555;
+    border: solid;
+    background: #F5f5f5;
+    border-width: 0.1em;
+    border-radius: 0.5em;
+    border-color: #0099e6;
+}
+
+.comment {
     color: navy;
+    border: solid;
+    background: #F5f5f5;
+    border-width: 0.1em;
+    border-radius: 0.5em;
+    border-color: #283f55;
 }
