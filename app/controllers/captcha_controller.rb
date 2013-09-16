@@ -1,7 +1,7 @@
 class CaptchaController < ApplicationController
   def generate
     # generate captcha using cool-captcha
-    raw_out = `cd extra/ && php5 captcha.php`
+    raw_out = `cd #{RAILS_ROOT}/extra && php5 captcha.php`
 
     # find index of captcha text
     captag = "%CAPTCHA%"
