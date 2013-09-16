@@ -47,6 +47,13 @@ class ApplicationController < ActionController::Base
       format.xml { head :ok }
     end
   end
+  
+  def redirect_to_register
+    respond_to do |format|
+      format.html { redirect_to :controller => 'users', :action => 'register' }
+      format.xml { head :ok }
+    end
+  end
 
   def redirect_to_article
     respond_to do |format|

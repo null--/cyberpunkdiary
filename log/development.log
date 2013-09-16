@@ -52516,3 +52516,1320 @@ Rendering articles/index
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '20f0900267c175f7aa291f16285288bb') [0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '20f0900267c175f7aa291f16285288bb') [0m
 Completed in 46ms (View: 30, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-09-16 08:55:51) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+Completed in 174ms (View: 172, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-16 08:55:55) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+Completed in 146ms (View: 83, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:12:24) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.7ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 57ms (View: 45, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:12:31) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 71ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#show to php (for 127.0.0.1 at 2013-09-16 11:12:31) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=index):
+  app/controllers/users_controller.rb:5:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:13:21) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (1.5ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 34ms (View: 23, DB: 1) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:13:33) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 29ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:14:25) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.7ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:15:34) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (1.4ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 32ms (View: 22, DB: 1) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:15:42) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:17:29) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.7ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#show to php (for 127.0.0.1 at 2013-09-16 11:17:37) [GET]
+  Parameters: {"id"=>"captcha", "0.8106404487043619"=>nil}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=captcha):
+  app/controllers/users_controller.rb:5:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (80.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show to php (for 127.0.0.1 at 2013-09-16 11:17:41) [GET]
+  Parameters: {"id"=>"captcha", "0.464211065787822"=>nil}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=captcha):
+  app/controllers/users_controller.rb:5:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (17.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:20:54) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (1.4ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 33ms (View: 23, DB: 1) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:21:24) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:21:50) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.9ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:22:50) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (1.5ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 37ms (View: 24, DB: 1) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:23:09) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:24:04) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 28ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:24:25) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 28ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:31:24) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:31:53) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 24ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:32:14) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.9ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:32:21) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:32:51) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:33:08) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (1.0ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:36:09) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:36:34) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:36:41) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:37:08) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 82ms (View: 71, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:39:01) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:39:23) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 31ms (View: 20, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:40:09) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 82ms (View: 73, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:40:35) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:40:51) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.9ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:41:31) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.9ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 83ms (View: 73, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2013-09-16 11:41:33) [GET]
+  Parameters: {"id"=>"captcha_url >", "0.6471075744206941"=>nil}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=captcha_url >):
+  app/controllers/users_controller.rb:5:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2013-09-16 11:41:37) [GET]
+  Parameters: {"id"=>"captcha_url >", "0.48462087309459456"=>nil}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=captcha_url >):
+  app/controllers/users_controller.rb:5:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (77.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2013-09-16 11:41:47) [GET]
+  Parameters: {"id"=>"captcha_url >", "0.761428259369196"=>nil}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=captcha_url >):
+  app/controllers/users_controller.rb:5:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (20.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:41:48) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (1.6ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 33ms (View: 22, DB: 1) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2013-09-16 11:41:49) [GET]
+  Parameters: {"0.6125734623648118"=>nil, "id"=>"captcha_url >"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=captcha_url >):
+  app/controllers/users_controller.rb:5:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (18.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:42:45) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (1.6ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 33ms (View: 22, DB: 1) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:42:48) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:43:17) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.9ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 31ms (View: 20, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:43:47) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.9ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:43:57) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 28ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:44:59) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:45:05) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:45:21) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (1.2ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:46:39) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.7ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:48:25) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:48:59) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:50:42) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:51:41) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.7ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:52:25) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (1.0ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:52:25) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-09-16 11:53:23) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:53:26) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 35ms (View: 21, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:54:02) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.9ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '7a5d931f5be0e4e47881cd9802f6a2c8') [0m
+Completed in 72ms (View: 66, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:54:19) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 29ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#goblack (for 127.0.0.1 at 2013-09-16 11:55:00) [POST]
+  Parameters: {"user"=>{"username"=>"", "email"=>"", "nickname"=>"punkbot", "password"=>"test"}, "captcha"=>"stif1er", "authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ=", "commit"=>"Register!"}
+  [4;36;1mUser Create (0.7ms)[0m   [0;1mINSERT INTO "users" ("username", "email", "created_at", "priv", "nickname", "updated_at", "session_id", "password") VALUES('', '', '2013-09-16 07:25:00', 0, 'punkbot', '2013-09-16 07:25:00', 'de5d3cc1c925fe8ceeec67bb1a3852ac', '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08')[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 284ms (DB: 1) | 302 Found [http://127.0.0.1/users/goblack]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-16 11:55:00) [GET]
+  [4;35;1mArticle Load (1.3ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 114ms (View: 98, DB: 5) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing UsersController#logout (for 127.0.0.1 at 2013-09-16 11:55:11) [POST]
+  Parameters: {"authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ="}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE "users" SET "session_id" = 'unathorzed', "updated_at" = '2013-09-16 07:25:11' WHERE "id" = 4[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 203ms (DB: 2) | 302 Found [http://127.0.0.1/users/logout]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-16 11:55:11) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 30ms (View: 20, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 11:55:13) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 12:01:30) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered users/_captcha (0.1ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing UsersController#goblack (for 127.0.0.1 at 2013-09-16 12:01:35) [POST]
+  Parameters: {"user"=>{"username"=>"", "email"=>"", "nickname"=>"punkbot", "password"=>"test"}, "captcha"=>"test", "authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ=", "commit"=>"Register!"}
+Redirected to http://127.0.0.1:3000/articles
+Completed in 3ms (DB: 0) | 302 Found [http://127.0.0.1/users/goblack]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-16 12:01:35) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 28ms (View: 20, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-09-16 12:44:25) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 125ms (View: 123, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-09-16 12:45:58) [GET]
+
+ActionController::RoutingError (No route matches "/captcha/generate" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 12:46:53) [GET]
+
+ActionView::MissingTemplate (Missing template captcha/generate.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 12:53:34) [GET]
+
+NoMethodError (undefined method `message=' for #<ActionController::Response:0x7f5e8619b748>):
+  app/controllers/captcha_controller.rb:5:in `generate'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (20.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 12:54:45) [GET]
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 12:55:42) [GET]
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 12:56:17) [GET]
+Completed in 45ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 12:56:25) [GET]
+Completed in 40ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 12:59:33) [GET]
+Completed in 40ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:00:28) [GET]
+Completed in 42ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:02:30) [GET]
+Completed in 45ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:03:40) [GET]
+Sending data 
+Completed in 43ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:04:09) [GET]
+Sending data 
+Completed in 42ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:04:10) [GET]
+Sending data 
+Completed in 35ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:05:53) [GET]
+Sending data 
+Completed in 45ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-09-16 13:05:56) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 16ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 13:05:57) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered captcha/_form (1.0ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 85ms (View: 79, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:05:57) [GET]
+Sending data 
+Completed in 36ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:05:59) [GET]
+  Parameters: {"0.6768695639912039"=>nil}
+Sending data 
+Completed in 35ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate?0.6768695639912039]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:06:00) [GET]
+  Parameters: {"0.3037005129735917"=>nil}
+Sending data 
+Completed in 36ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate?0.3037005129735917]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:06:01) [GET]
+  Parameters: {"0.09104745532386005"=>nil}
+Sending data 
+Completed in 36ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate?0.09104745532386005]
+
+
+Processing ApplicationController#register (for 127.0.0.1 at 2013-09-16 13:08:29) [GET]
+
+SyntaxError (/media/null/project/github/cyberpunkdiary/app/controllers/users_controller.rb:14: syntax error, unexpected tSTRING_BEG, expecting kEND
+...tched: " + session[:captcha] ", " + params[:captcha]
+                              ^
+/media/null/project/github/cyberpunkdiary/app/controllers/users_controller.rb:16: syntax error, unexpected tSTRING_BEG, expecting kEND
+...wrong: " + session[:captcha] ", " + params[:captcha]
+                              ^):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (79.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 13:08:57) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered captcha/_form (0.1ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 29ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:08:57) [GET]
+Sending data 
+Completed in 39ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing UsersController#goblack (for 127.0.0.1 at 2013-09-16 13:09:03) [POST]
+  Parameters: {"user"=>{"username"=>"", "email"=>"", "nickname"=>"punkbot", "password"=>"test"}, "captcha"=>"neckyoke", "authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ=", "commit"=>"Register!"}
+Redirected to http://127.0.0.1:3000/articles
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: users.usernam: SELECT * FROM "users" WHERE ("users"."usernam" = '') LIMIT 1[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.usernam: SELECT * FROM "users" WHERE ("users"."usernam" = '')  LIMIT 1):
+  app/controllers/users_controller.rb:20:in `goblack'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (86.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#goblack (for 127.0.0.1 at 2013-09-16 13:09:15) [POST]
+  Parameters: {"user"=>{"username"=>"", "email"=>"", "nickname"=>"punkbot", "password"=>"test"}, "captcha"=>"neckyoke", "authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ=", "commit"=>"Register!"}
+Redirected to http://127.0.0.1:3000/articles
+  [4;35;1mUser Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: users.usernam: SELECT * FROM "users" WHERE ("users"."usernam" = '') LIMIT 1[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.usernam: SELECT * FROM "users" WHERE ("users"."usernam" = '')  LIMIT 1):
+  app/controllers/users_controller.rb:20:in `goblack'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#goblack (for 127.0.0.1 at 2013-09-16 13:10:46) [POST]
+  Parameters: {"user"=>{"username"=>"", "email"=>"", "nickname"=>"punkbot", "password"=>"test"}, "captcha"=>"neckyoke", "authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ=", "commit"=>"Register!"}
+Redirected to http://127.0.0.1:3000/articles
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/users/goblack]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-16 13:10:46) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 28ms (View: 20, DB: 2) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 13:10:54) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered captcha/_form (0.1ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:10:54) [GET]
+Sending data 
+Completed in 34ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing UsersController#goblack (for 127.0.0.1 at 2013-09-16 13:10:57) [POST]
+  Parameters: {"user"=>{"username"=>"", "email"=>"", "nickname"=>"punkbot", "password"=>"test"}, "captcha"=>"eefadsf", "authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ=", "commit"=>"Register!"}
+Redirected to http://127.0.0.1:3000/articles
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/users/goblack]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-16 13:10:57) [GET]
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 30ms (View: 21, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ApplicationController#register (for 127.0.0.1 at 2013-09-16 13:12:26) [GET]
+
+SyntaxError (/media/null/project/github/cyberpunkdiary/app/controllers/users_controller.rb:38: syntax error, unexpected kELSE, expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (15.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 13:12:45) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered captcha/_form (0.1ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:12:45) [GET]
+Sending data 
+Completed in 39ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing UsersController#goblack (for 127.0.0.1 at 2013-09-16 13:12:52) [POST]
+  Parameters: {"user"=>{"username"=>"", "email"=>"", "nickname"=>"punkbot", "password"=>"test"}, "captcha"=>"dextra", "authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ=", "commit"=>"Register!"}
+Redirected to http://127.0.0.1:3000/users/register
+Completed in 3ms (DB: 0) | 302 Found [http://127.0.0.1/users/goblack]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 13:12:52) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered captcha/_form (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:12:52) [GET]
+Sending data 
+Completed in 100ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing UsersController#goblack (for 127.0.0.1 at 2013-09-16 13:13:03) [POST]
+  Parameters: {"user"=>{"username"=>"punkbot", "email"=>"", "nickname"=>"punkbot", "password"=>"test"}, "captcha"=>"isotely", "authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ=", "commit"=>"Register!"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'punkbot') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: users.usernam: SELECT * FROM "users" WHERE ("users"."usernam" = 'punkbot') LIMIT 1[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.usernam: SELECT * FROM "users" WHERE ("users"."usernam" = 'punkbot')  LIMIT 1):
+  app/controllers/users_controller.rb:18:in `goblack'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#goblack (for 127.0.0.1 at 2013-09-16 13:13:27) [POST]
+  Parameters: {"user"=>{"username"=>"punkbot", "email"=>"", "nickname"=>"punkbot", "password"=>"test"}, "captcha"=>"isotely", "authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ=", "commit"=>"Register!"}
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'punkbot') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."nickname" = 'punkbot') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/users/register
+Completed in 14ms (DB: 2) | 302 Found [http://127.0.0.1/users/goblack]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 13:13:27) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered captcha/_form (0.1ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 81ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:13:27) [GET]
+Sending data 
+Completed in 41ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing UsersController#goblack (for 127.0.0.1 at 2013-09-16 13:13:42) [POST]
+  Parameters: {"user"=>{"username"=>"punkbot", "email"=>"test", "nickname"=>"punkbot", "password"=>"test"}, "captcha"=>"peterloo", "authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ=", "commit"=>"Register!"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'punkbot') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'test') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."nickname" = 'punkbot') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/users/register
+Completed in 8ms (DB: 1) | 302 Found [http://127.0.0.1/users/goblack]
+
+
+Processing UsersController#register (for 127.0.0.1 at 2013-09-16 13:13:42) [GET]
+Rendering template within layouts/application
+Rendering users/register
+Rendered captcha/_form (0.1ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/users/register]
+
+
+Processing CaptchaController#generate (for 127.0.0.1 at 2013-09-16 13:13:42) [GET]
+Sending data 
+Completed in 95ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/captcha/generate]
+
+
+Processing UsersController#goblack (for 127.0.0.1 at 2013-09-16 13:13:58) [POST]
+  Parameters: {"user"=>{"username"=>"test", "email"=>"test", "nickname"=>"test", "password"=>"test"}, "captcha"=>"pinhold", "authenticity_token"=>"wl7++ria3aeLSk+ruOw4pStd+hjkAFGje4TiC1CdjUQ=", "commit"=>"Register!"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'test') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'test') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."nickname" = 'test') LIMIT 1[0m
+  [4;36;1mUser Create (0.7ms)[0m   [0;1mINSERT INTO "users" ("username", "email", "created_at", "priv", "nickname", "updated_at", "session_id", "password") VALUES('test', 'test', '2013-09-16 08:43:58', 0, 'test', '2013-09-16 08:43:58', 'de5d3cc1c925fe8ceeec67bb1a3852ac', '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08')[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 324ms (DB: 2) | 302 Found [http://127.0.0.1/users/goblack]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-09-16 13:13:59) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'de5d3cc1c925fe8ceeec67bb1a3852ac') [0m
+Completed in 30ms (View: 21, DB: 3) | 200 OK [http://127.0.0.1/articles]

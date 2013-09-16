@@ -1,0 +1,12 @@
+<% captcha_url = "/captcha/generate" %>
+
+<img src="<%= captcha_url %>" id="captcha-img" catch="false"/><br/>
+<!-- CHANGE TEXT LINK -->
+<%=
+    "<a href=\"#\" onclick=\"
+    document.getElementById('captcha-img').src='" + captcha_url + "?'+Math.random();
+    document.getElementById('captcha').focus();\""
+%>
+    id="change-image">Not readable! Change the shit!</a><br/>
+<label for="captcha"/>Captcha</label>
+<input id="captcha" name="captcha" type="text" autocomplete="off" /><br/>

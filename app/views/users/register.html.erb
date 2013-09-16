@@ -19,6 +19,7 @@
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </p>
+  <%= render :partial => 'captcha/form' %>
   <p>
     <%= f.submit 'Register!'%>
   </p>

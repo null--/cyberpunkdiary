@@ -1,5 +1,6 @@
 class MypageController < ApplicationController
   def index
+
   end
 
   def whoami

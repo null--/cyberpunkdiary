@@ -10,17 +10,36 @@ class UsersController < ApplicationController
   end
 
   def goblack
-    @user = User.new
-    
-    @user.username = params[:user][:username]
-    @user.password = Digest::SHA256.hexdigest(params[:user][:password])
-    @user.email = params[:user][:email]
-    @user.nickname = params[:user][:nickname]
-    @user.session_id = session[:session_id]
-    @user.save
+    if session[:captcha] == params[:captcha] then
+      flash[:notice] = "Captcha matched: " + session[:captcha] + ", " + params[:captcha]
 
-    flash[:notice] = "Once you go black, there is no turning back. #{@user.nickname}, welcome!"
-    redirect_to_index
+      vname = User.find(:first, :conditions => {:username => params[:user][:username]}).nil?
+      vmail = User.find(:first, :conditions => {:email => params[:user][:email]}).nil?
+      vnick = User.find(:first, :conditions => {:nickname => params[:user][:nickname]}).nil?
+
+      if vname and vmail and vnick then
+        @user = User.new
+      
+        @user.username = params[:user][:username]
+        @user.password = Digest::SHA256.hexdigest(params[:user][:password])
+        @user.email = params[:user][:email]
+        @user.nickname = params[:user][:nickname]
+        @user.session_id = session[:session_id]
+        @user.save
+
+        flash[:notice] = "Once you go black, there is no turning back. #{@user.nickname}, welcome!"
+        redirect_to_index
+      else
+        flash[:error] = "Username was taken" if not vname
+        flash[:error] = "Nickname was taken" if not vnick
+        flash[:error] = "Email was taken" if not vmail
+
+        redirect_to_register
+      end
+    else
+      flash[:error] = "Captcha code was wrong!"
+      redirect_to_register
+    end
   end
 
   def login
