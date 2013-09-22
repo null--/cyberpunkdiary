@@ -1,19 +1,19 @@
 <h1>Diary</h1>
 
-<p> Current Order: <%= @order + "/" + @dir %> </p>
+<p> Current Order: <%= @order + " " + @dir %> </p>
 <p>
-  [
-  <%= link_to 'date:D - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'date', :dir => 'desc'} %>
-  <%= link_to 'date:A - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'date', :dir => 'asc'} %>
-  <%= link_to 'hits:D - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'hits', :dir => 'desc'} %>
-  <%= link_to 'hits:A - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'hits', :dir => 'asc'} %>
-  <%= link_to '1337:D - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'leet', :dir => 'desc'} %>
-  <%= link_to '1337/A - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'leet', :dir => 'asc'} %>
-  <%= link_to 'lame:D - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'lame', :dir => 'desc'} %>
-  <%= link_to 'lame:A',    {:controller => 'articles', :action => 'index', :page => 1, :order => 'lame',  :dir => 'asc'} %>
-  ]
+  Change Order:
+  <%= link_to 'date:desc - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'date', :dir => 'desc'} %>
+  <%= link_to 'date:asc - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'date', :dir => 'asc'} %>
+  <%= link_to 'hits - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'hits', :dir => 'desc'} %>
+  <%#= link_to 'hits:a - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'hits', :dir => 'asc'} %>
+  <%= link_to '1337 - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'leet', :dir => 'desc'} %>
+  <%#= link_to '1337:a - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'leet', :dir => 'asc'} %>
+  <%= link_to 'lame', {:controller => 'articles', :action => 'index', :page => 1, :order => 'lame', :dir => 'desc'} %>
+  <%#= link_to 'lame:a',    {:controller => 'articles', :action => 'index', :page => 1, :order => 'lame',  :dir => 'asc'} %>
 </p>
 <hr>
+<%= render :partial => 'pagebar' %>
 <ul>
   <% @articles.each do |article| %>
     <li class = "article-list">
@@ -34,28 +34,7 @@
       <hr>
     </li>
   <% end %>
-  <p>
-    Page: <%= @page %> of <%= @n_page %>
-    <%=
-       if @page != 1 then
-         link_to 'first',  {:controller => 'articles', :action => 'index', :page => 1, :order => @order, :dir => @dir}
-       end
-    %>
-    <%=
-       if @page - 1 > 1 then
-         link_to 'prev',  {:controller => 'articles', :action => 'index', :page => @page - 1, :page => 1, :order => @order, :dir => @dir}
-       end
-    %>
-    <%=
-       if @page + 1 < @n_page then
-         link_to 'next',  {:controller => 'articles', :action => 'index', :page => @page + 1, :page => 1, :order => @order, :dir => @dir}
-       end
-    %>
-    <%=
-       if @page != @n_page then
-         link_to 'last',  {:controller => 'articles', :action => 'index', :page => @n_page, :page => 1, :order => @order, :dir => @dir}
-       end
-    %>
+  <%= render :partial => 'pagebar' %>
   </p>
 </ul>
 

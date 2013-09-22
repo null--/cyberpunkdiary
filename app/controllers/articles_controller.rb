@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    perpage = 10
+    @perpage = 10
 
     @total = Article.count
     @page = (params[:page] || '1').to_i;
@@ -36,13 +36,13 @@ class ArticlesController < ApplicationController
     @order = 'hits' if params[:order] == 'hits'
     @order = 'title' if params[:order] == 'title'
 
-    @articles = Article.find(:all, :order => (@order + " " + @dir), :limit => perpage, :offset => (@page - 1) * perpage);
+    @articles = Article.find(:all, :order => (@order + " " + @dir), :limit => @perpage, :offset => (@page - 1) * @perpage);
 
     # less words! :D
     @order = 'date' if @order == 'created_at'
 
-    @n_page = @total / perpage;
-    @n_page = @n_page + 1 if @n_page * perpage != @total
+    @n_page = @total / @perpage;
+    @n_page = @n_page + 1 if @n_page * @perpage != @total
   end
 
   def show
