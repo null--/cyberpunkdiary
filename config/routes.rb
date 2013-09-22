@@ -14,6 +14,8 @@ ActionController::Routing::Routes.draw do |map|
   map.connect "admin/userlist/", :controller => "admin", :action => "userlist"
   map.connect "admin/articlelist", :controller => "admin", :action => "articlelist"
 
+  map.connect "article/page/:order/:dir/:page", :controller => "articles", :action => "index"
+
   # Adding Controllers
   map.resources :articles
   map.resources :tags
