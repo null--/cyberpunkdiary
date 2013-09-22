@@ -1,34 +1,28 @@
-<% u = User.get_current_user session %>
+<% @user = User.get_current_user session %>
+<% u = @user %>
 
 <h1><%= @article.title %></h1>
-<%
-   if u then
-%>
-  <%= button_to "1337 (" + @article.leet.to_s + ")", {:controller => 'votes', :action => 'edit', :score => '1337', :article_id => @article.id}%>
-  <%= button_to "lame (" + @article.lame.to_s + ")", {:controller => 'votes', :action => 'edit', :score => 'lame', :article_id => @article.id}%>
-  <br><hr>
-<% end %>
-</p>
+<%= render :partial => 'rate' %>
 <p class="rate" font-style="bold">
-        <%= "Hits: " + @article.hits.to_s + " | 1337: " + @article.leet.to_s + " | lame: " + @article.lame.to_s %>
+  <%= "Hits: " + @article.hits.to_s + " | 1337: " + @article.leet.to_s + " | lame: " + @article.lame.to_s %>
 </p>
 <p>
-<%
-   if u and u.id == @article.user_id then
-%>
+  <%
+     if u and (u.id == @article.user_id || u.priv == 10) then
+     %>
   <%= button_to "Edit", {:controller => 'articles', :action => 'edit', :id => @article.id}%>
   <%= button_to "Delete", @article,
-    :confirm => 'Are you sure?', :method => :delete %>
-<br><hr>
-<% end %>
+      :confirm => 'Are you sure?', :method => :delete %>
+  <br><hr>
+  <% end %>
 </p>
 
 <h2> Author </h2>
 <p class="author"><%=h User.find(@article.user_id).nickname %></p>
 
 <% if @article.abstract and @article.abstract.length > 0 then %>
-  <h2>Abstract</h2>
-  <p class = "abstract"><%=h @article.abstract %></p>
+<h2>Abstract</h2>
+<p class = "abstract"><%=h @article.abstract %></p>
 <% end %>
 <br>
 
@@ -37,25 +31,21 @@
   <%= h(@article.body).gsub("\n","<br>") %>
 <p>
 <p class = "info"><%= @article.created_at %></p>
-  <p class = "info">
-    Tags:
-    <% @article.tags.each do |tag| %>
-    <%= link_to tag.name, tag_path(tag) %>
-    <% end %>
-  </p>
-<%
-   if u then
-%>
-  <%= button_to "1337 (" + @article.leet.to_s + ")", {:controller => 'votes', :action => 'edit', :score => '1337', :article_id => @article.id}%>
-  <%= button_to "lame (" + @article.lame.to_s + ")", {:controller => 'votes', :action => 'edit', :score => 'lame', :article_id => @article.id}%>
-<br><hr>
-<% end %>
+<p class = "info">
+  Tags:
+  <% @article.tags.each do |tag| %>
+  <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
 </p>
-
-<h3>Comments (<%= @article.comments.size %>)</h3>
-<hr>
-<%= render :partial => 'articles/comment', :collection => @article.comments %>
+<%= render :partial => 'rate' %>
+</p>
 
 <% if User.is_authorized session then %>
   <%= render :partial => 'comments/form' %>
 <% end %>
+
+<br><br>
+<h3>Comments (<%= @article.comments.size %>)</h3>
+<hr>
+
+<%= render :partial => 'articles/comment' %>

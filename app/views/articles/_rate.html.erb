@@ -1,0 +1,7 @@
+<%
+   if @user then
+%>
+  <%= button_to "1337 (" + @article.leet.to_s + ")", {:controller => 'votes', :action => 'edit', :score => '1337', :article_id => @article.id}%>
+  <%= button_to "lame (" + @article.lame.to_s + ")", {:controller => 'votes', :action => 'edit', :score => 'lame', :article_id => @article.id}%>
+<br><hr>
+<% end %>
