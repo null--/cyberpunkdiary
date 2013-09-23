@@ -7,17 +7,17 @@
     %>
     <%=
        if @page - 1 > 1 then
-         link_to 'prev',  {:controller => 'articles', :action => 'index', :page => @page - 1, :order => @order, :dir => @dir}
+         link_to 'prev',  {:controller => 'articles', :action => 'index', :page => @page - 1, :page => 1, :order => @order, :dir => @dir}
        end
     %>
     <%=
        if @page + 1 < @n_page then
-         link_to 'next',  {:controller => 'articles', :action => 'index', :page => @page + 1, :order => @order, :dir => @dir}
+         link_to 'next',  {:controller => 'articles', :action => 'index', :page => @page + 1, :page => 1, :order => @order, :dir => @dir}
        end
     %>
     <%=
        if @page != @n_page then
-         link_to 'last',  {:controller => 'articles', :action => 'index', :page => @n_page, :order => @order, :dir => @dir}
+         link_to 'last',  {:controller => 'articles', :action => 'index', :page => @n_page, :page => 1, :order => @order, :dir => @dir}
        end
     %>
 </p>

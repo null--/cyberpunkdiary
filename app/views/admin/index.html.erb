@@ -1,4 +1,10 @@
 <h1>Administration</h1>
 <h2>Be Careful!</h2>
 
+<p>
+  # of users: <%= @n_user %><br>
+  # of articles: <%= @n_article %><br>
+  # of comments: <%= @n_comment %><br>
+  # of tags: <%= @n_tag %><br>
+</p>
 <%= button_to "List of users", {:controller => 'admin', :action => 'userlist'} %>

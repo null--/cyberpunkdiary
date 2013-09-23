@@ -1,6 +1,6 @@
 <h1>Diary</h1>
 
-<p> Current Order: <%= @order + " " + @dir %> </p>
+<p> Order by <%= @order + ", " + @dir %> </p>
 <p>
   Change Order:
   <%= link_to 'date:desc - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'date', :dir => 'desc'} %>

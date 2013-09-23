@@ -1,4 +1,14 @@
 <% u = User.get_current_user session %>
+<%
+   # Update total hits
+   
+   ti = Info.first
+   if ti then
+     thits = ti.total_hits
+     ti.total_hits = thits + 1
+     ti.save
+   end
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -14,6 +24,8 @@
              %>
             <%= link_to 'Profile (' + h(u.nickname) + ')', '/users/' + u.id.to_s %>
           <% end %>
+          <br><hr>
+          Total Hits: <%= thits %>
         </profile>
       </panel>
       <header>

@@ -1,1 +1,32 @@
 <h1>List of users</h1>
+
+<p>
+    Page <%= @page %> of <%= @n_page %>
+    <%=
+       if @page != 1 then
+         link_to 'first',  {:controller => 'admin', :action => 'userlist', :page => 1}
+       end
+    %>
+    <%=
+       if @page - 1 > 1 then
+         link_to 'prev',  {:controller => 'admin', :action => 'userlist', :page => @page - 1}
+       end
+    %>
+    <%=
+       if @page + 1 < @n_page then
+         link_to 'next',  {:controller => 'admin', :action => 'userlist', :page => @page + 1}
+       end
+    %>
+    <%=
+       if @page != @n_page then
+         link_to 'last',  {:controller => 'admin', :action => 'userlist', :page => @n_page}
+       end
+    %>
+</p>
+<p>
+  <br>
+  <% @users.each do |user| %>
+  <%= link_to h(user.nickname), {:controller => 'user', :action => 'show', :id => user.id } %>
+  <br>
+  <% end %>
+</p>
