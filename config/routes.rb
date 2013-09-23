@@ -11,8 +11,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect "votes/:score/:article_id/", :controller => "votes", :action => "edit"
 
-  map.connect "admin/userlist/", :controller => "admin", :action => "userlist"
-  map.connect "admin/articlelist", :controller => "admin", :action => "articlelist"
+  map.connect "admin/userlist/:page", :controller => "admin", :action => "userlist"
 
   map.connect "article/page/:order/:dir/:page", :controller => "articles", :action => "index"
 
