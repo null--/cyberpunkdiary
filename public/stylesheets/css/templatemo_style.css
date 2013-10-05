@@ -1,3 +1,85 @@
+flash {
+    background-clip: padding-box;
+    background-image: linear-gradient(rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.7));
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-color: rgba(255, 255, 255, 0.7) rgba(255, 255, 255, 0.5);
+    border-image: none;
+    border-style: none solid solid;
+    border-width: 0 3px 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    margin: 0 auto;
+    padding: 0.4em 0.8em;
+    position: fixed;
+    text-align: center;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
+    /* width: 100%; */
+    /* top: -1.7em; */
+    /* top: 2.2em; */
+    left: 1em;
+    right: 1em;
+    z-index: 90;
+}
+
+flash error {
+    background-image: linear-gradient(rgba(250, 1, 1, 0.7), rgba(250, 0, 0, 0.1));
+}
+
+flash:empty {
+    background: none repeat scroll 0 0 transparent;
+    border-width: 0;
+    box-shadow: none;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.submit_btn {
+	display: block; 
+	width: 70px; 
+	height: 30px; 
+	padding: 5px 8px; 
+	text-align: center; 
+	text-decoration: none; 
+	font-weight: bold;  
+	background-color: #000; 
+	border: 1px solid #292929; 
+	color: #fff; 
+	font-size:12px; 
+	cursor: pointer;
+}
+
+.leet_btn {
+	display: block; 
+	width: 70px; 
+	height: 30px; 
+	padding: 5px 8px; 
+	text-align: center; 
+	text-decoration: none; 
+	font-weight: bold;  
+	background-color: #000; 
+	border: 1px solid #292929; 
+	color: green; 
+	font-size:12px; 
+	cursor: pointer; 
+}
+
+.lame_btn {
+	display: block; 
+	width: 70px; 
+	height: 30px; 
+	padding: 5px 8px; 
+	text-align: center; 
+	text-decoration: none; 
+	font-weight: bold;  
+	background-color: #000; 
+	border: 1px solid #292929; 
+	color: red; 
+	font-size:12px; 
+	cursor: pointer;
+}
+
 /*
 Credit: http://www.templatemo.com
 */
@@ -257,35 +339,35 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	line-height: 38px; 
 }
 
-.post .meta { 
+.meta { 
 	font-size: 10px; 
 	margin-bottom: 20px; 
 }
 
-.post .meta span { 
+.meta span { 
 	float: left; 
 	display: block; 
 	margin-right: 20px; 
 	padding: 5px 0 5px 30px; 
 }
 
-.post .meta span.admin { 
+.meta span.admin { 
 	background: url(/images/images/agent.png) no-repeat; 
 }
 
-.post .meta span.date { 
+.meta span.date { 
 	background: url(/images/images/calendar.png) no-repeat; 
 }
 
-.post .meta span.tag { 
+.meta span.tag { 
 	background: url(/images/images/tag.png) no-repeat; 
 }
 
-.post .meta span.comment { 
+.meta span.comment { 
 	background: url(/images/images/chat.png) no-repeat; 
 }
 
-.post .meta a, .post .meta strong { 
+.meta a, .meta strong { 
 	color: #7b7b7b; 
 	font-weight: 700; 
 }
@@ -527,7 +609,8 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 
 .col { 
 	float: left; 
-	margin: 0 20px 20px 0; 
+	/* margin: 0 20px 20px 0; */
+    margin: 0em 0em 5em 1em
 }
 
 .half { 

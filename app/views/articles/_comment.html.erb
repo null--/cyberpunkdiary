@@ -1,11 +1,17 @@
-<div>
+<div class="comment">
   <% @article.comments.each do |comment| %>
-    <p> <%=h User.find( comment.user_id ).nickname %> said:</p>
+    <p>
+      <div class="meta">
+        <span class="admin"><%=h User.find( comment.user_id ).nickname %> said:</span>
+      </div>
+    </p><br><br>
     <p class = "comment">
       <%= h(comment.body).gsub("\n","<br>") %>
     </p>
-    <p class = "info">
-      up: <%= distance_of_time_in_words(Time.now, comment.created_at)%> ago
+    <p>
+      <div class="meta">
+        <span class="date"><%= distance_of_time_in_words(Time.now, comment.created_at)%> ago</span>
+      </div>
     </p>
   <% end %>
 </div>

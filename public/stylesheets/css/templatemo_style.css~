@@ -1,3 +1,85 @@
+flash {
+    background-clip: padding-box;
+    background-image: linear-gradient(rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.7));
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-color: rgba(255, 255, 255, 0.7) rgba(255, 255, 255, 0.5);
+    border-image: none;
+    border-style: none solid solid;
+    border-width: 0 3px 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    margin: 0 auto;
+    padding: 0.4em 0.8em;
+    position: fixed;
+    text-align: center;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
+    /* width: 100%; */
+    /* top: -1.7em; */
+    /* top: 2.2em; */
+    left: 1em;
+    right: 1em;
+    z-index: 90;
+}
+
+flash error {
+    background-image: linear-gradient(rgba(250, 1, 1, 0.7), rgba(250, 0, 0, 0.1));
+}
+
+flash:empty {
+    background: none repeat scroll 0 0 transparent;
+    border-width: 0;
+    box-shadow: none;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.submit_btn {
+	display: block; 
+	width: 70px; 
+	height: 30px; 
+	padding: 5px 8px; 
+	text-align: center; 
+	text-decoration: none; 
+	font-weight: bold;  
+	background-color: #000; 
+	border: 1px solid #292929; 
+	color: #fff; 
+	font-size:12px; 
+	cursor: pointer 
+}
+
+.leet_btn {
+	display: block; 
+	width: 70px; 
+	height: 30px; 
+	padding: 5px 8px; 
+	text-align: center; 
+	text-decoration: none; 
+	font-weight: bold;  
+	background-color: #000; 
+	border: 1px solid #292929; 
+	color: green; 
+	font-size:12px; 
+	cursor: pointer 
+}
+
+.lame_btn {
+	display: block; 
+	width: 70px; 
+	height: 30px; 
+	padding: 5px 8px; 
+	text-align: center; 
+	text-decoration: none; 
+	font-weight: bold;  
+	background-color: #000; 
+	border: 1px solid #292929; 
+	color: red; 
+	font-size:12px; 
+	cursor: pointer 
+}
+
 /*
 Credit: http://www.templatemo.com
 */
@@ -12,7 +94,7 @@ body {
 	background-color: #000;
 	background-repeat: repeat-x;
 	background-position: top;
-	background-image: url(images/images/templatemo_body.jpg);
+	background-image: url(/images/images/templatemo_body.jpg);
 }
 
 a, a:link, a:visited { 
@@ -29,7 +111,7 @@ a.more {
 	height: 22px; 
 	line-height: 22px; 
 	text-align: center; 
-	background: url(images/images/templatemo_button.png) no-repeat; 
+	background: url(/images/images/templatemo_button.png) no-repeat; 
 }
 
 p { margin: 0 0 10px 0; padding: 0; }
@@ -73,7 +155,7 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 	color:#666; 
 	margin: 0 0 10px 0; 
 	padding: 0 5px 0 20px; 
-	background: url(images/images/templatemo_list.png) no-repeat scroll 0 5px;  
+	background: url(/images/images/templatemo_list.png) no-repeat scroll 0 5px;  
 }
 
 .templatemo_list li a { 
@@ -94,13 +176,13 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 #templatmeo_header {
 	width: 940px;
 	padding: 40px 10px 20px;
-	background: url(images/images/templatemo_header.png) bottom center no-repeat;
+	background: url(/images/images/templatemo_header.png) bottom center no-repeat;
 }
 
 #templatemo_menu {
 	width: 940px;
 	height: 70px;
-	background: url(images/images/templatemo_menu.jpg) no-repeat;
+	background: url(/images/images/templatemo_menu.jpg) no-repeat;
 	position:relative;
 }
 
@@ -144,14 +226,14 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 #templatemo_footer_wrapper {
 	clear: both;
 	width: 100%;
-	background: #1c1c1c url(images/images/templatemo_footer_wrapper.jpg) repeat-x top;
+	background: #1c1c1c url(/images/images/templatemo_footer_wrapper.jpg) repeat-x top;
 }
 
 #templatemo_footer {
 	width: 940px;
 	margin: 0 auto;
 	padding: 30px 10px;
-	background: url(images/images/templatemo_footer.jpg) top center no-repeat
+	background: url(/images/images/templatemo_footer.jpg) top center no-repeat
 }
 
 #site_title { 
@@ -171,14 +253,14 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 	height: 38px; 
 	color: #acacac; 
 	text-indent: -10000px; 
-	background: url(images/images/templatemo_logo.png) no-repeat center left; 
+	background: url(/images/images/templatemo_logo.png) no-repeat center left; 
 }
 
 #templatemo_search { 
 	float: right; 
 	width: 220px; 
 	height: 37px; 
-	background: url(images/images/templatemo_search.png) no-repeat; 
+	background: url(/images/images/templatemo_search.png) no-repeat; 
 }
 
 #templatemo_search form {
@@ -239,7 +321,7 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	clear: both;
 	padding-bottom: 40px;
 	margin-bottom: 40px;
-	background: url(images/images/templatemo_divider.png) repeat-x bottom 
+	background: url(/images/images/templatemo_divider.png) repeat-x bottom 
 }
 
 .post img { 
@@ -270,19 +352,19 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 }
 
 .post .meta span.admin { 
-	background: url(images/images/agent.png) no-repeat; 
+	background: url(/images/images/agent.png) no-repeat; 
 }
 
 .post .meta span.date { 
-	background: url(images/images/calendar.png) no-repeat; 
+	background: url(/images/images/calendar.png) no-repeat; 
 }
 
 .post .meta span.tag { 
-	background: url(images/images/tag.png) no-repeat; 
+	background: url(/images/images/tag.png) no-repeat; 
 }
 
 .post .meta span.comment { 
-	background: url(images/images/chat.png) no-repeat; 
+	background: url(/images/images/chat.png) no-repeat; 
 }
 
 .post .meta a, .post .meta strong { 
@@ -513,7 +595,7 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	margin: 0 0 15px; 
 	padding: 0 0 15px 60px; 
 	border-bottom: 1px dotted #4e4e4e; 
-	background: url(images/images/twitter_48.png) left center no-repeat; 
+	background: url(/images/images/twitter_48.png) left center no-repeat; 
 }
 
 .footer_social_button { 
@@ -527,7 +609,8 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 
 .col { 
 	float: left; 
-	margin: 0 20px 20px 0; 
+	/* margin: 0 20px 20px 0; */
+    margin: 0em 0em 5em 1em
 }
 
 .half { 

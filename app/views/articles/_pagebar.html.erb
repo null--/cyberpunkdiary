@@ -1,23 +1,35 @@
-<p>
-    Page <%= @page %> of <%= @n_page %>, Articles from <%= (@page - 1) * @perpage + 1 %> to <%= if @page + @perpage < @total then @page + @perpage else @total end%> of <%= @total %>.
+<div class="pagging">
+  <p>Page <%= @page %> of <%= @n_page %>, Articles from <%= (@page - 1) * @perpage + 1 %> to <%= if @page + @perpage < @total then @page + @perpage else @total end%> of <%= @total %></p>
+  <ul>
+    <li>
     <%=
        if @page != 1 then
          link_to 'first',  {:controller => 'articles', :action => 'index', :page => 1, :order => @order, :dir => @dir}
        end
     %>
+    </li>
+    <li>
     <%=
        if @page - 1 > 1 then
          link_to 'prev',  {:controller => 'articles', :action => 'index', :page => @page - 1, :order => @order, :dir => @dir}
        end
     %>
+    </li>
+    <li>
     <%=
        if @page + 1 < @n_page then
          link_to 'next',  {:controller => 'articles', :action => 'index', :page => @page + 1, :order => @order, :dir => @dir}
        end
     %>
+    </li>
+    <li>
     <%=
        if @page != @n_page then
          link_to 'last',  {:controller => 'articles', :action => 'index', :page => @n_page, :order => @order, :dir => @dir}
        end
     %>
-</p>
+    </li>
+  </ul>
+  <br>
+</div>
+<div class="cleaner"></div>

@@ -15,26 +15,31 @@
   </p>
   <hr>
   <%= render :partial => 'pagebar' %>
-  <ul>
+    <% i = 0 %>
     <% @articles.each do |article| %>
-    <li class = "article-list">
-      <%= link_to h(article.title), article_path(article) %>
-      <br><i>by <%= link_to h(article.user.nickname), user_path(article.user) %> </i>
-      <br>
-      <% if article.abstract then %>
-      <p class = "abstract"><%=h article.abstract %></p>
+      <% if i % 3 == 2 then %>
+        <div class="col one_third gallery_box no_margin_right">
+      <% else %>
+        <div class="col one_third gallery_box">
       <% end %>
-      <br>
-      <p class="rate">
-        <%= "Hits(" + article.hits.to_s + ") 1337(" + article.leet.to_s + ") lame(" + article.lame.to_s + ")"%>
-      </p>
-      <p class = "info">up: <%= article.created_at %> | Comments(<%= article.comments.size %>)</p>
-      <!-- <%#
-           <%= link_to "Create a New Article" new_article_path %>
-           %> -->
-      <hr>
-    </li>
+          <a rel="lightbox[portfolio]" href=<%= '"' + article_path(article) + '"' %> ><img class="image_frame" alt=<%= '"' + article.title + '"'%> src="/images/images/portfolio/06.jpg"></a>
+          <h5><%=h article.title %></h5>
+          <div class="meta">
+        <span class="admin"> <%=h article.user.nickname %></span>
+        <span class="date"><%= article.created_at %></span>
+        <span class="comment">comments:<%= article.comments.size %></span>
+      </div>
+      <div class="cleaner"></div>
+          <p><h6>
+            <%= "Hits(" + article.hits.to_s + ") 1337(" + article.leet.to_s + ") lame(" + article.lame.to_s + ")"%> <br>
+          </h6></p>
+        <% if article.abstract then %>
+          <p><%=h article.abstract.gsub("\n", " ") %></p>
+        <% end %>
+      </div>
+      <% i = i + 1 %>
     <% end %>
+    <div class="cleaner"></div>
     <%= render :partial => 'pagebar' %>
 </p>
 </ul>

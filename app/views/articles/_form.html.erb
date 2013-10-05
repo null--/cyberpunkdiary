@@ -1,3 +1,5 @@
+<div id="contact_form">
+  
 <% form_for(@article) do |f| %>
   <ul>
   <% @article.errors.full_messages.each do |error| %>
@@ -20,6 +22,8 @@
     <%=h f.text_area :body %>
   </p>
   <p>
-    <%= f.submit "Save"%>
+    <%= f.submit "Save" %>
   </p>
 <% end %>
+
+</div>
