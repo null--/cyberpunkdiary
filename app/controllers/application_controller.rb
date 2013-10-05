@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
        params[:action] == 'destroy'
     then
       if not User.is_authorized session then
-        flash[:error] = 'Sorry! That page was launched to Mars by NASA, go find it there! \m/'
+        flash[:error] = 'Sorry! NASA launched that page to Mars, yesterday! go find it there. \m/'
         redirect_to_index
       end
       return
@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
   end
 
   def redirect_to_index_error
-    flash[:error] = 'Sorry! That page was launched to Mars by NASA, go find it there! :D'
+    flash[:error] = 'Sorry! NASA launched that page to Mars, yesterday! go find it there. :D'
     respond_to do |format|
       format.html { redirect_to( articles_url ) }
       format.xml { head :ok }
