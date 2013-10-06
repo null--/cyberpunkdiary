@@ -16348,3 +16348,172 @@ Rendered articles/_pagebar (0.3ms)
   [4;36;1mInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
   [4;35;1mInfo Update (0.6ms)[0m   [0mUPDATE "infos" SET "total_hits" = 369, "updated_at" = '2013-10-05 16:56:26' WHERE "id" = 1[0m
 Completed in 380ms (View: 369, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-10-05 20:28:16) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '4719099bb332fca14de9a94202f70597') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (1.1ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 370, "updated_at" = '2013-10-05 16:58:17' WHERE "id" = 1[0m
+Completed in 530ms (View: 476, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-10-06 08:24:57) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+  [4;35;1mInfo Load (0.5ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (41.6ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 371, "updated_at" = '2013-10-06 04:54:57' WHERE "id" = 1[0m
+Completed in 346ms (View: 304, DB: 42) | 200 OK [http://127.0.0.1/]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-10-06 08:26:07) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+  [4;36;1mInfo Load (1.0ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (1.8ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 04:56:07', "total_hits" = 372 WHERE "id" = 1[0m
+Completed in 427ms (View: 423, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 08:26:13) [GET]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (1.1ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.6ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 04:56:13', "total_hits" = 373 WHERE "id" = 1[0m
+Completed in 475ms (View: 398, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 08:26:59) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.4ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mInfo Load (0.4ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.7ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 04:56:59', "total_hits" = 374 WHERE "id" = 1[0m
+Completed in 499ms (View: 485, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 08:27:10) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.7ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 04:57:10', "total_hits" = 375 WHERE "id" = 1[0m
+Completed in 542ms (View: 533, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 08:27:46) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.6ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 04:57:46', "total_hits" = 376 WHERE "id" = 1[0m
+Completed in 451ms (View: 439, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 08:27:50) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Update (0.6ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2013-10-06 04:57:50', "hits" = 3 WHERE "id" = 7[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 7)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_rate (0.7ms)
+Rendered articles/_rate (0.0ms)
+Rendered articles/_comment (0.8ms)
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 04:57:51', "total_hits" = 377 WHERE "id" = 1[0m
+Completed in 688ms (View: 340, DB: 4) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-06 08:27:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 08:28:22) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.5ms)
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 04:58:23', "total_hits" = 378 WHERE "id" = 1[0m
+Completed in 408ms (View: 397, DB: 3) | 200 OK [http://127.0.0.1/articles]

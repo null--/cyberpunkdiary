@@ -30,9 +30,9 @@
         <span class="comment">comments:<%= article.comments.size %></span>
       </div>
       <div class="cleaner"></div>
-          <p><h6>
+          <p class="position">
             <%= "Hits(" + article.hits.to_s + ") 1337(" + article.leet.to_s + ") lame(" + article.lame.to_s + ")"%> <br>
-          </h6></p>
+          </p>
         <% if article.abstract then %>
           <p><%=h article.abstract.gsub("\n", " ") %></p>
         <% end %>
