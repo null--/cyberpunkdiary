@@ -531,6 +531,17 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	margin-top: 5px;
 }
 
+#contact_form form #article_tag_list{ 
+	width: 55em; 
+	padding: 5px; 
+	color: #fff;
+	background: #000;
+	border: 1px solid #292929;
+	font-size: 12px;
+	font-family: Tahoma, Geneva, sans-serif;
+	margin-top: 5px;
+}
+
 #contact_form form label { 
 	display: block; 
 	width: 100px; 
@@ -539,8 +550,20 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 }
 
 #contact_form form textarea { 
-	width: 398px; 
-	height: 200px; 
+	width: 55em; 
+	height: 30em; 
+	padding: 5px; 
+	color: #fff;
+	background: #000;
+	border: 1px solid #292929;
+	font-size: 12px;
+	font-family: Tahoma, Geneva, sans-serif;
+	margin-top: 5px;
+}
+
+#contact_form form #article_abstract{ 
+	width: 55em; 
+	height: 7em; 
 	padding: 5px; 
 	color: #fff;
 	background: #000;

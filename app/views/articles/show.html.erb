@@ -19,7 +19,7 @@
       <br><br><hr>
       
       <div class="meta">
-        <span class="admin"> <%=h User.find(@article.user_id).nickname %></span>
+        <span class="admin"> <%= link_to h(@article.user.nickname), (user_path @article.user) %></span>
         <span class="date"><%= @article.created_at %></span>
         <span class="tag">
           <% @article.tags.each do |tag| %>

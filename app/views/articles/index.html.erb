@@ -25,9 +25,9 @@
           <a rel="lightbox[portfolio]" href=<%= '"' + article_path(article) + '"' %> ><img class="image_frame" alt=<%= '"' + article.title + '"'%> src="/images/images/portfolio/06.jpg"></a>
           <h5><%=h article.title %></h5>
           <div class="meta">
-        <span class="admin"> <%=h article.user.nickname %></span>
+        <span class="admin"> <%= link_to h(article.user.nickname), (user_path article.user) %></span>
+        <span class="comment"><%= article.comments.size %></span>
         <span class="date"><%= article.created_at %></span>
-        <span class="comment">comments:<%= article.comments.size %></span>
       </div>
       <div class="cleaner"></div>
           <p class="position">

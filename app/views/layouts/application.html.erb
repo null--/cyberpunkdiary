@@ -74,26 +74,29 @@ ddsmoothmenu.init({
     <div class="ddsmoothmenu" id="templatemo_menu">
       <ul>
         <li><a class="selected" href="/">Home<span>back to the bay</span></a></li>
-        <li style="z-index: 100;"><a href="/mypage/whoami" class="">About [CPD]<span>#whoami</span></a>
-          <ul style="display: none; top: 62px; visibility: visible;">
-            <li><a href="/mypage/bugs">bug report</a></li>
-          </ul>
-        </li>
-        <li style="z-index: 99;"><a href="/articles" class="">Diary<span>read/write/execute</span></a>
+        <li style="z-index: 99;"><a href="#" class="">Diary<span>read/write/execute</span></a>
           <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">
+            <li><a href="/articles" class="">Open diary</a></li>
             <li><a href="/articles/new">Create a new diary</a></li>
           </ul>
 	    </li>
         <% if !u then %>
-          <li><a class="selected" href="/">Register<span>join cyberpunks, right now!</span></a></li>
+          <li><a class="selected" href="/">Register<span>you're one click away from cyberpunks</span></a></li>
           <li><a class="selected" href="/users/login">Login<span>as a cyberpunk</span></a></li>
         <% else %>
-          <li style="z-index: 99;"><a href="/articles" class="">#user: <%= u.nickname %><span>Profile</span></a>
+          <li style="z-index: 99;"><a href="#" class="">#user: <%= u.nickname %><span>chmod 755</span></a>
           <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">
-            <li><a href="#">Logout</a></li>
+            <li><%= link_to 'Profile', user_path(u) %></li>
+            <li><%= link_to 'Logout', {:controller => 'users', :action => 'logout', :id => u.id} %></li>
           </ul>
 	    </li>
         <% end %>
+        <li style="z-index: 100;"><a href="#" class="">About [CPD]<span>#whoami</span></a>
+          <ul style="display: none; top: 62px; visibility: visible;">
+            <li><a href="/mypage/whoami">About</a></li>
+            <li><a href="/mypage/bugs">[BUG] Report</a></li>
+          </ul>
+        </li>
       </ul>
       <br style="clear: left" />
       <a target="_blank" title="OnlyImage from ru.onlyimage.com" href="http://ru.onlyimage.com" class="templatemo_menu_header">

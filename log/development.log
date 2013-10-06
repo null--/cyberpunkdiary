@@ -17322,3 +17322,1531 @@ ActionController::RoutingError (No route matches "/images/images/templatemo_divi
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+
+
+Processing MypageController#whoami (for 127.0.0.1 at 2013-10-06 09:00:41) [GET]
+Rendering template within layouts/application
+Rendering mypage/whoami
+  [4;36;1mInfo Load (0.9ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.7ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:30:41', "total_hits" = 407 WHERE "id" = 1[0m
+Completed in 555ms (View: 552, DB: 2) | 200 OK [http://127.0.0.1/mypage/whoami]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:00:44) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.4ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.5ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:30:44', "total_hits" = 408 WHERE "id" = 1[0m
+Completed in 462ms (View: 450, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:17:08) [GET]
+  Parameters: {"dir"=>"desc", "order"=>"date", "page"=>"2"}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 5[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 2) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.5ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:47:08', "total_hits" = 409 WHERE "id" = 1[0m
+Completed in 293ms (View: 282, DB: 3) | 200 OK [http://127.0.0.1/article/page/date/desc/2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:17:08) [GET]
+  Parameters: {"dir"=>"desc", "order"=>"date", "page"=>"2"}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 5[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.5ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 2) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mInfo Load (0.5ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (28.9ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:47:08', "total_hits" = 410 WHERE "id" = 1[0m
+Completed in 385ms (View: 340, DB: 31) | 200 OK [http://127.0.0.1/article/page/date/desc/2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:17:59) [GET]
+  Parameters: {"dir"=>"desc", "order"=>"date", "page"=>"1"}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.4ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.5ms)
+  [4;36;1mInfo Load (0.4ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (43.6ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:47:59', "total_hits" = 411 WHERE "id" = 1[0m
+Completed in 331ms (View: 275, DB: 47) | 200 OK [http://127.0.0.1/article/page/date/desc/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:19:09) [GET]
+  Parameters: {"dir"=>"desc", "order"=>"date", "page"=>"1"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.5ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:49:09', "total_hits" = 412 WHERE "id" = 1[0m
+Completed in 331ms (View: 320, DB: 3) | 200 OK [http://127.0.0.1/article/page/date/desc/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 09:19:11) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Update (0.7ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2013-10-06 05:49:11', "hits" = 5 WHERE "id" = 7[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 7)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_rate (0.1ms)
+Rendered articles/_rate (0.0ms)
+Rendered articles/_comment (0.1ms)
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 05:49:12', "total_hits" = 413 WHERE "id" = 1[0m
+Completed in 644ms (View: 286, DB: 3) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-06 09:19:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 09:19:50) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;36;1mArticle Update (0.5ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2013-10-06 05:49:50', "hits" = 6 WHERE "id" = 7[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 7)) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_rate (0.1ms)
+Rendered articles/_rate (0.1ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mInfo Load (0.4ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.9ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:49:51', "total_hits" = 414 WHERE "id" = 1[0m
+Completed in 577ms (View: 275, DB: 3) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-06 09:19:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 09:20:10) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Update (0.6ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2013-10-06 05:50:10', "hits" = 7 WHERE "id" = 7[0m
+Rendering template within layouts/application
+Rendering articles/show
+ERROR: compiling _run_erb_app47views47articles47show46html46erb RAISED compile error
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:22: syntax error, unexpected tIVAR, expecting kDO or '{' or '('
+...path @article.user, h @article.user.nickname ).to_s); @outpu...
+                              ^
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:25: syntax error, unexpected kDO_BLOCK, expecting kEND
+;  @article.tags.each do |tag| ; @output_buffer.concat "\n          "
+                        ^
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:61: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47articles47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"templatemo_main\">\n  <div id=\"content\">\n    <div class=\"post\">\n\n      "
+
+
+
+;  @user = User.get_current_user session ; @output_buffer.concat "\n      "
+;  u = @user ; @output_buffer.concat "\n\n      <h1>"
+
+; @output_buffer.concat(( @article.title ).to_s); @output_buffer.concat "</h1>\n\n      <p>"
+
+; 
+           if u and (u.id == @article.user_id || u.priv == 10) then
+           ; @output_buffer.concat "\n        "
+; @output_buffer.concat(( button_to "Edit", {:controller => 'articles', :action => 'edit', :id => @article.id}, :class => "submit_btn float_l" ).to_s); @output_buffer.concat "\n        "
+; @output_buffer.concat(( button_to "Delete", @article, :confirm => 'Are you sure?', :method => :delete, :class => "submit_btn float_r").to_s); @output_buffer.concat "\n        "
+;  end ; @output_buffer.concat "\n\n      "
+
+;  if @article.abstract and @article.abstract.length > 0 then ; @output_buffer.concat "\n      </p>\n      <br><br><hr>\n      \n      <div class=\"meta\">\n        <span class=\"admin\"> "
+
+
+
+
+; @output_buffer.concat(( link_to user_path @article.user, h @article.user.nickname ).to_s); @output_buffer.concat "</span>\n        <span class=\"date\">"
+; @output_buffer.concat(( @article.created_at ).to_s); @output_buffer.concat "</span>\n        <span class=\"tag\">\n          "
+
+;  @article.tags.each do |tag| ; @output_buffer.concat "\n          "
+; @output_buffer.concat(( link_to tag.name, tag_path(tag) ).to_s); @output_buffer.concat "\n          "
+;  end ; @output_buffer.concat "\n        </span>\n        <span class=\"comment\">comments:"
+
+; @output_buffer.concat(( @article.comments.size ).to_s); @output_buffer.concat "</span>\n      </div>\n      <div class=\"cleaner\"></div>\n\n      <p class=\"position\"> "
+
+
+
+; @output_buffer.concat(( "Hits: " + @article.hits.to_s + " | 1337: " + @article.leet.to_s + " | lame: " + @article.lame.to_s ).to_s); @output_buffer.concat " <p>\n      "
+; @output_buffer.concat(( render :partial => 'rate' ).to_s); @output_buffer.concat "\n\n      <h2>Abstract</h2>\n      <p class = \"abstract\">"
+
+
+; @output_buffer.concat((h @article.abstract ).to_s); @output_buffer.concat "</p>\n      "
+;  end ; @output_buffer.concat "\n      <br>\n\n      <h2>Full Story</h2>\n      <p class = \"article\">\n        "
+
+
+
+
+; @output_buffer.concat(( h(@article.body).gsub("\n","<br>") ).to_s); @output_buffer.concat "\n      <p>\n        "
+
+; @output_buffer.concat(( render :partial => 'rate' ).to_s); @output_buffer.concat "\n\n    </div> <!-- post -->\n    "
+
+
+;  if User.is_authorized session then ; @output_buffer.concat "\n    "
+; @output_buffer.concat(( render :partial => 'comments/form' ).to_s); @output_buffer.concat "\n    "
+;  end ; @output_buffer.concat "\n\n    <br><br>\n    <h3>Comments ("
+
+
+; @output_buffer.concat(( @article.comments.size ).to_s); @output_buffer.concat ")</h3>\n    <hr>\n\n    "
+
+
+; @output_buffer.concat(( render :partial => 'articles/comment' ).to_s); @output_buffer.concat "\n\n  </div> <!-- content -->\n</div> <!-- main -->\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:61:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/commands/server.rb:111
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:22: syntax error, unexpected tIVAR, expecting kDO or '{' or '('
+...path @article.user, h @article.user.nickname ).to_s); @outpu...
+                              ^
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:25: syntax error, unexpected kDO_BLOCK, expecting kEND
+;  @article.tags.each do |tag| ; @output_buffer.concat "\n          "
+                        ^
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:61: syntax error, unexpected kENSURE, expecting $end) on line #22 of app/views/articles/show.html.erb:
+19:       <br><br><hr>
+20:       
+21:       <div class="meta">
+22:         <span class="admin"> <%= link_to user_path @article.user, h @article.user.nickname %></span>
+23:         <span class="date"><%= @article.created_at %></span>
+24:         <span class="tag">
+25:           <% @article.tags.each do |tag| %>
+
+    app/views/articles/show.html.erb:61:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (22.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 09:20:16) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Update (0.8ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2013-10-06 05:50:16', "hits" = 8 WHERE "id" = 7[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 7)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_rate (0.1ms)
+Rendered articles/_rate (0.0ms)
+Rendered articles/_comment (0.1ms)
+  [4;35;1mInfo Load (0.2ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 05:50:17', "total_hits" = 415 WHERE "id" = 1[0m
+Completed in 651ms (View: 337, DB: 3) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-06 09:20:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 09:20:41) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;36;1mArticle Update (0.6ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2013-10-06 05:50:41', "hits" = 9 WHERE "id" = 7[0m
+Rendering template within layouts/application
+Rendering articles/show
+ERROR: compiling _run_erb_app47views47articles47show46html46erb RAISED compile error
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:22: syntax error, unexpected tIVAR, expecting kDO or '{' or '('
+...ath @article.user), h @article.user.nickname ).to_s); @outpu...
+                              ^
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:25: syntax error, unexpected kDO_BLOCK, expecting kEND
+;  @article.tags.each do |tag| ; @output_buffer.concat "\n          "
+                        ^
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:61: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47articles47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"templatemo_main\">\n  <div id=\"content\">\n    <div class=\"post\">\n\n      "
+
+
+
+;  @user = User.get_current_user session ; @output_buffer.concat "\n      "
+;  u = @user ; @output_buffer.concat "\n\n      <h1>"
+
+; @output_buffer.concat(( @article.title ).to_s); @output_buffer.concat "</h1>\n\n      <p>"
+
+; 
+           if u and (u.id == @article.user_id || u.priv == 10) then
+           ; @output_buffer.concat "\n        "
+; @output_buffer.concat(( button_to "Edit", {:controller => 'articles', :action => 'edit', :id => @article.id}, :class => "submit_btn float_l" ).to_s); @output_buffer.concat "\n        "
+; @output_buffer.concat(( button_to "Delete", @article, :confirm => 'Are you sure?', :method => :delete, :class => "submit_btn float_r").to_s); @output_buffer.concat "\n        "
+;  end ; @output_buffer.concat "\n\n      "
+
+;  if @article.abstract and @article.abstract.length > 0 then ; @output_buffer.concat "\n      </p>\n      <br><br><hr>\n      \n      <div class=\"meta\">\n        <span class=\"admin\"> "
+
+
+
+
+; @output_buffer.concat(( link_to (user_path @article.user), h @article.user.nickname ).to_s); @output_buffer.concat "</span>\n        <span class=\"date\">"
+; @output_buffer.concat(( @article.created_at ).to_s); @output_buffer.concat "</span>\n        <span class=\"tag\">\n          "
+
+;  @article.tags.each do |tag| ; @output_buffer.concat "\n          "
+; @output_buffer.concat(( link_to tag.name, tag_path(tag) ).to_s); @output_buffer.concat "\n          "
+;  end ; @output_buffer.concat "\n        </span>\n        <span class=\"comment\">comments:"
+
+; @output_buffer.concat(( @article.comments.size ).to_s); @output_buffer.concat "</span>\n      </div>\n      <div class=\"cleaner\"></div>\n\n      <p class=\"position\"> "
+
+
+
+; @output_buffer.concat(( "Hits: " + @article.hits.to_s + " | 1337: " + @article.leet.to_s + " | lame: " + @article.lame.to_s ).to_s); @output_buffer.concat " <p>\n      "
+; @output_buffer.concat(( render :partial => 'rate' ).to_s); @output_buffer.concat "\n\n      <h2>Abstract</h2>\n      <p class = \"abstract\">"
+
+
+; @output_buffer.concat((h @article.abstract ).to_s); @output_buffer.concat "</p>\n      "
+;  end ; @output_buffer.concat "\n      <br>\n\n      <h2>Full Story</h2>\n      <p class = \"article\">\n        "
+
+
+
+
+; @output_buffer.concat(( h(@article.body).gsub("\n","<br>") ).to_s); @output_buffer.concat "\n      <p>\n        "
+
+; @output_buffer.concat(( render :partial => 'rate' ).to_s); @output_buffer.concat "\n\n    </div> <!-- post -->\n    "
+
+
+;  if User.is_authorized session then ; @output_buffer.concat "\n    "
+; @output_buffer.concat(( render :partial => 'comments/form' ).to_s); @output_buffer.concat "\n    "
+;  end ; @output_buffer.concat "\n\n    <br><br>\n    <h3>Comments ("
+
+
+; @output_buffer.concat(( @article.comments.size ).to_s); @output_buffer.concat ")</h3>\n    <hr>\n\n    "
+
+
+; @output_buffer.concat(( render :partial => 'articles/comment' ).to_s); @output_buffer.concat "\n\n  </div> <!-- content -->\n</div> <!-- main -->\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:61:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.18/lib/commands/server.rb:111
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:22: syntax error, unexpected tIVAR, expecting kDO or '{' or '('
+...ath @article.user), h @article.user.nickname ).to_s); @outpu...
+                              ^
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:25: syntax error, unexpected kDO_BLOCK, expecting kEND
+;  @article.tags.each do |tag| ; @output_buffer.concat "\n          "
+                        ^
+/media/null/project/github/cyberpunkdiary/app/views/articles/show.html.erb:61: syntax error, unexpected kENSURE, expecting $end) on line #22 of app/views/articles/show.html.erb:
+19:       <br><br><hr>
+20:       
+21:       <div class="meta">
+22:         <span class="admin"> <%= link_to (user_path @article.user), h @article.user.nickname %></span>
+23:         <span class="date"><%= @article.created_at %></span>
+24:         <span class="tag">
+25:           <% @article.tags.each do |tag| %>
+
+    app/views/articles/show.html.erb:61:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 09:20:55) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;36;1mArticle Update (0.8ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2013-10-06 05:50:55', "hits" = 10 WHERE "id" = 7[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 7)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_rate (0.1ms)
+Rendered articles/_rate (0.0ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.7ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:50:56', "total_hits" = 416 WHERE "id" = 1[0m
+Completed in 657ms (View: 312, DB: 3) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-06 09:20:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 09:21:00) [GET]
+  Parameters: {"id"=>"punkbot"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=punkbot):
+  app/controllers/articles_controller.rb:49:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 09:21:10) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;36;1mArticle Update (0.5ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2013-10-06 05:51:10', "hits" = 11 WHERE "id" = 7[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 7)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_rate (0.1ms)
+Rendered articles/_rate (0.0ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.6ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:51:10', "total_hits" = 417 WHERE "id" = 1[0m
+Completed in 663ms (View: 365, DB: 3) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-06 09:21:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 09:21:26) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Update (1.5ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2013-10-06 05:51:26', "hits" = 12 WHERE "id" = 7[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 7)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_rate (0.1ms)
+Rendered articles/_rate (0.0ms)
+Rendered articles/_comment (0.1ms)
+  [4;35;1mInfo Load (0.2ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 05:51:27', "total_hits" = 418 WHERE "id" = 1[0m
+Completed in 654ms (View: 345, DB: 4) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-06 09:21:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:21:31) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+
+ActionView::TemplateError (undefined method `user' for nil:NilClass) on line #28 of app/views/articles/index.html.erb:
+25:           <a rel="lightbox[portfolio]" href=<%= '"' + article_path(article) + '"' %> ><img class="image_frame" alt=<%= '"' + article.title + '"'%> src="/images/images/portfolio/06.jpg"></a>
+26:           <h5><%=h article.title %></h5>
+27:           <div class="meta">
+28:         <span class="admin"> <%= link_to h(@article.user.nickname), (user_path @article.user) %></span>
+29:         <span class="date"><%= article.created_at %></span>
+30:         <span class="comment">comments:<%= article.comments.size %></span>
+31:       </div>
+
+    app/views/articles/index.html.erb:28
+    app/views/articles/index.html.erb:19:in `each'
+    app/views/articles/index.html.erb:19
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (80.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:21:40) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 05:51:40', "total_hits" = 419 WHERE "id" = 1[0m
+Completed in 321ms (View: 311, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:22:08) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.4ms)
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (1.1ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 05:52:08', "total_hits" = 420 WHERE "id" = 1[0m
+Completed in 348ms (View: 336, DB: 5) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:22:22) [GET]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.3ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 05:52:22', "total_hits" = 421 WHERE "id" = 1[0m
+Completed in 470ms (View: 458, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 09:22:36) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;36;1mArticle Update (1.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2013-10-06 05:52:36', "hits" = 36 WHERE "id" = 8[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 8)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+Rendered articles/_rate (0.1ms)
+Rendered articles/_rate (0.0ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mInfo Load (0.4ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.6ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:52:37', "total_hits" = 422 WHERE "id" = 1[0m
+Completed in 647ms (View: 359, DB: 4) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-06 09:22:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:22:42) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.5ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (8.6ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.6ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:52:42', "total_hits" = 423 WHERE "id" = 1[0m
+Completed in 388ms (View: 361, DB: 13) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-06 09:22:47) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+  [4;35;1mArticle Update (1.2ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2013-10-06 05:52:47', "hits" = 48 WHERE "id" = 6[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 6)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+Rendered articles/_rate (0.1ms)
+Rendered articles/_rate (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendered articles/_comment (2.9ms)
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.6ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:52:48', "total_hits" = 424 WHERE "id" = 1[0m
+Completed in 535ms (View: 259, DB: 4) | 200 OK [http://127.0.0.1/articles/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-06 09:22:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:23:27) [GET]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.5ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.5ms)
+  [4;36;1mInfo Load (0.7ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (1.0ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:53:27', "total_hits" = 425 WHERE "id" = 1[0m
+Completed in 340ms (View: 319, DB: 6) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:24:26) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.5ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:54:26', "total_hits" = 426 WHERE "id" = 1[0m
+Completed in 313ms (View: 303, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing UsersController#login (for 127.0.0.1 at 2013-10-06 09:25:12) [GET]
+Rendering template within layouts/application
+Rendering users/login
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 05:55:12', "total_hits" = 427 WHERE "id" = 1[0m
+Completed in 288ms (View: 279, DB: 2) | 200 OK [http://127.0.0.1/users/login]
+
+
+Processing UsersController#authenticate (for 127.0.0.1 at 2013-10-06 09:25:16) [POST]
+  Parameters: {"authenticity_token"=>"jL2n1+p4NUwIj+hrk0t0CxbI9O491SORubFA1CY+VIw=", "commit"=>"Login", "user"=>{"password"=>"test", "username"=>"_null_"}}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = '_null_') LIMIT 1[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2013-10-06 05:55:16', "session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 318ms (DB: 1) | 302 Found [http://127.0.0.1/users/authenticate]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:25:17) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.4ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.5ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 05:55:17', "total_hits" = 428 WHERE "id" = 1[0m
+Completed in 279ms (View: 268, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:25:48) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 05:55:48', "total_hits" = 429 WHERE "id" = 1[0m
+Completed in 343ms (View: 332, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:25:51) [GET]
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (18.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.5ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (1.1ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 05:55:51', "total_hits" = 430 WHERE "id" = 1[0m
+Completed in 329ms (View: 305, DB: 3) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:27:19) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (10.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.5ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (1.9ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 05:57:19', "total_hits" = 431 WHERE "id" = 1[0m
+Completed in 304ms (View: 288, DB: 3) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:30:57) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (9.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:00:57', "total_hits" = 432 WHERE "id" = 1[0m
+Completed in 352ms (View: 340, DB: 2) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:31:44) [GET]
+  [4;35;1mUser Load (1.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (11.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:01:44', "total_hits" = 433 WHERE "id" = 1[0m
+Completed in 366ms (View: 353, DB: 3) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:31:54) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (8.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:01:54', "total_hits" = 434 WHERE "id" = 1[0m
+Completed in 351ms (View: 339, DB: 2) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:32:10) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (8.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:02:10', "total_hits" = 435 WHERE "id" = 1[0m
+Completed in 335ms (View: 323, DB: 2) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:33:08) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (8.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.8ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:03:08', "total_hits" = 436 WHERE "id" = 1[0m
+Completed in 367ms (View: 354, DB: 2) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:34:38) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (9.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:04:38', "total_hits" = 437 WHERE "id" = 1[0m
+Completed in 320ms (View: 309, DB: 2) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:34:46) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (8.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:04:46', "total_hits" = 438 WHERE "id" = 1[0m
+Completed in 342ms (View: 330, DB: 1) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:35:00) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (8.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.8ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:05:00', "total_hits" = 439 WHERE "id" = 1[0m
+Completed in 345ms (View: 333, DB: 2) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:35:10) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (8.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:05:10', "total_hits" = 440 WHERE "id" = 1[0m
+Completed in 340ms (View: 329, DB: 1) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2013-10-06 09:35:21) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (8.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:05:21', "total_hits" = 441 WHERE "id" = 1[0m
+Completed in 348ms (View: 336, DB: 2) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:36:16) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.8ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:06:16', "total_hits" = 442 WHERE "id" = 1[0m
+Completed in 284ms (View: 271, DB: 5) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-10-06 09:37:55) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:07:55', "total_hits" = 443 WHERE "id" = 1[0m
+Completed in 297ms (View: 294, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-10-06 09:39:52) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.6ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (1.2ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:09:52', "total_hits" = 444 WHERE "id" = 1[0m
+Completed in 376ms (View: 371, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing MypageController#whoami (for 127.0.0.1 at 2013-10-06 09:39:58) [GET]
+Rendering template within layouts/application
+Rendering mypage/whoami
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:09:58', "total_hits" = 445 WHERE "id" = 1[0m
+Completed in 301ms (View: 298, DB: 2) | 200 OK [http://127.0.0.1/mypage/whoami]
+
+
+Processing MypageController#whoami (for 127.0.0.1 at 2013-10-06 09:40:10) [GET]
+Rendering template within layouts/application
+Rendering mypage/whoami
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.8ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:10:10', "total_hits" = 446 WHERE "id" = 1[0m
+Completed in 407ms (View: 404, DB: 2) | 200 OK [http://127.0.0.1/mypage/whoami]
+
+
+Processing MypageController#whoami (for 127.0.0.1 at 2013-10-06 09:40:11) [GET]
+Rendering template within layouts/application
+Rendering mypage/whoami
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:10:11', "total_hits" = 447 WHERE "id" = 1[0m
+Completed in 365ms (View: 362, DB: 2) | 200 OK [http://127.0.0.1/mypage/whoami]
+
+
+Processing MypageController#whoami (for 127.0.0.1 at 2013-10-06 09:40:13) [GET]
+Rendering template within layouts/application
+Rendering mypage/whoami
+  [4;35;1mUser Load (2.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.5ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.9ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:10:13', "total_hits" = 448 WHERE "id" = 1[0m
+Completed in 313ms (View: 307, DB: 4) | 200 OK [http://127.0.0.1/mypage/whoami]
+
+
+Processing MypageController#whoami (for 127.0.0.1 at 2013-10-06 09:40:17) [GET]
+Rendering template within layouts/application
+Rendering mypage/whoami
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.9ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:10:17', "total_hits" = 449 WHERE "id" = 1[0m
+Completed in 382ms (View: 328, DB: 2) | 200 OK [http://127.0.0.1/mypage/whoami]
+
+
+Processing MypageController#whoami (for 127.0.0.1 at 2013-10-06 09:40:21) [GET]
+Rendering template within layouts/application
+Rendering mypage/whoami
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.4ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.9ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:10:21', "total_hits" = 450 WHERE "id" = 1[0m
+Completed in 281ms (View: 278, DB: 2) | 200 OK [http://127.0.0.1/mypage/whoami]
+
+
+Processing MypageController#whoami (for 127.0.0.1 at 2013-10-06 09:42:04) [GET]
+Rendering template within layouts/application
+Rendering mypage/whoami
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.7ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (1.4ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:12:04', "total_hits" = 451 WHERE "id" = 1[0m
+Completed in 338ms (View: 332, DB: 4) | 200 OK [http://127.0.0.1/mypage/whoami]
+
+
+Processing MypageController#whoami (for 127.0.0.1 at 2013-10-06 09:43:03) [GET]
+Rendering template within layouts/application
+Rendering mypage/whoami
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (3.2ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:13:03', "total_hits" = 452 WHERE "id" = 1[0m
+Completed in 333ms (View: 326, DB: 4) | 200 OK [http://127.0.0.1/mypage/whoami]
+
+
+Processing MypageController#whoami (for 127.0.0.1 at 2013-10-06 09:43:44) [GET]
+Rendering template within layouts/application
+Rendering mypage/whoami
+  [4;36;1mUser Load (3.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.5ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (1.2ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:13:44', "total_hits" = 453 WHERE "id" = 1[0m
+Completed in 362ms (View: 355, DB: 5) | 200 OK [http://127.0.0.1/mypage/whoami]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:43:53) [GET]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.4ms)
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.5ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:13:53', "total_hits" = 454 WHERE "id" = 1[0m
+Completed in 308ms (View: 294, DB: 6) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:44:07) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:14:08', "total_hits" = 455 WHERE "id" = 1[0m
+Completed in 393ms (View: 383, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:45:59) [GET]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.6ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:15:59', "total_hits" = 456 WHERE "id" = 1[0m
+Completed in 345ms (View: 333, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing UsersController#logout (for 127.0.0.1 at 2013-10-06 09:46:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2013-10-06 06:16:02', "session_id" = 'unathorzed' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 250ms (DB: 1) | 302 Found [http://127.0.0.1/users/logout?id=1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:46:03) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.2ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:16:03', "total_hits" = 457 WHERE "id" = 1[0m
+Completed in 407ms (View: 394, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:46:58) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.5ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:16:58', "total_hits" = 458 WHERE "id" = 1[0m
+Completed in 340ms (View: 330, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing UsersController#login (for 127.0.0.1 at 2013-10-06 09:47:01) [GET]
+Rendering template within layouts/application
+Rendering users/login
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:17:01', "total_hits" = 459 WHERE "id" = 1[0m
+Completed in 281ms (View: 274, DB: 1) | 200 OK [http://127.0.0.1/users/login]
+
+
+Processing UsersController#authenticate (for 127.0.0.1 at 2013-10-06 09:47:04) [POST]
+  Parameters: {"authenticity_token"=>"jL2n1+p4NUwIj+hrk0t0CxbI9O491SORubFA1CY+VIw=", "commit"=>"Login", "user"=>{"password"=>"test", "username"=>"_null_"}}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = '_null_') LIMIT 1[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2013-10-06 06:17:04', "session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 388ms (DB: 1) | 302 Found [http://127.0.0.1/users/authenticate]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:47:04) [GET]
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.5ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.5ms)
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.5ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (1.1ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:17:04', "total_hits" = 460 WHERE "id" = 1[0m
+Completed in 334ms (View: 314, DB: 6) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing UsersController#logout (for 127.0.0.1 at 2013-10-06 09:47:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2013-10-06 06:17:09', "session_id" = 'unathorzed' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 262ms (DB: 1) | 302 Found [http://127.0.0.1/users/logout/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:47:09) [GET]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.5ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.7ms)
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.5ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (1.1ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:17:09', "total_hits" = 461 WHERE "id" = 1[0m
+Completed in 332ms (View: 310, DB: 7) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing UsersController#login (for 127.0.0.1 at 2013-10-06 09:47:13) [GET]
+Rendering template within layouts/application
+Rendering users/login
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.6ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:17:13', "total_hits" = 462 WHERE "id" = 1[0m
+Completed in 275ms (View: 267, DB: 1) | 200 OK [http://127.0.0.1/users/login]
+
+
+Processing UsersController#authenticate (for 127.0.0.1 at 2013-10-06 09:47:17) [POST]
+  Parameters: {"authenticity_token"=>"jL2n1+p4NUwIj+hrk0t0CxbI9O491SORubFA1CY+VIw=", "commit"=>"Login", "user"=>{"password"=>"سلی", "username"=>"سلی"}}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'سلی') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2013-10-06 06:17:17', "session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164' WHERE "id" = 9[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 350ms (DB: 1) | 302 Found [http://127.0.0.1/users/authenticate]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:47:17) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;35;1mInfo Load (0.2ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "updated_at" = '2013-10-06 06:17:17', "total_hits" = 463 WHERE "id" = 1[0m
+Completed in 331ms (View: 321, DB: 3) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing UsersController#logout (for 127.0.0.1 at 2013-10-06 09:47:51) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2013-10-06 06:17:51', "session_id" = 'unathorzed' WHERE "id" = 9[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 316ms (DB: 3) | 302 Found [http://127.0.0.1/users/logout/9]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-06 09:47:51) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.3ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 4) [0m
+Rendered articles/_pagebar (0.4ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = 'a8fdcfbedb4079e09942c16bc5e6d164') [0m
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.5ms)[0m   [0mUPDATE "infos" SET "updated_at" = '2013-10-06 06:17:51', "total_hits" = 464 WHERE "id" = 1[0m
+Completed in 341ms (View: 323, DB: 10) | 200 OK [http://127.0.0.1/articles]
