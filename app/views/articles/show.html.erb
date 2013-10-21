@@ -39,9 +39,11 @@
       <br>
 
       <h2>Full Story</h2>
-      <p class = "article">
+      <div class="sotry">
         <%= h(@article.body).gsub("\n","<br>") %>
-      <p>
+
+        <%#= @article.body %>
+      </div>
         <%= render :partial => 'rate' %>
 
     </div> <!-- post -->

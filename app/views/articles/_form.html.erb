@@ -17,10 +17,13 @@
     <%= f.label :abstract %><br />
     <%=h f.text_area :abstract %>
   </p>
+  <!--
   <p>
-    <%= f.label :body %><br />
-    <%=h f.text_area :body %>
+    <%#= f.label :body %><br />
+    <%#=h f.text_area :body %>
   </p>
+  -->
+  <%= render :partial => 'articles/advbody' %>
   <p>
     <%= f.submit "Save" %>
   </p>

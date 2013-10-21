@@ -30,7 +30,7 @@
         <span class="date"><%= article.created_at %></span>
       </div>
       <div class="cleaner"></div>
-          <% render :partial => score %>
+          <%= render :partial => "articles/score" %>
         <% if article.abstract then %>
           <p><%=h article.abstract.gsub("\n", " ") %></p>
         <% end %>
