@@ -1,3 +1,5 @@
+<h5><i> Note: Click on <img src="/images/maximize.png"></img> to view this article in MAXIMIZE mode! </i></h5>
+
 <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
 <%= javascript_include_tag 'ckeditor/config.js' %>
 
@@ -9,15 +11,61 @@
         readOnly: true,
         toolbar :
             [
-                { name: 'tools', items : [ 'Maximize', '-', 'Source' ] }
+                { name: 'document', items : [ 'Maximize', '-', 'Source'] },
+                // { name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+                // { name: 'editing', items : [ 'Find','Replace','-','SelectAll','-','Scayt' ] },
+                { name: 'insert', items : [ 'Image','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'] },
+                { name: 'styles', items : [ 'Styles','Format' ] },
+                { name: 'basicstyles', items : [ 'Bold','Italic','Strike','-','RemoveFormat' ] },
+                { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote' ] },
+                { name: 'links', items : [ 'Link','Unlink','Anchor' ] },
+
             ],
         width: "48em",
         height: "20em"
 
-        });
+        })
   });
 </script>
 
+<style>
+  .cke_bottom {
+    display: none;
+  }
+
+  /*
+  .cke_toolgroup {
+    display: none;
+  }
+  */
+  
+  .cke_combo_button {
+    display: none;
+  }
+
+  /*
+  .cke_1_top {
+    display: none;
+  }
+
+  .cke_5{
+    display: noen;
+  }
+  */
+</style>
+<!--
+<div><p>
+<a onclick="CKEDITOR.tools.callFunction(5,this);return false;"
+     onmousedown="return CKEDITOR.tools.callFunction(4,event);"
+     onfocus="return CKEDITOR.tools.callFunction(3,event);"
+     onkeydown="return CKEDITOR.tools.callFunction(2,event);"
+     onblur="this.style.cssText = this.style.cssText;"
+     aria-haspopup="false" aria-labelledby="cke_9_label" role="button" hidefocus="true" tabindex="-1"
+     title="Maximize" class="cke_button cke_button__maximize  cke_button_off" id="cke_9">Maximize
+  </a>
+</p><br></div>
+-->
+<hr>
 <textarea id="article_body" name="article[body]" style="width:48em;height:20em">
   <%= sanitize( @article.body ) %>
 </textarea>

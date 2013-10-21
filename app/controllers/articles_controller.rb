@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @perpage = 5
+    @perpage = 9
 
     @total = Article.count
     @page = (params[:page] || '1').to_i;
@@ -76,6 +76,7 @@ class ArticlesController < ApplicationController
     
     if u then # and u.id == @article.user_id then
       @article.user_id = u.id
+      @article.icon = params[:article][:icon] || 0
       @article.save
 
       redirect_to_article
@@ -89,8 +90,10 @@ class ArticlesController < ApplicationController
 
     u = User.get_current_user session
 
-    if u and u.id == @article.user_id then
+    if u and (u.id == @article.user_id || u.priv == 10) then
       @article.update_attributes( validate_params )
+      @article.icon = params[:article][:icon] || 0
+      @article.save
       flash[:notice] = "Hey #{u.nickname}, '#{@article.title}' has been updated."
       redirect_to_article
     else

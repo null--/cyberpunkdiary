@@ -1,3 +1,25 @@
+<%
+   icon_name = {}
+   icon_name[0] = "General"
+   icon_name[1] = "Crack"
+   icon_name[2] = "Hack"
+   icon_name[3] = "Pentest"
+   icon_name[4] = "Web Hacking"
+   icon_name[5] = "Reverse Engineering"
+
+   buttons = [[]]
+
+   buttons[0] = [icon_name[ @article.icon ], @article.icon.to_s]
+   ni = 0
+   icon_name.each do |icn|
+     if ni != @article.icon then
+        buttons[ buttons.length ] = [icon_name[ni], ni.to_s]
+     end
+     ni = ni + 1
+   end
+   @article.icon = @article.icon || 0
+   %>
+
 <div id="contact_form">
   
 <% form_for(@article) do |f| %>
@@ -5,6 +27,11 @@
   <% @article.errors.full_messages.each do |error| %>
     <li><%= error %></li>
   <% end %>
+  <p>
+    Select an icon for your article:
+    <%= f.select :icon, options_for_select(buttons)
+    %>
+  </p>
   <p>
     <%= f.label :title %><br />
     <%=h f.text_field :title %>
