@@ -7,17 +7,8 @@
 
       <h1><%= @article.title %></h1>
 
-      <p><%
-           if u and (u.id == @article.user_id || u.priv == 10) then
-           %>
-        <%= button_to "Edit", {:controller => 'articles', :action => 'edit', :id => @article.id}, :class => "submit_btn float_l" %>
-        <%= button_to "Delete", @article, :confirm => 'Are you sure?', :method => :delete, :class => "submit_btn float_r"%>
-        <% end %>
-
       <% if @article.abstract and @article.abstract.length > 0 then %>
-      </p>
-      <br><br><hr>
-      
+      <hr>
       <div class="meta">
         <span class="admin"> <%= link_to h(@article.user.nickname), (user_path @article.user) %></span>
         <span class="date"><%= @article.created_at %></span>
@@ -44,6 +35,13 @@
         <%#= sanitize( @article.body ) %>
         <%= render :partial => 'articles/advbody_readonly' %>
       </div>
+      <p><%
+           if u and (u.id == @article.user_id || u.priv == 10) then
+           %>
+        <%= button_to "Edit", {:controller => 'articles', :action => 'edit', :id => @article.id}, :class => "submit_btn float_l" %>
+        <%= button_to "Delete", @article, :confirm => 'Are you sure?', :method => :delete, :class => "submit_btn float_r"%>
+        <% end %>
+      </p><br><br><hr>
         <%= render :partial => 'rate' %>
 
     </div> <!-- post -->

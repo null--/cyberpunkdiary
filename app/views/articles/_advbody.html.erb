@@ -1,4 +1,4 @@
-<h5> Note: Click on <img src="/images/maximize.png"></img> to view article in MAXIMIZE mode! </h5>
+<p><i>Note: Click on <img src="/images/maximize.png"></img> to view article in MAXIMIZE mode! </i></p>
 
 <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
 <%= javascript_include_tag 'ckeditor/config.js' %>
@@ -8,11 +8,9 @@
   {
     var editor = CKEDITOR.replace('article[body]',
       {
-
-
         toolbar :
             [
-                { name: 'document', items : [ 'Preview', '-', 'Source'] },
+                { name: 'document', items : [ 'Maximize', '-', 'Preview', '-', 'Source'] },
                 { name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
                 { name: 'editing', items : [ 'Find','Replace','-','SelectAll','-','Scayt' ] },
                 { name: 'insert', items : [ 'Image','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'] },
@@ -21,11 +19,11 @@
                 { name: 'basicstyles', items : [ 'Bold','Italic','Strike','-','RemoveFormat' ] },
                 { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote' ] },
                 { name: 'links', items : [ 'Link','Unlink','Anchor' ] },
-                { name: 'tools', items : [ 'Maximize','-','About' ] }
+                { name: 'tools', items : [ 'About' ] }
 
             ],
-        width: "48em",
-        height: "20em"
+        width: "47.5em",
+        height: "40em"
 
         });
   
