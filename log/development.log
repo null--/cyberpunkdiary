@@ -28232,3 +28232,1314 @@ Rendered articles/_form (17.7ms)
   [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
   [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 690, "updated_at" = '2013-10-21 07:38:42' WHERE "id" = 1[0m
 Completed in 317ms (View: 305, DB: 2) | 200 OK [http://127.0.0.1/articles/8/edit]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-10-21 11:11:59) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mInfo Load (0.4ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (1.0ms)[0m   [0mUPDATE "infos" SET "total_hits" = 691, "updated_at" = '2013-10-21 07:41:59' WHERE "id" = 1[0m
+Completed in 278ms (View: 273, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-10-21 11:12:01) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.8ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 692, "updated_at" = '2013-10-21 07:42:01' WHERE "id" = 1[0m
+Completed in 281ms (View: 278, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-21 11:12:05) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_pagebar (0.3ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.8ms)[0m   [0mUPDATE "infos" SET "total_hits" = 693, "updated_at" = '2013-10-21 07:42:05' WHERE "id" = 1[0m
+Completed in 308ms (View: 297, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:12:07) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;35;1mArticle Update (1.1ms)[0m   [0mUPDATE "articles" SET "hits" = 32, "updated_at" = '2013-10-21 07:42:07' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (0.9ms)
+Rendered articles/_advbody_readonly (2.6ms)
+Rendered articles/_rate (0.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.7ms)
+Rendered articles/_comment (0.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.5ms)[0m   [0mUPDATE "infos" SET "total_hits" = 694, "updated_at" = '2013-10-21 07:42:07' WHERE "id" = 1[0m
+Completed in 560ms (View: 288, DB: 3) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:12:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:12:15) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+  [4;35;1mArticle Update (0.8ms)[0m   [0mUPDATE "articles" SET "hits" = 50, "updated_at" = '2013-10-21 07:42:15' WHERE "id" = 6[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 6)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.0ms)
+Rendered articles/_advbody_readonly (0.6ms)
+Rendered articles/_rate (0.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendered articles/_comment (3.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 695, "updated_at" = '2013-10-21 07:42:15' WHERE "id" = 1[0m
+Completed in 572ms (View: 293, DB: 4) | 200 OK [http://127.0.0.1/articles/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:12:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:13:16) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+  [4;36;1mArticle Update (1.3ms)[0m   [0;1mUPDATE "articles" SET "hits" = 51, "updated_at" = '2013-10-21 07:43:16' WHERE "id" = 6[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 6)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+Rendered articles/_score (0.2ms)
+Rendered articles/_rate (2.0ms)
+Rendered articles/_advbody_readonly (1.4ms)
+Rendered articles/_rate (1.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (3.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendered articles/_comment (6.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mInfo Load (0.5ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (1.5ms)[0m   [0mUPDATE "infos" SET "total_hits" = 696, "updated_at" = '2013-10-21 07:43:17' WHERE "id" = 1[0m
+Completed in 763ms (View: 407, DB: 7) | 200 OK [http://127.0.0.1/articles/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:13:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:13:20) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 5) [0m
+  [4;35;1mArticle Update (1.0ms)[0m   [0mUPDATE "articles" SET "hits" = 6, "updated_at" = '2013-10-21 07:43:20' WHERE "id" = 5[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 5)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (0.9ms)
+Rendered articles/_advbody_readonly (0.7ms)
+Rendered articles/_rate (0.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.7ms)
+Rendered articles/_comment (0.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.5ms)[0m   [0mUPDATE "infos" SET "total_hits" = 697, "updated_at" = '2013-10-21 07:43:20' WHERE "id" = 1[0m
+Completed in 550ms (View: 266, DB: 4) | 200 OK [http://127.0.0.1/articles/5]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:13:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:13:32) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Update (1.1ms)[0m   [0mUPDATE "articles" SET "hits" = 14, "updated_at" = '2013-10-21 07:43:32' WHERE "id" = 7[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 7)) [0m
+  [4;35;1mSQL (47.8ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_score (0.3ms)
+Rendered articles/_rate (1.2ms)
+Rendered articles/_advbody_readonly (0.7ms)
+Rendered articles/_rate (0.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.7ms)
+Rendered articles/_comment (0.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mInfo Load (0.4ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.8ms)[0m   [0mUPDATE "infos" SET "total_hits" = 698, "updated_at" = '2013-10-21 07:43:33' WHERE "id" = 1[0m
+Completed in 960ms (View: 300, DB: 52) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:13:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing VotesController#edit (for 127.0.0.1 at 2013-10-21 11:13:43) [POST]
+  Parameters: {"article_id"=>"7", "authenticity_token"=>"N8vrBXeDN+AGoWk/0YLPgXq4dLJYZKmctwhncXeviKc=", "score"=>"1337"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mVote Load (0.2ms)[0m   [0mSELECT * FROM "votes" WHERE ("votes"."user_id" = 2 AND "votes"."article_id" = '7') LIMIT 1[0m
+  [4;36;1mVote Create (0.7ms)[0m   [0;1mINSERT INTO "votes" ("updated_at", "article_id", "user_id", "created_at", "score") VALUES('2013-10-21 07:43:43', '7', 2, '2013-10-21 07:43:43', 1)[0m
+  [4;35;1mArticle Update (1.5ms)[0m   [0mUPDATE "articles" SET "leet" = 1, "updated_at" = '2013-10-21 07:43:43' WHERE "id" = 7[0m
+Redirected to http://127.0.0.1:3000/articles/7
+Completed in 488ms (DB: 3) | 302 Found [http://127.0.0.1/votes/1337/7]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:13:43) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Update (0.5ms)[0m   [0mUPDATE "articles" SET "hits" = 15, "updated_at" = '2013-10-21 07:43:43' WHERE "id" = 7[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 7)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (0.9ms)
+Rendered articles/_advbody_readonly (0.7ms)
+Rendered articles/_rate (0.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.4ms)
+Rendered articles/_comment (0.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.7ms)[0m   [0mUPDATE "infos" SET "total_hits" = 699, "updated_at" = '2013-10-21 07:43:44' WHERE "id" = 1[0m
+Completed in 599ms (View: 343, DB: 3) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:13:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-21 11:14:02) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+Rendered articles/_score (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_score (0.1ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+Rendered articles/_score (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.2ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 700, "updated_at" = '2013-10-21 07:44:02' WHERE "id" = 1[0m
+Completed in 302ms (View: 291, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-21 11:16:12) [GET]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_pagebar (0.2ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.5ms)[0m   [0mUPDATE "infos" SET "total_hits" = 701, "updated_at" = '2013-10-21 07:46:12' WHERE "id" = 1[0m
+Completed in 408ms (View: 391, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-21 11:16:39) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.5ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+Rendered articles/_score (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_score (0.1ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+Rendered articles/_score (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_pagebar (0.3ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 702, "updated_at" = '2013-10-21 07:46:39' WHERE "id" = 1[0m
+Completed in 415ms (View: 398, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:18:08) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (0.9ms)[0m   [0;1mUPDATE "articles" SET "hits" = 33, "updated_at" = '2013-10-21 07:48:08' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.0ms)
+Rendered articles/_advbody_readonly (3.1ms)
+Rendered articles/_rate (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.6ms)
+Rendered articles/_comment (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 703, "updated_at" = '2013-10-21 07:48:09' WHERE "id" = 1[0m
+Completed in 611ms (View: 320, DB: 3) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:18:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:49:25) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.0ms)[0m   [0;1mUPDATE "articles" SET "hits" = 34, "updated_at" = '2013-10-21 08:19:25' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.0ms)
+Rendered articles/_advbody_readonly (2.8ms)
+Rendered articles/_rate (0.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.6ms)
+Rendered articles/_comment (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 704, "updated_at" = '2013-10-21 08:19:25' WHERE "id" = 1[0m
+Completed in 635ms (View: 282, DB: 3) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:49:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:49:27) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.7ms)[0m   [0;1mUPDATE "articles" SET "hits" = 35, "updated_at" = '2013-10-21 08:19:27' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (0.9ms)
+Rendered articles/_advbody_readonly (2.7ms)
+Rendered articles/_rate (0.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.5ms)
+Rendered articles/_comment (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 705, "updated_at" = '2013-10-21 08:19:27' WHERE "id" = 1[0m
+Completed in 612ms (View: 331, DB: 5) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:49:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:49:40) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.2ms)[0m   [0;1mUPDATE "articles" SET "hits" = 36, "updated_at" = '2013-10-21 08:19:40' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.0ms)
+Rendered articles/_advbody_readonly (2.8ms)
+Rendered articles/_rate (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (2.1ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 706, "updated_at" = '2013-10-21 08:19:41' WHERE "id" = 1[0m
+Completed in 592ms (View: 280, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:49:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:49:43) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (0.8ms)[0m   [0;1mUPDATE "articles" SET "hits" = 37, "updated_at" = '2013-10-21 08:19:43' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.2ms)
+Rendered articles/_rate (2.0ms)
+Rendered articles/_advbody_readonly (5.7ms)
+Rendered articles/_rate (1.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (2.9ms)
+Rendered articles/_comment (0.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.5ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.9ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 707, "updated_at" = '2013-10-21 08:19:43' WHERE "id" = 1[0m
+Completed in 705ms (View: 395, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:49:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:49:44) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (0.9ms)[0m   [0;1mUPDATE "articles" SET "hits" = 38, "updated_at" = '2013-10-21 08:19:44' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.0ms)
+Rendered articles/_advbody_readonly (2.7ms)
+Rendered articles/_rate (0.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.6ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 708, "updated_at" = '2013-10-21 08:19:45' WHERE "id" = 1[0m
+Completed in 581ms (View: 298, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:49:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:49:46) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (0.9ms)[0m   [0;1mUPDATE "articles" SET "hits" = 39, "updated_at" = '2013-10-21 08:19:46' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.2ms)
+Rendered articles/_rate (2.0ms)
+Rendered articles/_advbody_readonly (5.6ms)
+Rendered articles/_rate (1.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (3.8ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 709, "updated_at" = '2013-10-21 08:19:47' WHERE "id" = 1[0m
+Completed in 671ms (View: 380, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:49:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:50:25) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (0.9ms)[0m   [0;1mUPDATE "articles" SET "hits" = 40, "updated_at" = '2013-10-21 08:20:25' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.1ms)
+Rendered articles/_advbody_readonly (2.7ms)
+Rendered articles/_rate (0.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.5ms)
+Rendered articles/_comment (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 710, "updated_at" = '2013-10-21 08:20:26' WHERE "id" = 1[0m
+Completed in 659ms (View: 298, DB: 3) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:50:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:50:27) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.1ms)[0m   [0;1mUPDATE "articles" SET "hits" = 41, "updated_at" = '2013-10-21 08:20:27' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.1ms)
+Rendered articles/_advbody_readonly (3.0ms)
+Rendered articles/_rate (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.7ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 711, "updated_at" = '2013-10-21 08:20:28' WHERE "id" = 1[0m
+Completed in 608ms (View: 334, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:50:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:51:03) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (0.9ms)[0m   [0;1mUPDATE "articles" SET "hits" = 42, "updated_at" = '2013-10-21 08:21:03' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.5ms)
+Rendered articles/_advbody_readonly (4.3ms)
+Rendered articles/_rate (1.4ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (2.2ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 712, "updated_at" = '2013-10-21 08:21:03' WHERE "id" = 1[0m
+Completed in 586ms (View: 286, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:51:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:51:05) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (2.6ms)[0m   [0;1mUPDATE "articles" SET "hits" = 43, "updated_at" = '2013-10-21 08:21:05' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.6ms)
+Rendered articles/_advbody_readonly (3.0ms)
+Rendered articles/_rate (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.7ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 713, "updated_at" = '2013-10-21 08:21:05' WHERE "id" = 1[0m
+Completed in 661ms (View: 336, DB: 5) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:51:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:51:22) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (2.6ms)[0m   [0;1mUPDATE "articles" SET "hits" = 44, "updated_at" = '2013-10-21 08:21:22' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.6ms)
+Rendered articles/_advbody_readonly (4.3ms)
+Rendered articles/_rate (1.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (2.4ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.6ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 714, "updated_at" = '2013-10-21 08:21:22' WHERE "id" = 1[0m
+Completed in 579ms (View: 267, DB: 6) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:51:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:51:34) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.3ms)[0m   [0;1mUPDATE "articles" SET "hits" = 45, "updated_at" = '2013-10-21 08:21:34' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.2ms)
+Rendered articles/_rate (1.1ms)
+Rendered articles/_advbody_readonly (3.0ms)
+Rendered articles/_rate (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.7ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 715, "updated_at" = '2013-10-21 08:21:35' WHERE "id" = 1[0m
+Completed in 677ms (View: 372, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:51:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:51:36) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (0.9ms)[0m   [0;1mUPDATE "articles" SET "hits" = 46, "updated_at" = '2013-10-21 08:21:36' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (0.9ms)
+Rendered articles/_advbody_readonly (2.6ms)
+Rendered articles/_rate (0.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.5ms)
+Rendered articles/_comment (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 716, "updated_at" = '2013-10-21 08:21:36' WHERE "id" = 1[0m
+Completed in 554ms (View: 284, DB: 3) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:51:37) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.0ms)[0m   [0;1mUPDATE "articles" SET "hits" = 47, "updated_at" = '2013-10-21 08:21:37' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.2ms)
+Rendered articles/_advbody_readonly (2.9ms)
+Rendered articles/_rate (0.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.6ms)
+Rendered articles/_comment (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 717, "updated_at" = '2013-10-21 08:21:37' WHERE "id" = 1[0m
+Completed in 602ms (View: 322, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:51:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:52:38) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (0.8ms)[0m   [0;1mUPDATE "articles" SET "hits" = 48, "updated_at" = '2013-10-21 08:22:38' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.2ms)
+Rendered articles/_rate (2.0ms)
+Rendered articles/_advbody_readonly (5.8ms)
+Rendered articles/_rate (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (3.0ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.6ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (1.0ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 718, "updated_at" = '2013-10-21 08:22:38' WHERE "id" = 1[0m
+Completed in 596ms (View: 299, DB: 5) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:52:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:52:39) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.1ms)[0m   [0;1mUPDATE "articles" SET "hits" = 49, "updated_at" = '2013-10-21 08:22:39' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.1ms)
+Rendered articles/_advbody_readonly (3.0ms)
+Rendered articles/_rate (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.8ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.7ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.8ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 719, "updated_at" = '2013-10-21 08:22:39' WHERE "id" = 1[0m
+Completed in 613ms (View: 332, DB: 5) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:52:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:53:19) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (2.0ms)[0m   [0;1mUPDATE "articles" SET "hits" = 50, "updated_at" = '2013-10-21 08:23:19' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.2ms)
+Rendered articles/_rate (2.0ms)
+Rendered articles/_advbody_readonly (6.1ms)
+Rendered articles/_rate (1.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (3.5ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.5ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (1.0ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 720, "updated_at" = '2013-10-21 08:23:20' WHERE "id" = 1[0m
+Completed in 590ms (View: 306, DB: 7) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:53:20) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.1ms)[0m   [0;1mUPDATE "articles" SET "hits" = 51, "updated_at" = '2013-10-21 08:23:20' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.0ms)
+Rendered articles/_advbody_readonly (2.6ms)
+Rendered articles/_rate (0.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.6ms)
+Rendered articles/_comment (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 721, "updated_at" = '2013-10-21 08:23:20' WHERE "id" = 1[0m
+Completed in 580ms (View: 256, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:53:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:54:44) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.0ms)[0m   [0;1mUPDATE "articles" SET "hits" = 52, "updated_at" = '2013-10-21 08:24:44' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.2ms)
+Rendered articles/_rate (2.0ms)
+Rendered articles/_advbody_readonly (6.5ms)
+Rendered articles/_rate (1.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.5ms)
+Rendered articles/_comment (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 722, "updated_at" = '2013-10-21 08:24:44' WHERE "id" = 1[0m
+Completed in 750ms (View: 429, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:54:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:54:57) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.1ms)[0m   [0;1mUPDATE "articles" SET "hits" = 53, "updated_at" = '2013-10-21 08:24:57' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.0ms)
+Rendered articles/_advbody_readonly (2.8ms)
+Rendered articles/_rate (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.8ms)
+Rendered articles/_comment (0.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.4ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.8ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 723, "updated_at" = '2013-10-21 08:24:58' WHERE "id" = 1[0m
+Completed in 590ms (View: 296, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:54:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:54:58) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.0ms)[0m   [0;1mUPDATE "articles" SET "hits" = 54, "updated_at" = '2013-10-21 08:24:58' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_rate (1.2ms)
+Rendered articles/_advbody_readonly (3.4ms)
+Rendered articles/_rate (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.9ms)
+Rendered articles/_comment (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.7ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 724, "updated_at" = '2013-10-21 08:24:59' WHERE "id" = 1[0m
+Completed in 632ms (View: 330, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:54:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2013-10-21 11:55:36) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 9) [0m
+  [4;36;1mArticle Update (1.0ms)[0m   [0;1mUPDATE "articles" SET "hits" = 55, "updated_at" = '2013-10-21 08:25:36' WHERE "id" = 9[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".article_id = 9)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.2ms)
+Rendered articles/_rate (2.1ms)
+Rendered articles/_advbody_readonly (5.8ms)
+Rendered articles/_rate (0.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+Rendered comments/_form (1.5ms)
+Rendered articles/_comment (0.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.3ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (0.5ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 725, "updated_at" = '2013-10-21 08:25:37' WHERE "id" = 1[0m
+Completed in 609ms (View: 295, DB: 5) | 200 OK [http://127.0.0.1/articles/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-10-21 11:55:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/templatemo_divider.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2013-10-21 11:55:58) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered articles/_pagebar (0.2ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 9) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 8) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 7) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 6) [0m
+Rendered articles/_score (0.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".article_id = 5) [0m
+Rendered articles/_score (0.1ms)
+Rendered articles/_pagebar (0.2ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;36;1mInfo Load (0.4ms)[0m   [0;1mSELECT * FROM "infos" LIMIT 1[0m
+  [4;35;1mInfo Update (0.9ms)[0m   [0mUPDATE "infos" SET "total_hits" = 726, "updated_at" = '2013-10-21 08:25:58' WHERE "id" = 1[0m
+Completed in 337ms (View: 326, DB: 4) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing MypageController#index (for 127.0.0.1 at 2013-10-21 11:56:16) [GET]
+Rendering template within layouts/application
+Rendering mypage/index
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."session_id" = '5465be8b2966613b7a819b117167d91a') [0m
+  [4;35;1mInfo Load (0.5ms)[0m   [0mSELECT * FROM "infos" LIMIT 1[0m
+  [4;36;1mInfo Update (1.2ms)[0m   [0;1mUPDATE "infos" SET "total_hits" = 727, "updated_at" = '2013-10-21 08:26:16' WHERE "id" = 1[0m
+Completed in 307ms (View: 302, DB: 3) | 200 OK [http://127.0.0.1/]
