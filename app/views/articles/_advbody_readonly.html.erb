@@ -1,0 +1,23 @@
+<%= javascript_include_tag 'ckeditor/ckeditor.js' %>
+<%= javascript_include_tag 'ckeditor/config.js' %>
+
+<script type="text/javascript">
+  $(document).ready(function()
+  {
+    var editor = CKEDITOR.replace('article[body]',
+      {
+        readOnly: true,
+        toolbar :
+            [
+                { name: 'tools', items : [ 'Maximize', '-', 'Source' ] }
+            ],
+        width: "48em",
+        height: "20em"
+
+        });
+  });
+</script>
+
+<textarea id="article_body" name="article[body]" style="width:48em;height:20em">
+  <%= sanitize( @article.body ) %>
+</textarea>

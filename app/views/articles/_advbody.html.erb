@@ -1,22 +1,33 @@
-<%#= stylesheet_link_tag "style_oww" %>
+<%= javascript_include_tag 'ckeditor/ckeditor.js' %>
+<%= javascript_include_tag 'ckeditor/config.js' %>
 
-<!-- 
-	 Include the WYSIWYG javascript files
-  -->
-<%= javascript_include_tag "wysiwyg" %>
-<%= javascript_include_tag "wysiwyg-settings" %>
-<!-- 
-	 Attach the editor on the textareas
-  -->
 <script type="text/javascript">
-  // Use it to attach the editor to all textareas with full featured setup
-  //WYSIWYG.attach('all', full);
+  $(document).ready(function()
+  {
+    var editor = CKEDITOR.replace('article[body]',
+      {
+
+
+        toolbar :
+            [
+                { name: 'document', items : [ 'Preview', '-', 'Source'] },
+                { name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+                { name: 'editing', items : [ 'Find','Replace','-','SelectAll','-','Scayt' ] },
+                { name: 'insert', items : [ 'Image','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'] },
+                        '/',
+                { name: 'styles', items : [ 'Styles','Format' ] },
+                { name: 'basicstyles', items : [ 'Bold','Italic','Strike','-','RemoveFormat' ] },
+                { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote' ] },
+                { name: 'links', items : [ 'Link','Unlink','Anchor' ] },
+                { name: 'tools', items : [ 'Maximize','-','About' ] }
+
+            ],
+        width: "48em",
+        height: "20em"
+
+        });
   
-  // Use it to attach the editor directly to a defined textarea
-  WYSIWYG.attach('article_body'); // default setup
-  
-  // Use it to display an iframes instead of a textareas
-  //WYSIWYG.display('all', full);  
+  });
 </script>
 
 <textarea id="article_body" name="article[body]" style="width:48em;height:20em">

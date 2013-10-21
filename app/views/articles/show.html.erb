@@ -40,9 +40,9 @@
 
       <h2>Full Story</h2>
       <div class="sotry">
-        <%= h(@article.body).gsub("\n","<br>") %>
-
-        <%#= @article.body %>
+        <%#= h(@article.body).gsub("\n","<br>") %>
+        <%#= sanitize( @article.body ) %>
+        <%= render :partial => 'articles/advbody_readonly' %>
       </div>
         <%= render :partial => 'rate' %>
 
