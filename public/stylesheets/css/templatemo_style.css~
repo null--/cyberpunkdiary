@@ -47,7 +47,7 @@ flash:empty {
 	border: 1px solid #292929; 
 	color: #fff; 
 	font-size:12px; 
-	cursor: pointer 
+	cursor: pointer;
 }
 
 .leet_btn {
@@ -62,7 +62,7 @@ flash:empty {
 	border: 1px solid #292929; 
 	color: green; 
 	font-size:12px; 
-	cursor: pointer 
+	cursor: pointer; 
 }
 
 .lame_btn {
@@ -77,7 +77,7 @@ flash:empty {
 	border: 1px solid #292929; 
 	color: red; 
 	font-size:12px; 
-	cursor: pointer 
+	cursor: pointer;
 }
 
 /*
@@ -87,9 +87,9 @@ Credit: http://www.templatemo.com
 body {
 	margin: 0;
 	padding: 0;
-	color: #666;
+	color: rgb(180, 200, 200);
 	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 1.4em; 
 	background-color: #000;
 	background-repeat: repeat-x;
@@ -296,7 +296,7 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 .fp_services h2 { font-size: 18px; line-height: 18px; margin-bottom: 5px; padding: 10px 0 20px 0; background-repeat: no-repeat; background-position: left }
 .fp_services img { float: left; margin-right: 10px }
 .fp_services h2 a { color: #fff }
-.fp_services p { font-size: 11px }
+.fp_services p { font-size: 12px }
 
 .about_box { clear: both; margin-bottom: 40px }
 .about_box img { float: left; margin-right: 40px }
@@ -309,7 +309,7 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 .flickr_stream li img { padding: 4px; border: 1px solid #272727; background: #0f0f0f }
 
 .gallery_box { margin-bottom: 40px }
-.gallery_box img { margin-bottom: 10px }
+.gallery_box img { margin-bottom: 10px; width: 100%}
 .gallery_box h5 { font-size: 12px; font-weight: 700; margin-bottom:0 }
 .gallery_box p { font-size: 11px }
 
@@ -339,35 +339,35 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	line-height: 38px; 
 }
 
-.post .meta { 
-	font-size: 10px; 
+.meta { 
+	font-size: 11px; 
 	margin-bottom: 20px; 
 }
 
-.post .meta span { 
+.meta span { 
 	float: left; 
 	display: block; 
 	margin-right: 20px; 
 	padding: 5px 0 5px 30px; 
 }
 
-.post .meta span.admin { 
+.meta span.admin { 
 	background: url(/images/images/agent.png) no-repeat; 
 }
 
-.post .meta span.date { 
+.meta span.date { 
 	background: url(/images/images/calendar.png) no-repeat; 
 }
 
-.post .meta span.tag { 
+.meta span.tag { 
 	background: url(/images/images/tag.png) no-repeat; 
 }
 
-.post .meta span.comment { 
+.meta span.comment { 
 	background: url(/images/images/chat.png) no-repeat; 
 }
 
-.post .meta a, .post .meta strong { 
+.meta a, .meta strong { 
 	color: #7b7b7b; 
 	font-weight: 700; 
 }
@@ -463,10 +463,10 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	padding-bottom: 10px;
 }
 
-#comment_form form {
+#new_comment form {
 }
 
-#comment_form textarea {
+#new_comment textarea {
 	width: 398px; 
 	height: 180px; 
 	padding: 5px; 
@@ -483,7 +483,8 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	margin-bottom: 15px;
 }
 
-#comment_form form input {
+/*
+#new_comment form input {
 	width: 270px; 
 	padding: 5px; 
 	color: #fff;
@@ -493,8 +494,8 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	font-family: Tahoma, Geneva, sans-serif;
 	margin-top: 5px;
 }
-
-#comment_form .submit_btn {
+*/
+#new_comment input /*.commit_submit*/ {
 	display: block; 
 	width: 70px; 
 	height: 30px; 
@@ -531,6 +532,17 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	margin-top: 5px;
 }
 
+#contact_form form #article_tag_list{ 
+	width: 55em; 
+	padding: 5px; 
+	color: #fff;
+	background: #000;
+	border: 1px solid #292929;
+	font-size: 12px;
+	font-family: Tahoma, Geneva, sans-serif;
+	margin-top: 5px;
+}
+
 #contact_form form label { 
 	display: block; 
 	width: 100px; 
@@ -539,8 +551,20 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 }
 
 #contact_form form textarea { 
-	width: 398px; 
-	height: 200px; 
+	width: 55em; 
+	height: 30em; 
+	padding: 5px; 
+	color: #fff;
+	background: #000;
+	border: 1px solid #292929;
+	font-size: 12px;
+	font-family: Tahoma, Geneva, sans-serif;
+	margin-top: 5px;
+}
+
+#contact_form form #article_abstract{ 
+	width: 55em; 
+	height: 7em; 
 	padding: 5px; 
 	color: #fff;
 	background: #000;
@@ -610,7 +634,7 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 .col { 
 	float: left; 
 	/* margin: 0 20px 20px 0; */
-    margin: 0em 0em 5em 1em
+    margin: 0em 0em 1em 1em
 }
 
 .half { 
@@ -618,7 +642,14 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 }
 
 #sidebar, .one_third { 
-	width: 300px; 
+	width: 30%;
+    height: 35em;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    border: medium solid;
+}
+
+#sidebar, .footer_one_third { 
+	width: 30%;
 }
 
 .two-third { 

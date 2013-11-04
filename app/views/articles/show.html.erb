@@ -6,7 +6,9 @@
       <% u = @user %>
 
       <h1><%= @article.title %></h1>
-
+      <%= render :partial => 'rate' %>
+      <br><br>
+      
       <% if @article.abstract and @article.abstract.length > 0 then %>
       <hr>
       <div class="meta">
@@ -22,8 +24,7 @@
       <div class="cleaner"></div>
 
       <%= render :partial => 'score' %>
-      <%= render :partial => 'rate' %>
-
+      
       <h2>Abstract</h2>
       <p class = "abstract"><%=h @article.abstract %></p>
       <% end %>
@@ -41,19 +42,14 @@
         <%= button_to "Edit", {:controller => 'articles', :action => 'edit', :id => @article.id}, :class => "submit_btn float_l" %>
         <%= button_to "Delete", @article, :confirm => 'Are you sure?', :method => :delete, :class => "submit_btn float_r"%>
         <% end %>
-      </p><br><br><hr>
-        <%= render :partial => 'rate' %>
-
+      </p>
+      <%= render :partial => 'rate' %>
     </div> <!-- post -->
-    <% if User.is_authorized session then %>
-    <%= render :partial => 'comments/form' %>
-    <% end %>
-
-    <br><br>
-    <h3>Comments (<%= @article.comments.size %>)</h3>
     <hr>
-
+    <div id="comment_section">
+    <%= render :partial => 'comments/form' %>
+    <h3>Comments (<%= @article.comments.size %>)</h3>
     <%= render :partial => 'articles/comment' %>
-
+    </div>
   </div> <!-- content -->
 </div> <!-- main -->

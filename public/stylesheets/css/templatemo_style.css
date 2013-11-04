@@ -463,10 +463,10 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	padding-bottom: 10px;
 }
 
-#comment_form form {
+#new_comment form {
 }
 
-#comment_form textarea {
+#new_comment textarea {
 	width: 398px; 
 	height: 180px; 
 	padding: 5px; 
@@ -483,7 +483,8 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	margin-bottom: 15px;
 }
 
-#comment_form form input {
+/*
+#new_comment form input {
 	width: 270px; 
 	padding: 5px; 
 	color: #fff;
@@ -493,8 +494,9 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	font-family: Tahoma, Geneva, sans-serif;
 	margin-top: 5px;
 }
+*/
 
-#comment_form .submit_btn {
+#new_comment input /*.commit_submit*/ {
 	display: block; 
 	width: 70px; 
 	height: 30px; 

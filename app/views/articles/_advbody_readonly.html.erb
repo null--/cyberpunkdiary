@@ -1,4 +1,4 @@
-<h5><i> Note: Click on <img src="/images/maximize.png"></img> to view this article in MAXIMIZE mode! </i></h5>
+<p><i> Note: Click on <img src="/images/maximize.png"></img> to view this article MAXIMIZED </i></p>
 
 <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
 <%= javascript_include_tag 'ckeditor/config.js' %>
@@ -65,7 +65,6 @@
   </a>
 </p><br></div>
 -->
-<hr>
 <textarea id="article_body" name="article[body]" style="width:48em;height:20em">
   <%= sanitize( @article.body ) %>
 </textarea>
