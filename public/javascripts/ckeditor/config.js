@@ -4,6 +4,8 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
+    config.skin = 'moono-dark';
+    
 	// Define changes to default configuration here.
 	// For the complete reference:
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
