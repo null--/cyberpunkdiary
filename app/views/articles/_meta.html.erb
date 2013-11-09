@@ -1,0 +1,10 @@
+<div class="meta">
+  <span class="admin"> <%= link_to h(@article.user.nickname), (user_path @article.user) %></span>
+  <span class="date"><%= @article.created_at %></span>
+  <span class="tag">
+	<% @article.tags.each do |tag| %>
+	<%= link_to tag.name, tag_path(tag) %> <b>,</b>
+	<% end %>
+  </span>
+  <span class="comment">comments:<%= @article.comments.size %></span>
+</div>

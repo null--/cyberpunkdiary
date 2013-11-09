@@ -1,55 +1,45 @@
 <div id="templatemo_main">
-  <div id="content">
-    <div class="post">
+  <div id="content">    
+	<% @user = User.get_current_user session %>
+	<% u = @user %>
 
-      <% @user = User.get_current_user session %>
-      <% u = @user %>
+	<h1><%= @article.title %></h1>
+	<%= render :partial => 'rate' %>
+	<br><br>
+	
+	<% if @article.abstract and @article.abstract.length > 0 then %>
+	<hr>
+    <%= render :partial => 'articles/meta' %>
+	<div class="cleaner"></div>
 
-      <h1><%= @article.title %></h1>
-      <%= render :partial => 'rate' %>
-      <br><br>
-      
-      <% if @article.abstract and @article.abstract.length > 0 then %>
-      <hr>
-      <div class="meta">
-        <span class="admin"> <%= link_to h(@article.user.nickname), (user_path @article.user) %></span>
-        <span class="date"><%= @article.created_at %></span>
-        <span class="tag">
-          <% @article.tags.each do |tag| %>
-            <%= link_to tag.name, tag_path(tag) %> <b>,</b>
-          <% end %>
-        </span>
-        <span class="comment">comments:<%= @article.comments.size %></span>
-      </div>
-      <div class="cleaner"></div>
+	<div class="post">
+	  <%= render :partial => 'score' %>
+	  
+	  <h2>Abstract</h2>
+	  <p class = "abstract"><%=h @article.abstract %></p>
+	  <% end %>
 
-      <%= render :partial => 'score' %>
-      
-      <h2>Abstract</h2>
-      <p class = "abstract"><%=h @article.abstract %></p>
-      <% end %>
       <br>
+      
+	  <h2>Full Story</h2>
+	  <%#= h(@article.body).gsub("\n","<br>") %>
+	  <%#= sanitize( @article.body ) %>
 
-      <h2>Full Story</h2>
-      <div class="sotry">
-        <%#= h(@article.body).gsub("\n","<br>") %>
-        <%#= sanitize( @article.body ) %>
-        <%= render :partial => 'articles/advbody_readonly' %>
-      </div>
+      <%= render :partial => 'articles/advbody_readonly' %>
+
       <p><%
-           if u and (u.id == @article.user_id || u.priv == 10) then
-           %>
-        <%= button_to "Edit", {:controller => 'articles', :action => 'edit', :id => @article.id}, :class => "submit_btn float_l" %>
-        <%= button_to "Delete", @article, :confirm => 'Are you sure?', :method => :delete, :class => "submit_btn float_r"%>
-        <% end %>
-      </p>
-      <%= render :partial => 'rate' %>
-    </div> <!-- post -->
-    <hr>
-    <div id="comment_section">
-    <%= render :partial => 'comments/form' %>
-    <h3>Comments (<%= @article.comments.size %>)</h3>
-    <%= render :partial => 'articles/comment' %>
-    </div>
+		    if u and (u.id == @article.user_id || u.priv == 10) then
+		    %>
+		<%= button_to "Edit", {:controller => 'articles', :action => 'edit', :id => @article.id}, :class => "submit_btn float_l" %>
+		<%= button_to "Delete", @article, :confirm => 'Are you sure?', :method => :delete, :class => "submit_btn float_r"%>
+		<% end %>
+	  </p>
+	  <%= render :partial => 'rate' %>
+	</div> <!-- post -->
+	<hr>
+	<div id="comment_section">
+	  <%= render :partial => 'comments/form' %>
+	  <%= render :partial => 'articles/comment' %>
+	</div>
   </div> <!-- content -->
 </div> <!-- main -->

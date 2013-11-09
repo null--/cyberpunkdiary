@@ -1,0 +1,19 @@
+<div class = "meta">
+	Note: Click on <img class="cleaner" id="shit" src="/javascripts/ckeditor/skins/moono-dark/icons/maximize.png"></img> to view article MAXIMIZED!
+</div>
+
+<%= javascript_include_tag 'ckeditor/ckeditor.js' %>
+<%= javascript_include_tag 'ckeditor/config.js' %>
+
+<script type="text/javascript">
+CKEDITOR.on('instanceReady', function(e) {
+    // First time
+    e.editor.document.getBody().setStyle('background-color', '#101010');
+    e.editor.document.getBody().setStyle('color', '#EEEEEE');
+    // in case the user switches to source and back
+    e.editor.on('contentDom', function() {
+        e.editor.document.getBody().setStyle('background-color', '#101010');
+        e.editor.document.getBody().setStyle('color', '#EEEEEE');
+    });
+  });
+</script>

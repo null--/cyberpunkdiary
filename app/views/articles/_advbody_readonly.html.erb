@@ -1,7 +1,4 @@
-<p><i> Note: Click on <img src="/images/maximize.png"></img> to view this article MAXIMIZED </i></p>
-
-<%= javascript_include_tag 'ckeditor/ckeditor.js' %>
-<%= javascript_include_tag 'ckeditor/config.js' %>
+<%= render :partial => 'articles/ckedit_style' %>
 
 <script type="text/javascript">
   $(document).ready(function()
@@ -22,7 +19,7 @@
 
             ],
         width: "42.7em",
-        height: "40em"
+        height: "30em"
 
         })
   });

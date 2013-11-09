@@ -325,7 +325,8 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 }
 
 .post img { 
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
+	margin-bottom: 0px;
 }
 
 .post h2.home { 
@@ -396,7 +397,7 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 }
 
 .comments li .commentbox2 {
-	border: 1px solid #1b1b1b; 
+	border: 1px solid #0099e6; 
 }
 
 .comments li .comment_box { 
@@ -467,12 +468,12 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 }
 
 #new_comment textarea {
-	width: 398px; 
-	height: 180px; 
+	width: 42em;
+    height: 10em;
 	padding: 5px; 
 	color: #fff;
-	background: #000;
-	border: 1px solid #292929;
+	background: #101010;
+	border: 2px solid #009999;
 	font-size: 12px;
 	font-family: Tahoma, Geneva, sans-serif;
 	margin-top: 5px;
