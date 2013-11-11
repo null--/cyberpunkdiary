@@ -35,6 +35,19 @@ flash:empty {
     padding: 0;
 }
 
+.headbar{
+	position:relative;
+	width:100%;
+	height:5em;
+	/* z-index:3px; */
+	/* overflow:hidden; */
+}
+
+.headbar img {
+    width: 100%;
+    height: 100%;
+}
+
 .submit_btn {
 	display: block; 
 	width: 70px; 
@@ -253,7 +266,7 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 	height: 38px; 
 	color: #acacac; 
 	text-indent: -10000px; 
-	background: url(/images/images/templatemo_logo.png) no-repeat center left; 
+	background: url(/images/images/cpd_logo.png) no-repeat center left; 
 }
 
 #templatemo_search { 
@@ -645,7 +658,7 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 
 #sidebar, .one_third { 
 	width: 30%;
-    height: 35em;
+    min-height: 35em;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     border: medium solid;
 }
