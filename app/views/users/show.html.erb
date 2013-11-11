@@ -1,5 +1,10 @@
-<h1>#whoami<h1>
-<h2><%=h @user.nickname %></h2>
-<p>#login: <%=h @user.username %> </p>
-<p>#whereis: <%=h @user.email %> </p>
-<p>#joined-at: <%=h @user.created_at %> </p>
+<div id="templatemo_main">
+  <div id = "content" >
+    <h1>#whoami</h1>
+    <h2><%=h @user.nickname %></h2>
+    <p>#login: <%=h @user.username %> </p>
+    <p>#whereis: <%=h @user.email %> </p>
+    <p>#joined-at: <%=h @user.created_at %> </p>
+  </div>
+  <%= render :partial => 'layouts/sidebar' %>
+</div>

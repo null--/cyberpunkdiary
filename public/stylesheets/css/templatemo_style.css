@@ -658,9 +658,10 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 
 #sidebar, .one_third { 
 	width: 30%;
-    min-height: 35em;
+    min-height: 25em;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     border: medium solid;
+    margin: 0px 0px 0.5em;
 }
 
 #sidebar, .footer_one_third { 
