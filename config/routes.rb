@@ -15,6 +15,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect "article/page/:order/:dir/:page", :controller => "articles", :action => "index"
 
+  map.connect "comment/destroy/:id", :controller => "comments", :action => ":id"
+
   # Adding Controllers
   map.resources :articles
   map.resources :tags

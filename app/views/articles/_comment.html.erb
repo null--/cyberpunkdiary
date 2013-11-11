@@ -1,5 +1,6 @@
 <div class="comments">
-  <% @article.comments.reverse.each do |comment| %>
+  <%# @article.comments.reverse.each do |comment| %>
+  <% @article.comments.each do |comment| %>
   <li class = "comment_box">
     <div class = "comment_author">
       <img src = "/images/images/arrow-r.png" />
@@ -9,6 +10,14 @@
       <p class = "commentbox2">
         <%= h(comment.body).gsub("\n","<br>") %>
       </p>
+
+      <%=
+      u = User.get_current_user session
+      if u and (u.id == comment.user_id or u.priv == 10) then
+        "<a href=\"/comments/destroy/" + comment.id.to_s + "\"> delete </a>"
+      end
+      %>
+      
       <span class="date"><%= distance_of_time_in_words(Time.now, comment.created_at)%> ago</span>
     </div>
   </li>

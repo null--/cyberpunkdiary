@@ -30,4 +30,23 @@ class CommentsController < ApplicationController
       redirect_to_index_error
     end
   end
+
+  def destroy
+    @comment = Comment.find( params[:id] )
+    @article = @comment.article if @comment
+
+    u = User.get_current_user session
+
+    if @comment and @article and u and (u.id == @comment.user_id or u.priv == 10) then
+      @comment.destroy
+
+      flash[:notice] = "Your comment has been deleted."
+      redirect_to_article
+    elsif @article then
+      flash[:error] = "You cannot do that!"
+      redirect_to_article
+    else
+      redirect_to_index_error
+    end
+  end
 end

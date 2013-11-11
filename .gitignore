@@ -4,7 +4,11 @@
 *.log
 *.sql
 *.sqlite
+
+# EDITOR
+######################
 *.*~
+.#*
 
 # OS generated files #
 ######################
