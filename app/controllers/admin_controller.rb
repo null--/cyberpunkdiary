@@ -3,7 +3,7 @@ class AdminController < ApplicationController
 
   def check_privs
     u = User.get_current_user session
-    if u.priv == 10 then
+    if u and u.priv == 10 then
       return true
     end
     

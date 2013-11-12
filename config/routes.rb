@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect "users/:id/:page", :controller => 'users', :action => 'show'
   map.connect "users/login", :controller => 'users', :action => 'login'
-  map.connect "users/logout/:id", :controller => 'users', :action => 'logout'
+  map.connect "logout/:id", :controller => 'users', :action => 'logout'
   map.connect "users/register", :controller => 'users', :action => 'register'
   map.connect "users/edit", :controller => 'users', :action => 'edit'
 

@@ -1,3 +1,4 @@
+<div id="main">
 <h1>List of users</h1>
 
 <p>
@@ -24,9 +25,12 @@
     %>
 </p>
 <p>
-  <br>
+  <div class = "list">
+  <ul>
   <% @users.each do |user| %>
-  <%= link_to h(user.nickname), {:controller => 'users', :action => 'show', :id => user.id } %>
-  <br>
+  <li> <%= link_to h(user.nickname), {:controller => 'users', :action => 'show', :id => user.id } %> </li>
   <% end %>
+  <ul>
+  </div>
 </p>
+</div>

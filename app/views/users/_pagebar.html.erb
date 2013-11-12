@@ -1,3 +1,4 @@
+<% if @total > 0 %>
 <div class="pagging">
   <%= render :partial => 'layouts/pagebar' %>
   <ul>
@@ -33,3 +34,6 @@
   <br>
 </div>
 <div class="cleaner"></div>
+<% else %>
+<p>This user has no article!</p>
+<% end %>

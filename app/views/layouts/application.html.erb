@@ -35,7 +35,7 @@ function clearText(field)
 <script type="text/javascript">
 
 ddsmoothmenu.init({
-	mainmenuid: "templatemo_menu", //menu DIV id
+	mainmenuid: "menu", //menu DIV id
 	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
 	classname: 'ddsmoothmenu', //class added to menu's outer DIV
 	//customtheme: ["#1c5a80", "#18374a"],
@@ -57,22 +57,36 @@ ddsmoothmenu.init({
   <flash><error><%=h flash[:error] %></error></flash>
   <% end %>
   
-  <div id="templatemo_wrapper">
+  <div id="wrapper">
 
-    <div id="templatmeo_header">
+    <div id="header">
+      <div id="rss_btn">
+		<a href="#"><%= image_tag ("images/feed.png", :alt => "RSS", :title => "RSS") %></a>
+      </div>
       <div id="site_title">
         <h1> <a href="http://cyberpunkdiary.org">Cyberpunk Diary [CPD]</a> </h1></div>
-        <div id="templatemo_search">
+        <!-- 
+        <div id="search">
+        <a href="#"><%= image_tag ("images/feed.png", :alt => "RSS", :title => "RSS") %></a>
           <form method="get" action="#">
             <input type="text" class="txt_field" onblur="clearText(this)" onfocus="clearText(this)" title="keyword" id="keyword" name="keyword" value="Search [TODO]">
             <input type="submit" class="sub_btn" title="Search" id="searchbutton" alt="Search" value="" name="Search">
           </form>
         </div>
+        -->
       <div class="cleaner"></div>
     </div>
 
-    <div class="ddsmoothmenu" id="templatemo_menu">
+    <div class="ddsmoothmenu" id="menu">
       <ul>
+        <% if u then %>
+          <li style="z-index: 99;"><a href="#" class="">#<%= u.nickname %><span>sudo su -</span></a>
+          <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">
+            <li><%= link_to 'Profile', user_path(u) %></li>
+            <li><%= link_to 'Logout', {:controller => 'users', :action => 'logout', :id => u.id} %></li>
+          </ul>
+	    </li>
+        <% end %>
         <li><a class="selected" href="/">Home<span>back to the bay</span></a></li>
         <li style="z-index: 99;"><a href="#" class="">Diary<span>read/write/exec</span></a>
           <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">
@@ -86,13 +100,6 @@ ddsmoothmenu.init({
         <% if !u then %>
           <li><a class="selected" href="/users/register">Register<span>be a cyberpunk</span></a></li>
           <li><a class="selected" href="/users/login">Login<span>go black!</span></a></li>
-        <% else %>
-          <li style="z-index: 99;"><a href="#" class="">#user: <%= u.nickname %><span>chmod 755</span></a>
-          <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">
-            <li><%= link_to 'Profile', user_path(u) %></li>
-            <li><%= link_to 'Logout', {:controller => 'users', :action => 'logout', :id => u.id} %></li>
-          </ul>
-	    </li>
         <% end %>
         <li style="z-index: 100;"><a href="#" class="">About [CPD]<span>#whoami</span></a>
           <ul style="display: none; top: 62px; visibility: visible;">
@@ -113,9 +120,9 @@ ddsmoothmenu.init({
 
     <div class="cleaner"></div>
   </div>
-
-  <div id="templatemo_footer_wrapper">
-	<div id="templatemo_footer">
+<!--
+  <div id="footer_wrapper">
+	<div id="footer">  
       <div class="col footer_one_third">
         <h4>Flickr</h4>
         <ul class="flickr_stream">
@@ -124,17 +131,18 @@ ddsmoothmenu.init({
           <li class="no_margin_right"><a href="#"><%= image_tag ("images/03.png", :alt => "Flickr 03") %></a></li>
         </ul>  
       </div>
-	  
+  
       <div class="col footer_one_third">
         <h4>Twitter</h4>
         <ul class="twitter_post">
 	      <li>Test twitter: blah blah blah.... blah blah blah! <a href="#">http://twitter.com</a></li>
 		</ul>
       </div>
-      
       <div class="col footer_one_third no_margin_right">
-        <h4>Follow Us</h4>
-		<div class="cleaner h20"></div>
+      
+	  <div>
+        <b>Follow </b><a href="#">[cpd]</a>
+		<div class="cleaner"></div>
         <div class="footer_social_button">
           <a href="#"><%= image_tag ("images/facebook.png", :alt => "Facebook", :title => "Facebook") %></a>
           <a href="#"><%= image_tag ("images/flickr.png", :alt => "Flickr", :title => "Flickr") %></a>
@@ -143,16 +151,11 @@ itter") %></a>
           <a href="#"><%= image_tag ("images/youtube.png", :alt => "Youtube", :title => "Youtube") %></a>
           <a href="#"><%= image_tag ("images/feed.png", :alt => "RSS", :title => "RSS") %></a>
 		</div>
-        
-        GPLv3 2013 <a href="#">[cpd]</a> <br>
-          <%# <p>This CSS theme is developed by [cpd] crew for Ruby-on-Rails, based on <a target="_parent" href="http://www.templatemo.com">Dark Pro Theme</a> </p> %>
-	            <div class="cleaner"></div>
-              </div>
-		      
-              <div class="cleaner"></div>
-            </div> <!-- END of footer -->
       </div>
-
+    </div> 
+    --> 
+    <!-- END of footer -->
+   </div>
 </body>
 </html>
 

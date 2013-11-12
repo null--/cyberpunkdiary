@@ -1,4 +1,4 @@
-<div id="templatemo_main">
+<div id="main">
   <!-- <div id = "content" > -->
     <h1>#whoami</h1>
     <h2><%=h @user.nickname %></h2>
@@ -7,13 +7,12 @@
     <p>#joined-at: <%=h @user.created_at %> </p>
     <br>
     <h2> Articles </h2>
-    <br>
     <%= render :partial => 'users/pagebar' %>
     <p>
       <%= render :partial => 'articles/list_articles' %>
     </p>
     <div class="cleaner"></div>
-    <%= render :partial => 'users/pagebar' %>
+    <%= render (:partial => 'users/pagebar') if @total > 0 %>
   <!-- </div> -->
   <%#= render :partial => 'layouts/sidebar' %>
 </div>

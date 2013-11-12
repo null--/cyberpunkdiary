@@ -1,26 +1,29 @@
+<div id="main">
+<h1>#useradd Cyberpunk</h1>
 <% form_for @user, :url => {:action => 'goblack'} do |f| %>
   <ul>
   <% @user.errors.full_messages.each do |error| %>
     <li><%= error %></li>
   <% end %>
   <p>
-    <%= f.label :username %><br />
+    <%= f.label "username (*)"%><br />
     <%= f.text_field :username %>
   </p>
   <p>
-    <%= f.label :nickname %><br />
+    <%= f.label "nickname (*)" %><br />
     <%= f.text_field :nickname %>
   </p>
   <p>
-    <%= f.label :password %><br />
+    <%= f.label "password (*)" %><br />
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :email %><br />
+    <%= f.label "email (optional)" %><br />
     <%= f.text_field :email %>
   </p>
   <%= render :partial => 'captcha/form' %>
   <p>
-    <%= f.submit 'Register!'%>
+    <%= f.submit 'wanna be a C-PUNK!'%>
   </p>
 <% end %>
+</div>
