@@ -1,17 +1,46 @@
+<%
+  links = [[]]
+  lables = []
+  links[0] = ["test", link_to ('date/desc - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'date', :dir => 'desc'}) ]
+  lables[0] = "test"
+  # links[1] = link_to 'date/asc - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'date', :dir => 'asc'}
+  # lables[1] = "Date - Ascending"
+  # links[2] = link_to 'hits - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'hits', :dir => 'desc'}
+  # lables[2] = "Date - Descending"
+  # links[3] = link_to 'hits/a - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'hits', :dir => 'asc'}
+  # lables[3] = "Date - Descending"
+  # links[4] = link_to '1337 - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'leet', :dir => 'desc'}
+  # lables[4] = "Date - Descending"
+  # links[5] = link_to '1337/a - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'leet', :dir => 'asc'}
+  # lables[5] = "Date - Descending"
+  # links[6] = link_to 'lame', {:controller => 'articles', :action => 'index', :page => 1, :order => 'lame', :dir => 'desc'}
+  # lables[6] = "Date - Descending"
+  # links[7] = link_to 'lame/a',    {:controller => 'articles', :action => 'index', :page => 1, :order => 'lame',  :dir => 'asc'}
+  # lables[7] = "Date - Descending"
+
+  links = [
+    ["<Change order>", "#"],
+    ["Date - Descending", "/article/page/date/desc/1"],
+    ["Date - Ascending", "/article/page/date/asc/1"],
+    ["Hits - Descending", "/article/page/hits/desc/1"],
+    ["Hits - Ascending", "/article/page/hits/asc/1"],
+    ["1337 - Descending", "/article/page/leet/desc/1"],
+    ["1337 - Ascending", "/article/page/leet/asc/1"],
+    ["lame - Descending", "/article/page/lame/desc/1"],
+    ["lame - Ascending", "/article/page/lame/asc/1"]
+  ]
+%>
+
 <div id="templatemo_main">
   <h1>Diary</h1>
 
   <p>
-    Sort by (current: <%= @order + "/" + @dir %>):
-    <%= link_to 'date/desc - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'date', :dir => 'desc'} %>
-    <%= link_to 'date/asc - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'date', :dir => 'asc'} %>
-    <%= link_to 'hits - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'hits', :dir => 'desc'} %>
-    <%#= link_to 'hits/a - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'hits', :dir => 'asc'} %>
-    <%= link_to '1337 - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'leet', :dir => 'desc'} %>
-    <%#= link_to '1337/a - ', {:controller => 'articles', :action => 'index', :page => 1, :order => 'leet', :dir => 'asc'} %>
-    <%= link_to 'lame', {:controller => 'articles', :action => 'index', :page => 1, :order => 'lame', :dir => 'desc'} %>
-    <%#= link_to 'lame/a',    {:controller => 'articles', :action => 'index', :page => 1, :order => 'lame',  :dir => 'asc'} %>
+    Sort by (current: <%= @order + "/" + @dir %>): <%= select_tag :sort_select, options_for_select( links ) %>
   </p>
+  
+  <script language="javascript" type="text/javascript">
+    $('#sort_select').bind('change', function() { window.location.pathname = $(this).val() });
+  </script>
   <hr>
   <%= render :partial => 'pagebar' %>
     <% i = 0 %>
