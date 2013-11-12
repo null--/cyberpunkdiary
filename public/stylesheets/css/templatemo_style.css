@@ -512,8 +512,8 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 
 #new_comment input /*.commit_submit*/ {
 	display: block; 
-	width: 70px; 
-	height: 30px; 
+	min-width: 5em;
+	height: 3em;
 	padding: 5px 8px; 
 	text-align: center; 
 	text-decoration: none; 

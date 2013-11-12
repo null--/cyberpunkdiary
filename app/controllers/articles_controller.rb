@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @perpage = 6
+    @perpage = 9
 
     @page = (params[:page] || '1').to_i;
     @total = Article.count

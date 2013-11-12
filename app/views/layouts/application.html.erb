@@ -74,7 +74,7 @@ ddsmoothmenu.init({
     <div class="ddsmoothmenu" id="templatemo_menu">
       <ul>
         <li><a class="selected" href="/">Home<span>back to the bay</span></a></li>
-        <li style="z-index: 99;"><a href="#" class="">Diary<span>read/write/execute</span></a>
+        <li style="z-index: 99;"><a href="#" class="">Diary<span>read/write/exec</span></a>
           <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">
             <li><a href="/articles" class="">All Submissions</a></li>
             <% if u then %>
@@ -82,9 +82,10 @@ ddsmoothmenu.init({
             <% end %>
           </ul>
 	    </li>
+        <li><a class="selected" href="/tags">Tags<span>view list of tags</span></a></li>
         <% if !u then %>
-          <li><a class="selected" href="/">Register<span>you're one click away from cyberpunks</span></a></li>
-          <li><a class="selected" href="/users/login">Login<span>as a cyberpunk</span></a></li>
+          <li><a class="selected" href="/users/register">Register<span>be a cyberpunk</span></a></li>
+          <li><a class="selected" href="/users/login">Login<span>go black!</span></a></li>
         <% else %>
           <li style="z-index: 99;"><a href="#" class="">#user: <%= u.nickname %><span>chmod 755</span></a>
           <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">

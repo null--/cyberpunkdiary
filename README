@@ -5,15 +5,6 @@ Installation:
   chmod 755 app/controllers/captcha_controller.rb
 
 TODO:
-  XSS Safezone
-    show article body inside a safe session
-
   abstract character limit
-  choosing a picture for each article
-  Edit/Delete comments
-  Style improvement
-    change css class names
-    add an style for comments
   Edit/Delete user
-
-  
+  rss feed

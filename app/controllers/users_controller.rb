@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 	orig_captcha = session[:captcha]
     session.delete(:captcha)
     
-    if orig_captcha == params[:captcha] then
+    if (not orig_captcha.nil?) and orig_captcha == params[:captcha] then
       vname = User.find(:first, :conditions => {:username => params[:user][:username]}).nil?
       vmail = User.find(:first, :conditions => {:email => params[:user][:email]}).nil?
       vnick = User.find(:first, :conditions => {:nickname => params[:user][:nickname]}).nil?

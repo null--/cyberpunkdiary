@@ -18,17 +18,23 @@ class CommentsController < ApplicationController
 
   def create
     u = User.get_current_user session
-    if u then
+    
+    orig_captcha = session[:captcha]
+    session.delete(:captcha)
+    
+    if orig_captcha.nil? or orig_captcha != params[:captcha] then
+      flash[:error] = "Wrong captcha!"
+    elsif u then
       @comment = Comment.new( validate_comment )
     
       @comment.article_id = params[:article_id]
       @comment.user_id = u.id
 
       @comment.save
-      redirect_to article_path(@comment.article)
     else
-      redirect_to_index_error
+      flash[:error] = "Not Authorized"
     end
+    redirect_to article_path(params[:article_id])
   end
 
   def destroy
