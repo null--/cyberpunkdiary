@@ -1,11 +1,12 @@
 <%
    icon_name = {}
-   icon_name[0] = "General"
+   icon_name[0] = "Cybersec News"
    icon_name[1] = "Crack"
    icon_name[2] = "Hack"
    icon_name[3] = "Pentest"
    icon_name[4] = "Web Hacking"
    icon_name[5] = "Reverse Engineering"
+   icon_name[6] = "Hacktivism"
 
    buttons = [[]]
 
@@ -28,31 +29,31 @@
     <li><%= error %></li>
   <% end %>
   <p>
-    Select an icon for your article:
+    <%= f.label "Select a category" %>
     <%= f.select :icon, options_for_select(buttons)
     %>
   </p>
   <p>
-    <%= f.label :title %><br />
+    <%= f.label :title %>
     <%=h f.text_field :title %>
   </p>
   <p>
-    <%= f.label :tag_list %><br />
+    <%= f.label :tag_list %>
     <%=h f.text_field :tag_list %>
   </p>
   <p>
-    <%= f.label :abstract %><br />
+    <%= f.label :abstract %>
     <%=h f.text_area :abstract %>
   </p>
   <!--
   <p>
-    <%#= f.label :body %><br />
+    <%#= f.label :body %>
     <%#=h f.text_area :body %>
   </p>
   -->
   <%= render :partial => 'articles/advbody' %>
-  <p>
-    <%= f.submit "Save" %>
+  <p><br>
+    <%= f.submit "Submit Strory" %>
   </p>
 <% end %>
 

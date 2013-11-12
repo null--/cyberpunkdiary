@@ -189,7 +189,7 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 #header {
 	width: 940px;
 	padding: 40px 10px 20px;
-	background: url(/images/images/templatemo_header.png) bottom center no-repeat;
+	background: url(/images/images/header.png) bottom center no-repeat;
 }
 
 #menu {
@@ -565,7 +565,7 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 
 #contact_form form label { 
 	display: block; 
-	width: 100px; 
+	/* width: 100px; */
 	margin-right: 12px; 
 	font-size: 13px; 
 }
