@@ -1,8 +1,9 @@
-<h1>Articles Tagged with <%= @tag.name %></h1>
-
-<ul>
-  <% @tag.articles.each do |article| %>
-    <li><%= link_to h(article.title), article_path(article) %></li>
-  <% end %>
-</ul>
-
+<div id="templatemo_main">
+<h1>Tag: <%= @tag.name %></h1>
+<%= render :partial => 'tags/pagebar' %>
+<p>
+  <%= render :partial => 'articles/list_articles' %>
+</p>
+<div class="cleaner"></div>
+<%= render :partial => 'tags/pagebar' %>
+</div>

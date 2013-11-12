@@ -4,6 +4,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect "captcha/generate", :controller => 'captcha', :action => 'generate'
   
+  map.connect "tags/:id/:page", :controller => 'tags', :action => 'show'
+
   map.connect "users/:id/:page", :controller => 'users', :action => 'show'
   map.connect "users/login", :controller => 'users', :action => 'login'
   map.connect "users/logout/:id", :controller => 'users', :action => 'logout'

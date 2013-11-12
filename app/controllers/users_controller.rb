@@ -3,7 +3,7 @@ require 'digest/sha1'
 class UsersController < ApplicationController  
   def show
     @user = User.find( params[:id] )
-    @total = Article.count
+    @total = @user.articles.count
 
     @perpage = 6
     @page = (params[:page] || '1').to_i;

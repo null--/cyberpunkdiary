@@ -1,0 +1,35 @@
+<div class="pagging">
+  <%= render :partial => 'layouts/pagebar' %>
+  <ul>
+    <li>
+    <%=
+       if @page != 1 then
+         link_to 'first',  {:controller => 'tags', :action => 'show', :page => 1}
+       end
+    %>
+    </li>
+    <li>
+    <%=
+       if @page - 1 > 1 then
+         link_to 'prev',  {:controller => 'tags', :action => 'show', :page => @page - 1}
+       end
+    %>
+    </li>
+    <li>
+    <%=
+       if @page + 1 < @n_page then
+         link_to 'next',  {:controller => 'tags', :action => 'show', :page => @page + 1}
+       end
+    %>
+    </li>
+    <li>
+    <%=
+       if @page != @n_page then
+         link_to 'last',  {:controller => 'tags', :action => 'show', :page => @n_page}
+       end
+    %>
+    </li>
+  </ul>
+  <br>
+</div>
+<div class="cleaner"></div>
