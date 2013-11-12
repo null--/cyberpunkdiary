@@ -1,9 +1,13 @@
 <div id="templatemo_main">
-<%= render :partial => 'layouts/sidebar' %>
+<div id="content">
+
 <h1>Tags</h1>
 <div class="meta">
 <% @tags.sort_by{|e| e.name}.each do |tag| %>
 <span class="tag"> <%= link_to h(tag.name), tag_path(tag) %> </span>
 <% end %>
 </div>
+
+</div>
+<%= render :partial => 'layouts/sidebar' %>
 </div>

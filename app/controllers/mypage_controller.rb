@@ -8,4 +8,7 @@ class MypageController < ApplicationController
 
   def bugs
   end
+  
+  def dev
+  end
 end
