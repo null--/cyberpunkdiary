@@ -1,14 +1,14 @@
 <%
   links = [
     ["<Change order>", "#"],
-    ["Date - Descending", "/article/page/date/desc/1"],
-    ["Date - Ascending", "/article/page/date/asc/1"],
-    ["Hits - Descending", "/article/page/hits/desc/1"],
-    ["Hits - Ascending", "/article/page/hits/asc/1"],
-    ["1337 - Descending", "/article/page/leet/desc/1"],
-    ["1337 - Ascending", "/article/page/leet/asc/1"],
-    ["lame - Descending", "/article/page/lame/desc/1"],
-    ["lame - Ascending", "/article/page/lame/asc/1"]
+    ["Date - Descending", "/articles/page/date/desc/1"],
+    ["Date - Ascending", "/articles/page/date/asc/1"],
+    ["Hits - Descending", "/articles/page/hits/desc/1"],
+    ["Hits - Ascending", "/articles/page/hits/asc/1"],
+    ["1337 - Descending", "/articles/page/leet/desc/1"],
+    ["1337 - Ascending", "/articles/page/leet/asc/1"],
+    ["lame - Descending", "/articles/page/lame/desc/1"],
+    ["lame - Ascending", "/articles/page/lame/asc/1"]
   ]
 %>
 
@@ -17,6 +17,11 @@
 
   <p>
     Sort by (current: <%= @order + "/" + @dir %>): <%= select_tag :sort_select, options_for_select( links ) %>
+  </p>
+  <p>
+	<a href="/rss/articles">
+	<%= image_tag ("images/feed.png", :alt => "Comments RSS", :title => "Comments RSS") %></a>
+	Subscribe to [CPD]-RSS
   </p>
   
   <script language="javascript" type="text/javascript">

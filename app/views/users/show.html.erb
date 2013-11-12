@@ -6,6 +6,11 @@
     <p>#whereis: <%=h @user.email %> </p>
     <p>#joined-at: <%=h @user.created_at %> </p>
     <br>
+    <p>
+		<%= '<a href="/rss/user/' + @user.id.to_s + '">' %>
+		<%= image_tag ("images/feed.png", :alt => "Comments RSS", :title => "Comments RSS") %></a>
+		Subscribe to article-RSS of <%= @user.nickname %>
+      </p>
     <h2> Articles </h2>
     <%= render :partial => 'users/pagebar' %>
     <p>

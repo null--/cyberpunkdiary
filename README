@@ -5,7 +5,6 @@ Installation:
   chmod 755 app/controllers/captcha_controller.rb
 
 TODO:
-  abstract character limit
+  abstract, etc. character limit
   Edit/Delete user
-  rss feed
   API

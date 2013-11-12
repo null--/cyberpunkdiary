@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @perpage = 6
     @page = (params[:page] || '1').to_i;
 
-    @articles = Article.find(:all, :conditions => {:user_id => @user.id}, :limit => @perpage, :offset => (@page - 1) * @perpage);
+    @articles = Article.find(:all, :conditions => {:user_id => @user.id}, :order => "created_at desc", :limit => @perpage, :offset => (@page - 1) * @perpage);
 
     @n_page = @total / @perpage;
     @n_page = @n_page + 1 if @n_page * @perpage != @total
@@ -88,6 +88,18 @@ class UsersController < ApplicationController
     redirect_to_index
   end
 
+  def user_rss
+    user = User.find( params[:id] )
+    articles = Article.find(:all, :conditions => {:user_id => user.id}, :order => "created_at desc", :limit => 22, :offset => 0);
+    
+    generate_rss(articles,
+                 'Latest articles of ' + user.nickname, 
+                 Proc.new {|art| art.title}, 
+                 Proc.new {|art| art.abstract}, 
+                 Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})
+  end
+  
   def edit
+  
   end
 end
