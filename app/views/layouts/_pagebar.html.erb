@@ -1,0 +1,1 @@
+<p>Page <%= @page %> of <%= @n_page %>, Articles from <%= (@page - 1) * @perpage + 1 %> to <%= if @page*@perpage < @total then @page*@perpage else @total end%> of <%= @total %></p>

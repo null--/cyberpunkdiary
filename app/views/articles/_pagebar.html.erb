@@ -1,5 +1,5 @@
 <div class="pagging">
-  <p>Page <%= @page %> of <%= @n_page %>, Articles from <%= (@page - 1) * @perpage + 1 %> to <%= if @page + @perpage < @total then @page + @perpage - 1 else @total end%> of <%= @total %></p>
+  <%= render :partial => 'layouts/pagebar' %>
   <ul>
     <li>
     <%=

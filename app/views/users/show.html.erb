@@ -1,10 +1,19 @@
 <div id="templatemo_main">
-  <div id = "content" >
+  <!-- <div id = "content" > -->
     <h1>#whoami</h1>
     <h2><%=h @user.nickname %></h2>
     <p>#login: <%=h @user.username %> </p>
     <p>#whereis: <%=h @user.email %> </p>
     <p>#joined-at: <%=h @user.created_at %> </p>
-  </div>
-  <%= render :partial => 'layouts/sidebar' %>
+    <br>
+    <h2> Articles </h2>
+    <br>
+    <%= render :partial => 'users/pagebar' %>
+    <p>
+      <%= render :partial => 'articles/list_articles' %>
+    </p>
+    <div class="cleaner"></div>
+    <%= render :partial => 'users/pagebar' %>
+  <!-- </div> -->
+  <%#= render :partial => 'layouts/sidebar' %>
 </div>

@@ -3,6 +3,15 @@ require 'digest/sha1'
 class UsersController < ApplicationController  
   def show
     @user = User.find( params[:id] )
+    @total = Article.count
+
+    @perpage = 6
+    @page = (params[:page] || '1').to_i;
+
+    @articles = Article.find(:all, :conditions => {:user_id => @user.id}, :limit => @perpage, :offset => (@page - 1) * @perpage);
+
+    @n_page = @total / @perpage;
+    @n_page = @n_page + 1 if @n_page * @perpage != @total
   end
 
   def register

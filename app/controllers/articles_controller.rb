@@ -22,11 +22,11 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @perpage = 9
+    @perpage = 6
 
-    @total = Article.count
     @page = (params[:page] || '1').to_i;
-    
+    @total = Article.count
+
     @dir = 'desc'
     @dir = 'asc' if params[:dir] == 'asc'
 
