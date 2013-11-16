@@ -8,8 +8,7 @@
     <br>
     <p>
 		<%= '<a href="/rss/user/' + @user.id.to_s + '">' %>
-		<%= image_tag ("images/feed.png", :alt => "Comments RSS", :title => "Comments RSS") %></a>
-		Subscribe to article-RSS of <%= @user.nickname %>
+		<%= image_tag ("images/feed.png", :alt => "Comments RSS", :title => "Comments RSS") %>Follow #<%= @user.nickname %></a>
       </p>
     <h2> Articles </h2>
     <%= render :partial => 'users/pagebar' %>

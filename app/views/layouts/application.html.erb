@@ -82,14 +82,14 @@ ddsmoothmenu.init({
         <% if u then %>
           <li style="z-index: 99;"><a href="#" class="">#<%= u.nickname %> &#x25BD;<span>sudo su -</span></a>
           <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">
-            <li><a href="/articles/new">Submit a New Story</a></li>
+            <li><a href="/articles/new">New story...</a></li>
             <li><%= link_to 'Profile', user_path(u) %></li>
             <li><%= link_to 'Logout', {:controller => 'users', :action => 'logout', :id => u.id} %></li>
           </ul>
 	    </li>
         <% end %>
         <li><a class="selected" href="/">Home<span>back to the bay</span></a></li>
-        <li style="z-index: 99;"><a href="/articles" class="">Diary<span>Yo. Wazzup, punk?</span></a>
+        <li style="z-index: 99;"><a href="/articles" class="">Diary<span>Take the RED pill</span></a>
 	    </li>
         <li><a class="selected" href="/tags">Tags <span>view list of tags</span></a></li>
         <% if !u then %>

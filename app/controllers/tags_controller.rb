@@ -18,12 +18,14 @@ class TagsController < ApplicationController
   
   def tag_rss
     tag = Tag.find( params[:id] )
-    articles = tag.articles.find(:all, :order => "created_at desc", :limit => 22, :offset => 0);
+    if !tag.nil? then
+      articles = tag.articles.find(:all, :order => "created_at desc", :limit => 22, :offset => 0);
     
-    generate_rss(articles,
-                 'Latest articles tagged as ' + tag.name, 
-                 Proc.new {|art| art.title}, 
-                 Proc.new {|art| art.abstract}, 
-                 Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})
+      generate_rss(articles,
+                   'Latest articles tagged as ' + tag.name, 
+                   Proc.new {|art| art.title}, 
+                   Proc.new {|art| art.abstract}, 
+                   Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})
+    end
   end
 end

@@ -90,13 +90,15 @@ class UsersController < ApplicationController
 
   def user_rss
     user = User.find( params[:id] )
-    articles = Article.find(:all, :conditions => {:user_id => user.id}, :order => "created_at desc", :limit => 22, :offset => 0);
-    
-    generate_rss(articles,
-                 'Latest articles of ' + user.nickname, 
-                 Proc.new {|art| art.title}, 
-                 Proc.new {|art| art.abstract}, 
-                 Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})
+   if not user.nil? then
+     articles = Article.find(:all, :conditions => {:user_id => user.id}, :order => "created_at desc", :limit => 22, :offset => 0);
+     
+     generate_rss(articles,
+                  'Latest stories of ' + user.nickname, 
+                  Proc.new {|art| art.title}, 
+                  Proc.new {|art| art.abstract}, 
+                  Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})
+   end
   end
   
   def edit

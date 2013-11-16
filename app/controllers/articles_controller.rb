@@ -113,21 +113,25 @@ class ArticlesController < ApplicationController
   
   def diary_rss
     articles = Article.find(:all, :order => "created_at desc", :limit => 22, :offset => 0);
-    generate_rss(articles,
-                 'Cyberpunkdiary: 1337 or lame', 
-                 Proc.new {|art| art.title}, 
-                 Proc.new {|art| art.abstract}, 
-                 Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})
+    if not articles.nil? then
+      generate_rss(articles,
+                   'Cyberpunkdiary: 1337 or lame', 
+                   Proc.new {|art| art.title}, 
+                   Proc.new {|art| art.abstract}, 
+                   Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})
+    end
   end
   
   def comment_rss
     article = Article.find( params[:id] )
-    comments = article.comments[0..22]
+    if not article.nil? then
+      comments = article.comments[0..(article.comments.count % 22)]
     
-    generate_rss(comments,
-                 'Latest comments of ' + article.title, 
-                 Proc.new {|cmn| cmn.user.nickname}, 
-                 Proc.new {|cmn| cmn.body}, 
-                 Proc.new {'http://' + request.host + ':' + request.port.to_s + '/articles/' + article.id.to_s})
+      generate_rss(comments,
+                   'Latest comments of ' + article.title, 
+                   Proc.new {|cmn| cmn.user.nickname}, 
+                   Proc.new {|cmn| cmn.body}, 
+                   Proc.new {'http://' + request.host + ':' + request.port.to_s + '/articles/' + article.id.to_s})
+    end
   end
 end
