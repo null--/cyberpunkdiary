@@ -8,3 +8,4 @@ TODO:
   abstract, etc. character limit
   Edit/Delete user
   API
+  exception handling + rescue
