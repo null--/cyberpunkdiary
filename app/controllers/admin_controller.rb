@@ -7,7 +7,7 @@ class AdminController < ApplicationController
       return true
     end
     
-    flash[:error] = 'YOU ARE NOT AUTHORIZED'
+    flash[:error] = CPDConf.unauth_err
     redirect_to_index
     nil
   end

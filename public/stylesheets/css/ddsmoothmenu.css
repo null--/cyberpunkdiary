@@ -19,8 +19,8 @@
 /*Top level menu link items style*/
 .ddsmoothmenu ul li a {
 	display: block;
-	height: 50px;
-	padding: 12px 30px 0;
+	/* height: 50px; */
+	padding: 12px 30px 7px;
 	font-size: 14px;
 	color: #ccc;	
 	text-decoration: none;

@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     @user = User.find( params[:id] )
     @total = @user.articles.count
 
-    @perpage = 6
+    @perpage = CPDConf.user_perp
     @page = (params[:page] || '1').to_i;
 
     @articles = Article.find(:all, :conditions => {:user_id => @user.id}, :order => "created_at desc", :limit => @perpage, :offset => (@page - 1) * @perpage);
@@ -37,17 +37,17 @@ class UsersController < ApplicationController
         @user.session_id = session[:session_id]
         @user.save
 
-        flash[:notice] = "Once you go black, there is no turning back. #{@user.nickname}, welcome!"
+        flash[:notice] = CPDConf.welcome_msg( @user.nickname )
         redirect_to_index
       else
-        flash[:error] = "Username was taken" if not vname
-        flash[:error] = "Nickname was taken" if not vnick
-        flash[:error] = "Email was taken" if not vmail
+        flash[:error] = CPDConf.username_err if not vname
+        flash[:error] = CPDConf.nickname_err if not vnick
+        flash[:error] = CPDConf.email_err if not vmail
 
         redirect_to_register
       end
     else
-      flash[:error] = "Captcha code was wrong!"
+      flash[:error] = CPDConf.captcha_err
       redirect_to_register
     end
   end
@@ -65,10 +65,10 @@ class UsersController < ApplicationController
       @user.session_id = session[:session_id]
       @user.save
 
-      flash[:notice] = "#{@user.nickname}, welcome back!"
+      flash[:notice] = CPDConf.login_msg( @user.nickname )
       redirect_to_index
     else
-      flash[:error] = "Sorry! Who are you? again"
+      flash[:error] = CPDConf.auth_faild_err
       redirect_to_login
     end
   end
@@ -77,13 +77,13 @@ class UsersController < ApplicationController
     @users = User.find(:all ,:conditions => {:session_id => session[:session_id]})
 
     if @users.length == 0 then
-      flash[:error] = "Invalid Session"
+      flash[:error] = CPDConf.invalid_session_err
     else
       @users.each do |u|
-        u.session_id = 'unathorzed'
+        u.session_id = 'unathorized'
         u.save
       end
-      flash[:notice] = "Seasion Closed!"
+      flash[:notice] = CPDConf.logout_msg
     end
     redirect_to_index
   end
@@ -94,7 +94,7 @@ class UsersController < ApplicationController
      articles = Article.find(:all, :conditions => {:user_id => user.id}, :order => "created_at desc", :limit => 22, :offset => 0);
      
      generate_rss(articles,
-                  'Latest stories of ' + user.nickname, 
+                  CPDConf.user_rss_title(user.nickname), 
                   Proc.new {|art| art.title}, 
                   Proc.new {|art| art.abstract}, 
                   Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})

@@ -181,21 +181,21 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 }
 
 #wrapper {
-	width: 940px;
+	/* width: 940px; */
 	margin: 0 auto;
-	padding: 0 10px;
+	/* padding: 0 10px; */
 }
 
 #header {
-	width: 940px;
+	/* width: 940px; */
 	padding: 40px 10px 20px;
 	background: url(/images/images/header.png) bottom center no-repeat;
 }
 
 #menu {
-	width: 940px;
-	height: 70px;
-	background: url(/images/images/templatemo_menu.jpg) no-repeat;
+	/* width: 940px; */
+	/* height: 70px; */
+	background: url(/images/images/templatemo_menu.jpg); /* no-repeat; */
 	position:relative;
 }
 
@@ -210,7 +210,7 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 }
 
 #slider {
-	width: 940px;
+	/* width: 940px; */
 	padding: 20px 0;
 	height: 340px;
 	overflow: hidden;
@@ -218,8 +218,8 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 }
 
 #main {
-	width: 940px;
-	padding: 40px 0;
+	/* width: 940px; */
+	padding: 40px 10px;
 }
 .col_active {
 	cursor:default;
@@ -243,7 +243,7 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 }
 
 #footer {
-	width: 940px;
+	/* width: 940px; */
 	margin: 0 auto;
 	padding: 1em 5em;
 	background: url(/images/images/templatemo_footer.jpg) top center no-repeat
@@ -662,8 +662,9 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 }
 
 #sidebar, .one_third { 
-	width: 30%;
-    min-height: 25em;
+	/* width: 30%; */
+    width: 20em;
+    min-height: 30em;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     border: medium solid;
     margin: 0px 0px 0.5em;
@@ -696,7 +697,7 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 
 .pagging { 
 	margin: 0 0 20px; 
-	padding: 0; 
+	padding: 0px 10px; 
 }
 
 .pagging ul { 

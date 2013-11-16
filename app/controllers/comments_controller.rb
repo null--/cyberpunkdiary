@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
     session.delete(:captcha)
     
     if orig_captcha.nil? or orig_captcha != params[:captcha] then
-      flash[:error] = "Wrong captcha!"
+      flash[:error] = CPDConf.captcha_err
     elsif u then
       @comment = Comment.new( validate_comment )
     
@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
 
       @comment.save
     else
-      flash[:error] = "Not Authorized"
+      flash[:error] = CPDConf.unauth_err
     end
     redirect_to article_path(params[:article_id])
   end
@@ -46,10 +46,10 @@ class CommentsController < ApplicationController
     if @comment and @article and u and (u.id == @comment.user_id or u.priv == 10) then
       @comment.destroy
 
-      flash[:notice] = "Your comment has been deleted."
+      flash[:notice] = CPDConf.comment_delete_msg
       redirect_to_article
     elsif @article then
-      flash[:error] = "You cannot do that!"
+      flash[:error] = CPDConf.unauth_err
       redirect_to_article
     else
       redirect_to_index_error

@@ -7,7 +7,7 @@ class TagsController < ApplicationController
     @tag = Tag.find( params[:id] )
     @total = @tag.articles.count
 
-    @perpage = 6
+    @perpage = CPDConf.tag_perp
     @page = (params[:page] || '1').to_i;
 
     @articles = @tag.articles.find(:all, :order => "created_at desc", :limit => @perpage, :offset => (@page - 1) * @perpage);
@@ -22,7 +22,7 @@ class TagsController < ApplicationController
       articles = tag.articles.find(:all, :order => "created_at desc", :limit => 22, :offset => 0);
     
       generate_rss(articles,
-                   'Latest articles tagged as ' + tag.name, 
+                   CPDConf.tag_rss_title(tag.name), 
                    Proc.new {|art| art.title}, 
                    Proc.new {|art| art.abstract}, 
                    Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})

@@ -1,10 +1,10 @@
 <% i = 0 %>
 <% @articles.each do |article| %>
-<% if i % 3 == 2 then %>
-<div class="col one_third gallery_box no_margin_right">
-  <% else %>
+<%# if i % 3 == 2 then %>
+  <!-- <div class="col one_third gallery_box no_margin_right"> -->
+<%# else %>
   <div class="col one_third gallery_box">
-    <% end %>
+<%# end %>
     <a rel="lightbox[portfolio]" href=<%= '"' + article_path(article) + '"' %> ><img class="image_frame" alt=<%= '"' + article.title + '"'%> src=<%= "\"/images/articon/" + (article.icon || 0).to_s + ".jpg\"" %> ></a>
     <h5><%=h article.title %></h5>
     <div class="meta">

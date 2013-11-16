@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @perpage = 9
+    @perpage = CPDConf.article_perp
 
     @page = (params[:page] || '1').to_i;
     @total = Article.count
@@ -97,7 +97,7 @@ class ArticlesController < ApplicationController
       @article.update_attributes( validate_params )
       @article.icon = params[:article][:icon] || 0
       @article.save
-      flash[:notice] = "Hey #{u.nickname}, '#{@article.title}' has been updated."
+      flash[:notice] = CPDConf.article_update(u.nickname, @article.title)
       redirect_to_article
     else
       redirect_to_index_error
@@ -115,7 +115,7 @@ class ArticlesController < ApplicationController
     articles = Article.find(:all, :order => "created_at desc", :limit => 22, :offset => 0);
     if not articles.nil? then
       generate_rss(articles,
-                   'Cyberpunkdiary: 1337 or lame', 
+                   CPDConf.diary_rss_title, 
                    Proc.new {|art| art.title}, 
                    Proc.new {|art| art.abstract}, 
                    Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})
@@ -128,7 +128,7 @@ class ArticlesController < ApplicationController
       comments = article.comments[0..(article.comments.count % 22)]
     
       generate_rss(comments,
-                   'Latest comments of ' + article.title, 
+                   CPDConf.comment_rss_title(article.title), 
                    Proc.new {|cmn| cmn.user.nickname}, 
                    Proc.new {|cmn| cmn.body}, 
                    Proc.new {'http://' + request.host + ':' + request.port.to_s + '/articles/' + article.id.to_s})

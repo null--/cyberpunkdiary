@@ -4,6 +4,93 @@
 include ERB::Util
 require 'digest/md5'
 
+# CONFIGURATION
+class CPDConf
+  def initialize
+  end
+  
+  # articles per page
+  def self.article_perp
+    12
+  end
+  
+  def self.tag_perp
+    8
+  end
+  
+  def self.user_perp
+    8
+  end
+  
+  def self.auth_faild_err
+    "James Jr.:\"Why's he running, Dad?\"- Lt. Gordon: \"Because we have to chase him.\""
+  end
+  
+  def self.unauth_err
+    "He turns to me and says, \"Why so serious?\" Comes at me with the knife. \"WHY SO SERIOUS?\" He sticks the blade in my mouth... \"Let's put a smile on that face.\" And..."
+  end
+  
+  def self.access_denied_err
+    'Sorry! NASA launched that page to Mars, yesterday! go find it there. :D'
+  end
+  
+  def self.article_update(user, article)
+    "Hey #{user}, '#{article}' has been updated."
+  end
+  
+  def self.diary_rss_title
+    'Cyberpunkdiary: 1337 or lame'
+  end
+  
+  def self.comment_rss_title(article)
+    'Latest comments of ' + article
+  end
+  
+  def self.tag_rss_title(tag)
+    'Latest articles tagged as ' + tag
+  end
+  
+  def self.user_rss_title(user)
+    'Latest stories of ' + user
+  end
+  
+  def self.welcome_msg(user)
+    "Once you go black, there is no turning back. #{user}, welcome!"
+  end
+  
+  def self.username_err
+    "This username already exists!"
+  end
+  
+  def self.nickname_err
+    "Your nickname belongs to somebody!"
+  end
+  
+  def self.email_err
+    "This email was used before."
+  end
+  
+  def self.captcha_err
+    "Captcha code was wrong!"
+  end
+  
+  def self.invalid_session_err
+    "Invalid Session"
+  end
+  
+  def self.login_msg( user )
+    "#{user}, welcome back!"
+  end
+  
+  def self.logout_msg
+    "Don't go too far away, Alice!"
+  end
+  
+  def self.comment_delete_msg
+    "Your comment has been deleted."
+  end
+end
+
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
@@ -22,7 +109,7 @@ class ApplicationController < ActionController::Base
        params[:action] == 'destroy'
     then
       if not User.is_authorized session then
-        flash[:error] = 'Sorry! NASA launched that page to Mars, yesterday! go find it there. \m/'
+        flash[:error] = CPDConf.unauth_err
         redirect_to_index
       end
       return
@@ -37,7 +124,7 @@ class ApplicationController < ActionController::Base
   end
 
   def redirect_to_index_error
-    flash[:error] = 'Sorry! NASA launched that page to Mars, yesterday! go find it there. :D'
+    flash[:error] = CPDConf.access_denied_err
     respond_to do |format|
       format.html { redirect_to( articles_url ) }
       format.xml { head :ok }
