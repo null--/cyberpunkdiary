@@ -21,10 +21,9 @@
    @article.icon = @article.icon || 0
    %>
 
-<div id="contact_form">
-  
+<div id="submit_form">  
 <% form_for(@article) do |f| %>
-  <ul>
+  <!-- <ul> -->
   <% @article.errors.full_messages.each do |error| %>
     <li><%= error %></li>
   <% end %>
@@ -39,7 +38,7 @@
   </p>
   <p>
     <%= f.label :tag_list %>
-    <%=h f.text_field :tag_list %>
+    <%=h f.text_area :tag_list %>
   </p>
   <p>
     <%= f.label "Abstract (RSS description field)" %>

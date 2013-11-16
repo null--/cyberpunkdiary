@@ -530,19 +530,20 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	cursor: pointer 
 }
 
-#contact_form { 
+#submit_form { 
 	padding: 0; 
-	width: 410px; 
+	width: 100%; 
 	margin-bottom: 40px; 
 }
 
-#contact_form form { 
+#submit_form form { 
 	margin: 0px; 
 	padding: 0px; 
+	width: 100%;
 }
 
-#contact_form form .input_field { 
-	width: 270px; 
+#submit_form form .input_field { 
+	width: 50%;
 	padding: 5px; 
 	color: #fff;
 	background: #000;
@@ -552,8 +553,8 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	margin-top: 5px;
 }
 
-#contact_form form #article_tag_list{ 
-	width: 55em; 
+#submit_form form #article_title{ 
+	width: 50%;
 	padding: 5px; 
 	color: #fff;
 	background: #000;
@@ -563,15 +564,15 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	margin-top: 5px;
 }
 
-#contact_form form label { 
+#submit_form form label { 
 	display: block; 
 	/* width: 100px; */
 	margin-right: 12px; 
 	font-size: 13px; 
 }
 
-#contact_form form textarea { 
-	width: 55em; 
+#submit_form form textarea { 
+	width: 50%;
 	height: 30em; 
 	padding: 5px; 
 	color: #fff;
@@ -582,8 +583,8 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	margin-top: 5px;
 }
 
-#contact_form form #article_abstract{ 
-	width: 55em; 
+#submit_form form #article_abstract{ 
+	width: 50%;
 	height: 7em; 
 	padding: 5px; 
 	color: #fff;
@@ -594,7 +595,19 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	margin-top: 5px;
 }
 
-#contact_form form .submit_btn { 
+#submit_form form #article_tag_list{ 
+	width: 50%;
+	height: 3em; 
+	padding: 5px; 
+	color: #fff;
+	background: #000;
+	border: 1px solid #292929;
+	font-size: 12px;
+	font-family: Tahoma, Geneva, sans-serif;
+	margin-top: 5px;
+}
+
+#submit_form form .submit_btn { 
 	padding: 5px 14px; 
 	background: #000;
 	border: 1px solid #292929;
