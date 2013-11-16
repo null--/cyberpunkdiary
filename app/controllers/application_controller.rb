@@ -22,6 +22,14 @@ class CPDConf
     8
   end
   
+  def self.min_font_size
+    10
+  end
+  
+  def self.max_font_size
+    100
+  end
+  
   def self.auth_faild_err
     "James Jr.:\"Why's he running, Dad?\"- Lt. Gordon: \"Because we have to chase him.\""
   end

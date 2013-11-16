@@ -1,6 +1,7 @@
 class TagsController < ApplicationController
   def index
     @tags = Tag.all
+    @total_art = Article.count
   end
 
   def show
