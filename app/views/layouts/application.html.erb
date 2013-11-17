@@ -80,7 +80,7 @@ ddsmoothmenu.init({
     <div class="ddsmoothmenu" id="menu">
       <ul>
         <% if u then %>
-          <li style="z-index: 99;"><a href="#" class="">#<%= u.nickname %> &#x25BD;<span>sudo su -</span></a>
+          <li style="z-index: 99;"><a href="#" class="">#<%= u.nickname %> &#x25BD;<span>$ sudo su -</span></a>
           <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">
             <li><a href="/articles/new">New story...</a></li>
             <li><%= link_to 'Profile', user_path(u) %></li>
@@ -97,7 +97,7 @@ ddsmoothmenu.init({
           <li><a class="selected" href="/users/recovery">Recover<span>forgotten password</span></a></li>
           <li><a class="selected" href="/users/login">Login<span>go black!</span></a></li>
         <% end %>
-        <li style="z-index: 100;"><a href="#" class="">About [CPD] &#x25BD;<span>#whoami</span></a>
+        <li style="z-index: 100;"><a href="#" class="">About [CPD] &#x25BD;<span># whoami</span></a>
           <ul style="display: none; top: 62px; visibility: visible;">
             <li><a href="/mypage/whoami">About</a></li>
             <li><a href="/mypage/dev">Dev. and API</a></li>

@@ -6,6 +6,8 @@ Installation:
 
 TODO:
   abstract, etc. character limit
-  Edit/Delete user
+  Delete user
+  Recovery
   API
   exception handling + rescue
+  TOS and UA

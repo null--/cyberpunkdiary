@@ -12,11 +12,15 @@
     <%= f.text_field :nickname %>
   </p>
   <p>
-    <%= f.label "password (*)" %><br />
+    <% if @user.password.nil? then %>
+      <%= f.label "password (*)" %><br />
+    <% else %>
+      <%= f.label "password (*) (If you don't want to change your password, leave this textbox unchainged)" %><br />
+    <% end %>
     <%= f.password_field :password %>
   </p>
   <p>
-    <p>Email (optional) - will be used for <a href="http://gravatar.com">Gravatar</a></p>
+    <p>Email (optional) - will be used to load avatar of your [CPD] profile, using <a href="http://gravatar.com">Gravatar</a>.</p>
     <%= f.text_field :email %>
   </p>
   <p>
@@ -24,7 +28,11 @@
     <%= f.text_field :recov_qst %>
   </p>
   <p>
-    <%= f.label "Recovery Answer (optional)" %><br />
+    <% if @user.recov_ans.nil? then %>
+      <%= f.label "Recovery Answer (optional)" %><br />
+    <% else %>
+      <%= f.label "Recovery Answer (*) (If you don't want to change your recovery answer, leave this textbox unchainged)" %><br />
+    <% end %>    
     <%= f.text_field :recov_ans %>
   </p>
   <%= render :partial => 'captcha/form' %>
