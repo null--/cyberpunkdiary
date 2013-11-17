@@ -105,6 +105,53 @@ class UsersController < ApplicationController
   end
   
   def recovery
+    # stage 2: get username
+    if not params[:username].nil? and params[:answer].nil? then
+      orig_captcha = session[:captcha]
+      session.delete(:captcha)
+      
+      if (not orig_captcha.nil?) and orig_captcha == params[:captcha] then
+        @user = User.find(:first, :conditions => {:username => params[:username]})
+        
+        if @user.nil? then
+          flash[:error] = CPDConf.user_not_found_err
+          redirect_to_recovery
+        elsif @user.recov_qst.nil? or @user.recov_qst.length == 0 or 
+              @user.recov_ans.nil? or @user.recov_ans.length == 0 then
+          flash[:error] = CPDConf.no_recov_qst_err
+          redirect_to_index
+        end
+      else
+        flash[:error] = CPDConf.captcha_err + orig_captcha + params[:captcha]
+        redirect_to_recovery
+      end
+    # stage 3: match answers
+    elsif not params[:username].nil? and not params[:answer].nil? then
+      orig_captcha = session[:captcha]
+      session.delete(:captcha)
+      
+      if (not orig_captcha.nil?) and orig_captcha == params[:captcha] then
+        @user = User.find(:first, :conditions => {:username => params[:username]})
+        
+        if Digest::SHA256.hexdigest(params[:answer]) == @user.recov_ans then
+          @user.session_id = session[:session_id]
+          @user.save
+
+          flash[:notice] = CPDConf.login_msg( @user.nickname )
+          redirect_to_edit_user
+        else
+          flash[:error] = CPDConf.wrong_answer_err
+          redirect_to_recovery
+        end
+        if @user.nil? then
+          flash[:error] = CPDConf.user_not_found_err
+          redirect_to_recovery
+        end
+      else
+        flash[:error] = CPDConf.captcha_err
+        redirect_to_recovery
+      end
+    end
   end
   
   def edit
@@ -119,33 +166,33 @@ class UsersController < ApplicationController
     u = User.get_current_user session
 
     if (not orig_captcha.nil?) and orig_captcha == params[:captcha] then
-			if u and (u.id == @user.id || u.priv == 10) then
-				vname = User.find(:first, :conditions => {:username => params[:user][:username]}).nil?
-				vmail = User.find(:first, :conditions => {:email => params[:user][:email]}).nil?
-				vnick = User.find(:first, :conditions => {:nickname => params[:user][:nickname]}).nil?
+      if u and (u.id == @user.id || u.priv == 10) then
+        vname = User.find(:first, :conditions => {:username => params[:user][:username]}).nil?
+        vmail = User.find(:first, :conditions => {:email => params[:user][:email]}).nil?
+        vnick = User.find(:first, :conditions => {:nickname => params[:user][:nickname]}).nil?
 
-				if (vname or @user.username == params[:user][:username]) and 
-				   (vmail or @user.email == params[:user][:email]) and 
-				   (vnick or @user.username == params[:user][:nickname]) 
-				then
-					@user.username = params[:user][:username]
-					if @user.password != params[:user][:password] then
-					  @user.password = Digest::SHA256.hexdigest(params[:user][:password])
-					end
-					@user.email = params[:user][:email]
-					@user.nickname = params[:user][:nickname]
-					
-					@user.recov_qst = params[:user][:recov_qst]
-					if @user.recov_ans != params[:user][:recov_ans] then
-					  @user.recov_ans = Digest::SHA256.hexdigest(params[:user][:recov_ans])
-					end
-					@user.priv = @user.priv
-					@user.save
+        if (vname or @user.username == params[:user][:username]) and 
+           (vmail or @user.email == params[:user][:email]) and 
+           (vnick or @user.username == params[:user][:nickname]) 
+        then
+          @user.username = params[:user][:username]
+          if @user.password != params[:user][:password] then
+            @user.password = Digest::SHA256.hexdigest(params[:user][:password])
+          end
+          @user.email = params[:user][:email]
+          @user.nickname = params[:user][:nickname]
+          
+          @user.recov_qst = params[:user][:recov_qst]
+          if @user.recov_ans != params[:user][:recov_ans] then
+            @user.recov_ans = Digest::SHA256.hexdigest(params[:user][:recov_ans])
+          end
+          @user.priv = @user.priv
+          @user.save
 
-					flash[:notice] = CPDConf.user_edit_msg( @user.nickname )
-					redirect_to_user
-				else
-					flash[:error] = (flash[:error] + CPDConf.username_err + "<br>") if not vname
+          flash[:notice] = CPDConf.user_edit_msg( @user.nickname )
+          redirect_to_user
+        else
+          flash[:error] = (flash[:error] + CPDConf.username_err + "<br>") if not vname
           flash[:error] = (flash[:error] + CPDConf.nickname_err + "<br>") if not vnick
           flash[:error] = (flash[:error] + CPDConf.email_err if + "<br>") if not vmail
 

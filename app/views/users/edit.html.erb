@@ -2,16 +2,14 @@
 <h1>Edit <%= h @user.username %> </h1>
 
 <p>
+<hr>
 <img src="<%= @user.avatar_url(200) %>" alt="<%= @user.nickname %>"></img> <br>
-It's not your avatar? You may go to <a href="http://gravatar.com">Gravatar</a> and change it.<br>
+It's not your avatar? You can go to <a href="http://gravatar.com">Gravatar</a> and change it.<br>
 Remember, this avatar is based on your profile's email address,<br>
 after changing your avatar make sure that email address of your [CPD] profile is same as your gravatar's.)
+<hr>
 </p>
 
-<p>
- <hr>
- NOTE: If there is a SHA1 hash inside recovery password
- <hr>
 <%= render :partial => 'form' %>
 
 </div>

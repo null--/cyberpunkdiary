@@ -101,6 +101,18 @@ class CPDConf
   def self.user_edit_msg( user )
     "Your profile has been updated."
   end
+  
+  def self.user_not_found_err
+    "User not found!"
+  end
+  
+  def self.wrong_answer_err
+    "WRONG ANSWER!"
+  end
+  
+  def self.no_recov_qst_err
+    "There is no recovery question! you are doomed!"
+  end
 end
 
 class ApplicationController < ActionController::Base
@@ -161,6 +173,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def redirect_to_recovery
+    respond_to do |format|
+      format.html { redirect_to :controller => 'users', :action => 'recovery' }
+      format.xml { head :ok }
+    end
+  end
+  
   def redirect_to_article
     respond_to do |format|
       format.html { redirect_to article_path( @article ) }
