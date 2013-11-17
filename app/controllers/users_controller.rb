@@ -1,6 +1,6 @@
 require 'digest/sha1'
 
-class UsersController < ApplicationController  
+class UsersController < ApplicationController
   def show
     @user = User.find( params[:id] )
     @total = @user.articles.count
@@ -14,11 +14,11 @@ class UsersController < ApplicationController
     @n_page = @n_page + 1 if @n_page * @perpage != @total
   end
 
-  def register
+  def new
     @user = User.new
   end
 
-  def goblack
+  def create
 	orig_captcha = session[:captcha]
     session.delete(:captcha)
     
@@ -34,15 +34,18 @@ class UsersController < ApplicationController
         @user.password = Digest::SHA256.hexdigest(params[:user][:password])
         @user.email = params[:user][:email]
         @user.nickname = params[:user][:nickname]
+        @user.recov_qst = params[:user][:recov_qst]
+        @user.recov_ans = Digest::SHA256.hexdigest(params[:user][:recov_ans])
         @user.session_id = session[:session_id]
+        @user.priv = 0
         @user.save
 
         flash[:notice] = CPDConf.welcome_msg( @user.nickname )
         redirect_to_index
       else
-        flash[:error] = CPDConf.username_err if not vname
-        flash[:error] = CPDConf.nickname_err if not vnick
-        flash[:error] = CPDConf.email_err if not vmail
+        flash[:error] = (flash[:error] + CPDConf.username_err + "<br>") if not vname
+        flash[:error] = (flash[:error] + CPDConf.nickname_err + "<br>") if not vnick
+        flash[:error] = (flash[:error] + CPDConf.email_err if + "<br>") if not vmail
 
         redirect_to_register
       end
@@ -101,7 +104,60 @@ class UsersController < ApplicationController
    end
   end
   
-  def edit
+  def recovery
+  end
   
+  def edit
+    @user = User.find( params[:id] )
+  end
+  
+  def update
+    @user = User.find( params[:id] )
+    orig_captcha = session[:captcha]
+    session.delete(:captcha)
+    
+    u = User.get_current_user session
+
+    if (not orig_captcha.nil?) and orig_captcha == params[:captcha] then
+			if u and (u.id == @user.id || u.priv == 10) then
+				vname = User.find(:first, :conditions => {:username => params[:user][:username]}).nil?
+				vmail = User.find(:first, :conditions => {:email => params[:user][:email]}).nil?
+				vnick = User.find(:first, :conditions => {:nickname => params[:user][:nickname]}).nil?
+
+				if (vname or @user.username == params[:user][:username]) and 
+				   (vmail or @user.email == params[:user][:email]) and 
+				   (vnick or @user.username == params[:user][:nickname]) 
+				then
+					@user.username = params[:user][:username]
+					if @user.password != params[:user][:password] then
+					  @user.password = Digest::SHA256.hexdigest(params[:user][:password])
+					end
+					@user.email = params[:user][:email]
+					@user.nickname = params[:user][:nickname]
+					
+					@user.recov_qst = params[:user][:recov_qst]
+					if @user.recov_ans != params[:user][:recov_ans] then
+					  @user.recov_ans = Digest::SHA256.hexdigest(params[:user][:recov_ans])
+					end
+					@user.priv = @user.priv
+					@user.save
+
+					flash[:notice] = CPDConf.user_edit_msg( @user.nickname )
+					redirect_to_user
+				else
+					flash[:error] = (flash[:error] + CPDConf.username_err + "<br>") if not vname
+          flash[:error] = (flash[:error] + CPDConf.nickname_err + "<br>") if not vnick
+          flash[:error] = (flash[:error] + CPDConf.email_err if + "<br>") if not vmail
+
+					redirect_to_edit_user
+				end
+			else
+				flash[:error] = CPDConf.unauth_error
+				redirect_to_index
+			end
+		else
+      flash[:error] = CPDConf.captcha_err
+      redirect_to_edit_user
+    end
   end
 end

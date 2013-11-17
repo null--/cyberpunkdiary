@@ -436,10 +436,15 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	height: 75px; 
 }
 
-.comment_box .comment_text {  }
+.comment_box .comment_text 
+{  
+    min-height: 75px;
+}
 
 .comment_box .comment_text p { 
 	margin: 0; 
+	min-width: 5em;
+	border: 1px solid #0099e6;
 }
 
 .comment_text .comment_author { 
@@ -495,6 +500,7 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	font-size: 12px;
 	font-family: Tahoma, Geneva, sans-serif;
 	margin-top: 5px;
+	resize: vertical;
 }
 
 #comment_form .form_row {

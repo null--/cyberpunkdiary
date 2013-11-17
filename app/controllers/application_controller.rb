@@ -97,6 +97,10 @@ class CPDConf
   def self.comment_delete_msg
     "Your comment has been deleted."
   end
+  
+  def self.user_edit_msg( user )
+    "Your profile has been updated."
+  end
 end
 
 class ApplicationController < ActionController::Base
@@ -104,13 +108,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   before_filter :check_access
+  before_filter :check_input
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 
   def check_access
     if params[:action] == 'create' or
-       params[:action] == 'new' or
+       (params[:action] == 'new' and params[:controller] != 'users') or
        params[:action] == 'update' or 
        params[:action] == 'edit' or
        params[:action] == 'delete' or
@@ -124,6 +129,9 @@ class ApplicationController < ActionController::Base
     end  
   end
 
+  def check_input
+  end
+  
   def redirect_to_index
     respond_to do |format|
       format.html { redirect_to( articles_url ) }
@@ -156,6 +164,20 @@ class ApplicationController < ActionController::Base
   def redirect_to_article
     respond_to do |format|
       format.html { redirect_to article_path( @article ) }
+      format.xml { head :ok }
+    end
+  end
+  
+  def redirect_to_edit_user
+    respond_to do |format|
+      format.html { redirect_to edit_user_path( @user ) }
+      format.xml { head :ok }
+    end
+  end
+  
+  def redirect_to_user
+    respond_to do |format|
+      format.html { redirect_to user_path( @user ) }
       format.xml { head :ok }
     end
   end

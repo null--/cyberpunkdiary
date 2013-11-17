@@ -1,6 +1,12 @@
+<% u = User.get_current_user session %>
+
 <div id="main">
   <!-- <div id = "content" > -->
     <h1>#whoami</h1>
+    <% if u and (u.id == @user.id || u.priv == 10) then %>
+      <%= button_to "Edit", {:controller => 'users', :action => 'edit', :id => @user.id}, :class => "submit_btn float_l" %><br><br>
+    <% end %>
+    <img src="<%= @user.avatar_url(200) %>" alt="<%= @user.nickname %>"></img>
     <h2><%=h @user.nickname %></h2>
     <p>#login: <%=h @user.username %> </p>
     <p>#whereis: <%=h @user.email %> </p>

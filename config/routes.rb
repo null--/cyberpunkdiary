@@ -6,10 +6,11 @@ ActionController::Routing::Routes.draw do |map|
   
   map.connect "tags/:id/:page", :controller => 'tags', :action => 'show'
 
+  map.connect "users/:id/edit", :controller => "users", :action => "edit"
   map.connect "users/:id/:page", :controller => 'users', :action => 'show'
   map.connect "users/login", :controller => 'users', :action => 'login'
-  map.connect "users/register", :controller => 'users', :action => 'register'
-  map.connect "users/edit", :controller => 'users', :action => 'edit'
+  # map.connect "users/register", :controller => 'users', :action => 'register'
+  # map.connect "users/edit", :controller => 'users', :action => 'edit'
   map.connect "logout/:id", :controller => 'users', :action => 'logout'
   
   map.connect "votes/:score/:article_id/", :controller => "votes", :action => "edit"
@@ -18,7 +19,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect "articles/page/:order/:dir/:page", :controller => "articles", :action => "index"
   
-  map.connect "comments/destroy/:id", :controller => "comments", :action => ":id"
+  map.connect "comments/destroy/:id", :controller => "comments", :action => "destroy"
 
   map.connect "rss/articles", :controller => "articles", :action => "diary_rss"
   map.connect "rss/article/:id", :controller => "articles", :action => "comment_rss"
