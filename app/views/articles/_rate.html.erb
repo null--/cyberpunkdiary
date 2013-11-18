@@ -2,7 +2,7 @@
    if @user then
 %>
 <div>
-  <%= button_to "Woohoo! \\m/", {:controller => 'votes', :action => 'edit', :score => '1337', :article_id => @article.id}, :class => "leet_btn float_l"%>
+  <%= button_to "1337! \\m/", {:controller => 'votes', :action => 'edit', :score => '1337', :article_id => @article.id}, :class => "leet_btn float_l"%>
   <%= button_to "It sucks, man!", {:controller => 'votes', :action => 'edit', :score => 'lame', :article_id => @article.id}, :class => "lame_btn float_l"%>
 </div>
 <% end %>

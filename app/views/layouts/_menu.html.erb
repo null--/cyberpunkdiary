@@ -4,23 +4,24 @@
 	  <li style="z-index: 99;"><a href="#" class="">#<%= @u.nickname %> &#x25BD;<span>$ sudo su -</span></a>
 	  <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">
 		<li><a href="/articles/new">New story...</a></li>
-		<li><%= link_to 'Profile', user_path(@u) %></li>
+		<li><%= link_to 'My [CPD] Profile', user_path(@u) %></li>
+    <li><%= link_to 'Edit Profile', edit_user_path(@u) %></li>
 		<li><%= link_to 'Logout', {:controller => 'users', :action => 'logout', :id => @u.id} %></li>
 	  </ul>
 	</li>
 	<% end %>
-	<li><a class="selected" href="/">Home<span>back to the bay</span></a></li>
+	<!-- <li><a class="selected" href="/">Home<span>back to the bay</span></a></li> -->
 	<li style="z-index: 99;"><a href="/articles" class="">Diary<span>Take the RED pill</span></a>
 	</li>
 	<li><a class="selected" href="/tags">Tags <span>view list of tags</span></a></li>
 	<% if @u.nil? then %>
-	  <li><a class="selected" href="/users/new">Register<span>be a cyberpunk</span></a></li>
-	  <li><a class="selected" href="/recovery">Recover<span>forgotten password</span></a></li>
 	  <li><a class="selected" href="/users/login">Login<span>go black!</span></a></li>
+    <li><a class="selected" href="/recovery">Recover<span>forgotten password</span></a></li>
+    <li><a class="selected" href="/users/new">Register<span>be a cyberpunk</span></a></li>
 	<% end %>
 	<li style="z-index: 100;"><a href="#" class="">About [CPD] &#x25BD;<span># whoami</span></a>
 	  <ul style="display: none; top: 62px; visibility: visible;">
-		<li><a href="/mypage/whoami">About</a></li>
+		<li><a href="/mypage/whoami">README [CPD]</a></li>
 		<li><a href="/mypage/dev">Dev. and API</a></li>
 		<li><a href="/mypage/bugs">[BUG] Report</a></li>
 	  </ul>

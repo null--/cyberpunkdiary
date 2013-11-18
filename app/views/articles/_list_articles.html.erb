@@ -5,7 +5,7 @@
   <%# else %>
     <div class="col one_third gallery_box">
   <%# end %>
-    <a rel="lightbox[portfolio]" href=<%= '"' + article_path(article) + '"' %> ><img class="image_frame" alt=<%= '"' + article.title + '"'%> src=<%= "\"/images/articon/" + (article.icon || 0).to_s + ".jpg\"" %> ></a>
+    <a rel="lightbox[portfolio]" href=<%= '"' + article_path(article) + '"' %> ><img class="image_frame" alt=<%= '"' + article.title + '"'%> src=<%= "\"/images/articon/" + (article.icon || 0).to_s + ".png\"" %> ></a>
     <a rel="lightbox[portfolio]" href=<%= '"' + article_path(article) + '"' %> ><h5><%=h article.title %></h5></a>
     <div class="meta">
       <span class="admin"> <%= link_to h(article.user.nickname), (user_path article.user) %></span>

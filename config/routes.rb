@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   # Custom routings
-  map.connect "/", :controller => "mypage", :action => "index"
+  map.connect "/", :controller => "articles", :action => "index"
 
   map.connect "captcha/generate", :controller => 'captcha', :action => 'generate'
   
