@@ -227,7 +227,7 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 
 #header {
 	/* width: 940px; */
-	padding: 40px 10px 20px;
+	padding: 20px 5px 10px;
 	background: url(/images/images/header.png) bottom center no-repeat;
 }
 
@@ -311,7 +311,7 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 	font-size: 12px; 
 	font-family: Georgia, "Times New Roman", Times, serif; 
 	width: 350px; 
-	height: 50px; 
+	height: 75px; 
 	color: #acacac; 
 	text-indent: -10000px; 
 	background: url(/images/images/cpd_logo.png) no-repeat center left; 

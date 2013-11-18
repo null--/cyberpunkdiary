@@ -7,7 +7,6 @@ Installation:
 TODO:
   abstract, etc. character limit
   Delete user
-  Recovery
   API
-  exception handling + rescue
+  exception handling + rescue and redirect to [bug] report
   TOS and UA

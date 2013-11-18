@@ -11,7 +11,12 @@
 	</li>
 	<% end %>
 	<!-- <li><a class="selected" href="/">Home<span>back to the bay</span></a></li> -->
-	<li style="z-index: 99;"><a href="/articles" class="">Diary<span>Take the RED pill</span></a>
+	<li style="z-index: 99;"><a href="#" class="">Explore [CPD] &#x25BD;<span>Take the RED pill</span></a>
+    <ul style="display: none; top: 62px; visibility: visible;">
+		  <li><a href="/articles/">Latest</a></li>
+		  <li><a href="/articles/page/hits/desc/1">Most visited</a></li>
+		  <li><a href="/articles/page/leet/desc/1">1337est</a></li>
+	  </ul>
 	</li>
 	<li><a class="selected" href="/tags">Tags <span>view list of tags</span></a></li>
 	<% if @u.nil? then %>
