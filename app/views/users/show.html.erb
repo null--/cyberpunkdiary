@@ -7,22 +7,26 @@
       <%= button_to "Edit", {:controller => 'users', :action => 'edit', :id => @user.id}, :class => "submit_btn float_l" %><br><br>
     <% end %>
     <p>
-    <img src="<%= @user.avatar_url(200) %>" alt="<%= @user.nickname %>"></img> <br>
+      <img src="<%= @user.avatar_url(200) %>" alt="<%= @user.nickname %>"> <br>
     </p>
     <h2><%=h @user.nickname %></h2>
-    <p>#login: <%=h @user.username %> </p>
-    <p>#whereis: <%=h @user.email %> </p>
-    <p>#joined-at: <%=h @user.created_at %> </p>
+    <div class="list">
+      <li>#joined-at: <%=h @user.created_at.strftime("%a, %d %b %Y") %> </li>
+      <li>#whereis: <%=h @user.email %> </li>
+    </div>
+    <div class="meta">
+      <p class="leet">TOTAL LEET: <%= @total_leet %></p>
+      <p class="lame">TOTAL LAME: <%= @total_lame %></p>
+      <p class="hit">TOTAL HITS: <%= @total_hits %></p>
+    </div>
     <br>
-    <p>
-		<%= '<a href="/rss/user/' + @user.id.to_s + '">' %>
-		<%= image_tag ("images/feed.png", :alt => "Comments RSS", :title => "Comments RSS") %>Follow #<%= @user.nickname %></a><br>
-      </p>
+    <div class="rss">
+      <%= '<a href="/rss/user/' + @user.id.to_s + '">' %>Follow #<%= @user.nickname %></a>
+    </div>
     <h2> Articles </h2>
     <%= render :partial => 'users/pagebar' %>
-    <p>
-      <%= render :partial => 'articles/list_articles' %>
-    </p>
+    <%= render :partial => 'articles/list_articles' %>
+    
     <div class="cleaner"></div>
     <%= render (:partial => 'users/pagebar') if @total > 0 %>
   <!-- </div> -->

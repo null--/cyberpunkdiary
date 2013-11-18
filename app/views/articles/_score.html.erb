@@ -1,4 +1,9 @@
 <% if @article then %>
-<p class="position"> <%= "Hits: " + @article.hits.to_s + " | leet: " + @article.leet.to_s + " | lame: " + @article.lame.to_s %> <p>
+    <div class="meta">
+	  <span class="hit">HITS: <%= @article.hits.to_s %></span>
+      <span class="leet">LEET: <%= @article.leet.to_s %></span>
+      <span class="lame">LAME: <%= @article.lame.to_s %></span>
+    </div>
+    <br><br>
 <% end %>
   

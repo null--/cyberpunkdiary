@@ -27,7 +27,7 @@ class CPDConf
   end
   
   def self.max_font_size
-    100
+    48
   end
   
   def self.auth_faild_err

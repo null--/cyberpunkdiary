@@ -3,7 +3,7 @@
 	<% @user = User.get_current_user session %>
 	<% u = @user %>
 
-	<h1><%= @article.title %></h1>
+	<h1><%=h @article.title %></h1>
 	<%= render :partial => 'rate' %>
 	<br><br>
 	
@@ -40,10 +40,9 @@
 	
 	<div id="comment_section">
 	  <%= render :partial => 'comments/form' %>
-	  <p>
-		<%= '<a href="/rss/article/' + @article.id.to_s + '">' %>
-		<%= image_tag ("images/feed.png", :alt => "Comments RSS", :title => "Comments RSS") %>Follow comments of this article</a>
-      </p>
+	  <div class="rss">
+	    <%= '<a href="/rss/article/' + @article.id.to_s + '">' %>Follow comments of this article</a>
+      </div>
 	  <%= render :partial => 'articles/comment' %>
 	</div>
   <!-- </div> <!-- content -->

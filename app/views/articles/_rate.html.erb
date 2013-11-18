@@ -2,8 +2,8 @@
    if @user then
 %>
 <div>
-  <%= button_to "L33T (" + @article.leet.to_s + ")", {:controller => 'votes', :action => 'edit', :score => '1337', :article_id => @article.id}, :class => "leet_btn float_l"%>
-  <%= button_to "L4M3 (" + @article.lame.to_s + ")", {:controller => 'votes', :action => 'edit', :score => 'lame', :article_id => @article.id}, :class => "lame_btn float_l"%>
+  <%= button_to "Woohoo! \\m/", {:controller => 'votes', :action => 'edit', :score => '1337', :article_id => @article.id}, :class => "leet_btn float_l"%>
+  <%= button_to "It sucks, man!", {:controller => 'votes', :action => 'edit', :score => 'lame', :article_id => @article.id}, :class => "lame_btn float_l"%>
 </div>
 <% end %>
 

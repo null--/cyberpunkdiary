@@ -1,3 +1,19 @@
+.rss { 
+	color:#666; 
+	margin: 0 0 10px 0; 
+	padding: 15px 5px 0px 30px; 
+	background: url("/images/images/feed.png") no-repeat scroll 0px 10px transparent
+}
+
+.rss a { 
+	color: #666; 
+	font-weight: normal; 
+}
+
+.rss a:hover { 
+	color: #999; 
+}
+
 flash {
     background-clip: padding-box;
     background-image: linear-gradient(rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.7));
@@ -64,33 +80,37 @@ flash:empty {
 }
 
 .leet_btn {
-	display: block; 
-	width: 70px; 
-	height: 30px; 
-	padding: 5px 8px; 
-	text-align: center; 
+	display: block;
+	width: 140px; 
+	height: 32px; 
+	padding: 0px 5px 3px; 
+	text-align: right; 
 	text-decoration: none; 
 	font-weight: bold;  
-	background-color: #000; 
-	border: 1px solid #292929; 
-	color: green; 
-	font-size:12px; 
+	background: url("/images/images/leet.png") no-repeat scroll 0% 100% rgb(0, 0, 0);
+	border: 3px solid #0099e6; 
+	border-radius: 0.5em 0.5em 0.5em 0.5em;
+	color: #0099e6; 
+	font-size:13px; 
 	cursor: pointer; 
+	margin-left: 5px;
 }
 
 .lame_btn {
-	display: block; 
-	width: 70px; 
-	height: 30px; 
-	padding: 5px 8px; 
-	text-align: center; 
+	display: block;
+	width: 140px; 
+	height: 32px; 
+	padding: 0px 5px 3px; 
+	text-align: right; 
 	text-decoration: none; 
 	font-weight: bold;  
-	background-color: #000; 
-	border: 1px solid #292929; 
-	color: red; 
-	font-size:12px; 
-	cursor: pointer;
+	background: url("/images/images/lame.png") no-repeat scroll 0% 0% rgb(0, 0, 0);
+	border: 3px solid #e62200; 
+	border-radius: 0.5em 0.5em 0.5em 0.5em;
+	color: #e62200; 
+	font-size:13px; 
+	cursor: pointer; 
+	margin-left: 5px;
 }
 
 /*
@@ -219,7 +239,7 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 
 #main {
 	/* width: 940px; */
-	padding: 40px 10px;
+	padding: 40px 40px;
 }
 .col_active {
 	cursor:default;
@@ -370,25 +390,44 @@ p.position { color: #f3a706; font-weight: bold; font-size: 12px; font-style: ita
 	padding: 5px 0 5px 30px; 
 }
 
-.meta span.admin { 
+.meta p { 
+	/* float: left;  */
+	display: block; 
+	margin-right: 20px;
+	padding: 5px 0 5px 30px;
+}
+
+.meta .admin { 
 	background: url(/images/images/agent.png) no-repeat; 
 }
 
-.meta span.date { 
+.meta .date { 
 	background: url(/images/images/calendar.png) no-repeat; 
 }
 
-.meta span.tag { 
+.meta .tag { 
 	background: url(/images/images/tag.png) no-repeat; 
 }
 
-.meta span.comment { 
+.meta .comment { 
 	background: url(/images/images/chat.png) no-repeat; 
 }
 
 .meta a, .meta strong { 
 	color: #A7A7A7; 
 	font-weight: 700; 
+}
+
+.meta .hit { 
+	background: url(/images/images/hit.png) no-repeat; 
+}
+
+.meta .leet { 
+	background: url(/images/images/leet.png) no-repeat; 
+}
+
+.meta .lame { 
+	background: url(/images/images/lame.png) no-repeat; 
 }
 
 #comment_section {

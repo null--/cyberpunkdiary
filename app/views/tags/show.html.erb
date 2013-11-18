@@ -1,8 +1,9 @@
 <div id="main">
 <h1>Tag: <%=h @tag.name %></h1>
 <p>
-<%= '<a href="/rss/tag/' + @tag.id.to_s + '">' %>
-<%= image_tag ("images/feed.png", :alt => "Comments RSS", :title => "Comments RSS") %>Follow updates on #<%=h @tag.name %></a>
+<div class="rss">
+  <%= '<a href="/rss/tag/' + @tag.id.to_s + '">' %>Follow updates on #<%=h @tag.name %></a>
+</div>
 </p>
 <%= render :partial => 'tags/pagebar' %>
 <%= render :partial => 'articles/list_articles' %>

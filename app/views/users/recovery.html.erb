@@ -4,10 +4,12 @@
 
 <% form_tag({:controller => "users", :action => "recovery"}, :method => "post") do %>
   <% if @user.nil? or params[:username].nil? then %>
+    <h2>Stage 1: What's your username</h2>
     <label> Enter your username (*) </label><br>
     <input type="text" class="txt_field" title="username" id="username" name="username" value=""><br>
   <% elsif not @user.nil? then %>
-    <label> Answer this question: <%= h @user.recov_qst %> </label><br>
+    <h2>Stage 2: Answer</h2>
+    <label> Answer this question: <strong><%= h @user.recov_qst %></strong></label><br>
     <input type="hidden" title="username" id="username" name="username" value="<%= h @user.username %>">
     <input type="text" class="txt_field" title="answer" id="answer" name="answer" value=""><br>
   <% end %>

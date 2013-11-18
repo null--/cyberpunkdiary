@@ -1,6 +1,6 @@
 <%
   links = [
-    ["<Change order>", "#"],
+    ["<Select one>", "#"],
     ["Date - Descending", "/articles/page/date/desc/1"],
     ["Date - Ascending", "/articles/page/date/asc/1"],
     ["Hits - Descending", "/articles/page/hits/desc/1"],
@@ -16,12 +16,11 @@
   <h1>Diary</h1>
 
   <p>
-    Sort by (current: <%= @order + "/" + @dir %>): <%= select_tag :sort_select, options_for_select( links ) %>
+    Change sort order: <%= select_tag :sort_select, options_for_select( links ) %> (current: <%= @order + "/" + @dir %>)
   </p>
-  <p>
-	<a href="/rss/articles">
-	<%= image_tag ("images/feed.png", :alt => "Comments RSS", :title => "Comments RSS") %>Subscribe to [CPD]-RSS</a>
-  </p>
+  <div class="rss">
+    <a href="/rss/articles">Subscribe to Diary RSS Feed</a>
+  </div>
   
   <script language="javascript" type="text/javascript">
     $('#sort_select').bind('change', function() { window.location.pathname = $(this).val() });

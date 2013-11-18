@@ -1,23 +1,25 @@
 <% i = 0 %>
 <% @articles.each do |article| %>
-<%# if i % 3 == 2 then %>
-  <!-- <div class="col one_third gallery_box no_margin_right"> -->
-<%# else %>
-  <div class="col one_third gallery_box">
-<%# end %>
+  <%# if i % 3 == 2 then %>
+    <!-- <div class="col one_third gallery_box no_margin_right"> -->
+  <%# else %>
+    <div class="col one_third gallery_box">
+  <%# end %>
     <a rel="lightbox[portfolio]" href=<%= '"' + article_path(article) + '"' %> ><img class="image_frame" alt=<%= '"' + article.title + '"'%> src=<%= "\"/images/articon/" + (article.icon || 0).to_s + ".jpg\"" %> ></a>
     <a rel="lightbox[portfolio]" href=<%= '"' + article_path(article) + '"' %> ><h5><%=h article.title %></h5></a>
     <div class="meta">
       <span class="admin"> <%= link_to h(article.user.nickname), (user_path article.user) %></span>
+      <span class="date"><%= article.created_at.strftime("%d/%m/%y %H:%M") %></span>
       <span class="comment"><%= article.comments.size %></span>
-      <span class="date"><%= article.created_at %></span>
+      <span class="hit"><%= article.hits.to_s %></span>
+      <span class="leet"><%= article.leet.to_s %></span>
+      <span class="lame"><%= article.lame.to_s %></span>
     </div>
     <div class="cleaner"></div>
-    <%= render :partial => "articles/score" %>
+      <%= render :partial => "articles/score" %>
     <% if article.abstract then %>
-    <p><%=h article.abstract.gsub("\n", " ") %></p>
+      <p><%=h article.abstract.gsub("\n", " ") %></p>
     <% end %>
-  </div>
+    </div>
   <% i = i + 1 %>
-  <% end %>
-</div>
+<% end %>

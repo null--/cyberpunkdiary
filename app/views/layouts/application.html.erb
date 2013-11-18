@@ -1,4 +1,4 @@
-<% u = User.get_current_user session %>
+<% @u = User.get_current_user session %>
 <%
    # Update total hits
    
@@ -9,7 +9,6 @@
      ti.save
    end
 %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,7 +16,7 @@
 <title>[CPD]</title>
 <meta name="keywords" content="dark pro, theme, free templates, templatemo, website templates, CSS, HTML" />
 <meta name="description" content="Dark Pro Theme, free CSS template provided by templatemo.com" />
-<%= stylesheet_link_tag "css/templatemo_style" %>
+<%= stylesheet_link_tag "css/cpd_style" %>
 
 <script language="javascript" type="text/javascript">
 function clearText(field)
@@ -58,99 +57,15 @@ ddsmoothmenu.init({
   <% end %>
   
   <div id="wrapper">
-
-    <div id="header">
-      <div id="rss_btn">
-		<a href="/rss/articles"><%= image_tag ("images/feed.png", :alt => "RSS", :title => "RSS") %></a>
-      </div>
-      <div id="site_title">
-        <h1> <a href="http://cyberpunkdiary.org">Cyberpunk Diary [CPD]</a> </h1></div>
-        <!-- 
-        <div id="search">
-        <a href="#"><%= image_tag ("images/feed.png", :alt => "RSS", :title => "RSS") %></a>
-          <form method="get" action="#">
-            <input type="text" class="txt_field" onblur="clearText(this)" onfocus="clearText(this)" title="keyword" id="keyword" name="keyword" value="Search [TODO]">
-            <input type="submit" class="sub_btn" title="Search" id="searchbutton" alt="Search" value="" name="Search">
-          </form>
-        </div>
-        -->
-      <div class="cleaner"></div>
-    </div>
-
-    <div class="ddsmoothmenu" id="menu">
-      <ul>
-        <% if u then %>
-          <li style="z-index: 99;"><a href="#" class="">#<%= u.nickname %> &#x25BD;<span>$ sudo su -</span></a>
-          <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">
-            <li><a href="/articles/new">New story...</a></li>
-            <li><%= link_to 'Profile', user_path(u) %></li>
-            <li><%= link_to 'Logout', {:controller => 'users', :action => 'logout', :id => u.id} %></li>
-          </ul>
-	    </li>
-        <% end %>
-        <li><a class="selected" href="/">Home<span>back to the bay</span></a></li>
-        <li style="z-index: 99;"><a href="/articles" class="">Diary<span>Take the RED pill</span></a>
-	    </li>
-        <li><a class="selected" href="/tags">Tags <span>view list of tags</span></a></li>
-        <% if !u then %>
-          <li><a class="selected" href="/users/new">Register<span>be a cyberpunk</span></a></li>
-          <li><a class="selected" href="/recovery">Recover<span>forgotten password</span></a></li>
-          <li><a class="selected" href="/users/login">Login<span>go black!</span></a></li>
-        <% end %>
-        <li style="z-index: 100;"><a href="#" class="">About [CPD] &#x25BD;<span># whoami</span></a>
-          <ul style="display: none; top: 62px; visibility: visible;">
-            <li><a href="/mypage/whoami">About</a></li>
-            <li><a href="/mypage/dev">Dev. and API</a></li>
-            <li><a href="/mypage/bugs">[BUG] Report</a></li>
-          </ul>
-        </li>
-      </ul>
-      <br style="clear: left" />
-    </div>
-    
-    <div class="headbar">
-  	  <%= image_tag ("headbar/default.png", :alt => "TEST", :title => "TEST") %>
-    </div>
+    <%= render :partial => 'layouts/header'%>
+    <%= render :partial => 'layouts/menu' %>
+    <%#= render :partial => 'layouts/ads' %>
     
     <%= yield %>
 
     <div class="cleaner"></div>
-  </div>
-<!--
-  <div id="footer_wrapper">
-	<div id="footer">  
-      <div class="col footer_one_third">
-        <h4>Flickr</h4>
-        <ul class="flickr_stream">
-          <li><a href="#"><%= image_tag ("images/01.png", :alt => "Flickr 01") %></a></li>
-          <li><a href="#"><%= image_tag ("images/02.png", :alt => "Flickr 02") %></a></li>
-          <li class="no_margin_right"><a href="#"><%= image_tag ("images/03.png", :alt => "Flickr 03") %></a></li>
-        </ul>  
-      </div>
-  
-      <div class="col footer_one_third">
-        <h4>Twitter</h4>
-        <ul class="twitter_post">
-	      <li>Test twitter: blah blah blah.... blah blah blah! <a href="#">http://twitter.com</a></li>
-		</ul>
-      </div>
-      <div class="col footer_one_third no_margin_right">
-      
-	  <div>
-        <b>Follow </b><a href="#">[cpd]</a>
-		<div class="cleaner"></div>
-        <div class="footer_social_button">
-          <a href="#"><%= image_tag ("images/facebook.png", :alt => "Facebook", :title => "Facebook") %></a>
-          <a href="#"><%= image_tag ("images/flickr.png", :alt => "Flickr", :title => "Flickr") %></a>
-          <a href="#"><%= image_tag ("images/twitter.png", :alt => "Twitter", :title => "Tw
-itter") %></a>
-          <a href="#"><%= image_tag ("images/youtube.png", :alt => "Youtube", :title => "Youtube") %></a>
-          <a href="#"><%= image_tag ("images/feed.png", :alt => "RSS", :title => "RSS") %></a>
-		</div>
-      </div>
-    </div> 
-    --> 
-    <!-- END of footer -->
+    
+    <%#= render :partial => 'layouts/footer' %>
    </div>
 </body>
 </html>

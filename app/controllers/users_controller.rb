@@ -12,6 +12,17 @@ class UsersController < ApplicationController
 
     @n_page = @total / @perpage;
     @n_page = @n_page + 1 if @n_page * @perpage != @total
+    
+    @total_hits = 0
+    @total_leet = 0
+    @total_lame = 0
+    
+    @articles.each do |article|
+      @total_hits = @total_hits + article.hits
+      @total_leet = @total_leet + article.leet
+      @total_lame = @total_lame + article.lame
+    end
+      
   end
 
   def new
