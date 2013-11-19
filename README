@@ -5,6 +5,7 @@ Installation:
   chmod 755 app/controllers/captcha_controller.rb
 
 TODO:
+  more articons
   abstract, etc. character limit
   Delete user
   API

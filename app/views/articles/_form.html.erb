@@ -1,5 +1,5 @@
 <%
-   icon_name = {}
+   icon_name = []
    icon_name[0] = "Cybersec News"
    icon_name[1] = "Crack"
    icon_name[2] = "Hack"
@@ -7,19 +7,25 @@
    icon_name[4] = "Web Hacking"
    icon_name[5] = "Reverse Engineering"
    icon_name[6] = "Hacktivism"
-
-   buttons = [[]]
-
-   buttons[0] = [icon_name[ @article.icon ], @article.icon.to_s]
-   ni = 0
-   icon_name.each do |icn|
-     if ni != @article.icon then
-        buttons[ buttons.length ] = [icon_name[ni], ni.to_s]
-     end
-     ni = ni + 1
-   end
-   @article.icon = @article.icon || 0
    %>
+
+<script language="javascript" type="text/javascript">
+  function articon_change()
+  {
+    var item = document.getElementById('articon');
+    var sel = document.getElementById('article_icon');
+    document.getElementById('articon').src='/images/articon/' + sel.selectedIndex + '.png';
+    
+    if(item.value.length<3)
+    {
+      setTimeout(function() {
+        item.focus()
+      }, 10);
+      return false;
+    }
+    return;
+  }
+</script>
 
 <div id="submit_form">  
 <% form_for(@article) do |f| %>
@@ -28,9 +34,12 @@
     <li><%= error %></li>
   <% end %>
   <p>
-    <%= f.label "Select a category" %>
-    <%= f.select :icon, options_for_select(buttons)
-    %>
+    <%= f.label "Select an Articon" %>
+    <%= f.select(:icon, options_for_select(icon_name, :selected => icon_name[@article.icon || 0]), {}, {:onchange => 'articon_change()'})  %>
+    <%# select_tag "article[icon]', %>
+    <br>
+    Articon: <br>
+    <img src="/images/articon/<%= @article.icon || 0 %>.png" id="articon" catch="false"/><br>
   </p>
   <p>
     <%= f.label :title %>
