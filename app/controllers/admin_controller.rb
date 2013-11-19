@@ -9,7 +9,14 @@ class AdminController < ApplicationController
     
     flash[:error] = CPDConf.unauth_err
     redirect_to_index
+    
     nil
+    
+  rescue => details
+    general_rescue details
+    
+    nil
+    
   end
 
   def index
@@ -17,6 +24,9 @@ class AdminController < ApplicationController
     @n_article = Article.count
     @n_user = User.count
     @n_tag = Tag.count
+  
+  rescue => details
+    general_rescue details
   end
 
   def userlist
@@ -27,5 +37,9 @@ class AdminController < ApplicationController
     @users = User.find(:all, :order => "nickname desc", :limit => @perpage, :offset => (@page - 1) * @perpage);
     @n_page = @n_user / @perpage;
     @n_page = @n_page + 1 if @n_page * @perpage != @total
+    
+  rescue => details
+    general_rescue details
+    
   end
 end

@@ -22,6 +22,8 @@ class ArticlesController < ApplicationController
       :body => params[:article][:body],
       :tag_list => params[:article][:tag_list]
     }
+  rescue => details
+    general_rescue details
   end
 
   def index
@@ -46,6 +48,10 @@ class ArticlesController < ApplicationController
 
     @n_page = @total / @perpage;
     @n_page = @n_page + 1 if @n_page * @perpage != @total
+    
+  # TODO: Is there a chance of endless-loop?
+  rescue => details
+    general_rescue details
   end
 
   def show
@@ -56,14 +62,22 @@ class ArticlesController < ApplicationController
 
     @comment = Comment.new
     @comment.article_id = @article.id
+  rescue => details
+    general_rescue details
   end
 
   def new
     @article = Article.new
+    
+  rescue => details
+    general_rescue details
   end
 
   def edit
     @article = Article.find( params[:id] )
+    
+  rescue => details
+    general_rescue details
   end
 
   def create
@@ -86,6 +100,8 @@ class ArticlesController < ApplicationController
     else
       redirect_to_index_error
     end
+  rescue => details
+    general_rescue details
   end
 
   def update
@@ -102,6 +118,8 @@ class ArticlesController < ApplicationController
     else
       redirect_to_index_error
     end
+  rescue => details
+    general_rescue details
   end
 
   def destroy
@@ -109,6 +127,8 @@ class ArticlesController < ApplicationController
     @article.destroy
 
     redirect_to_index
+  rescue => details
+    general_rescue details
   end
   
   def diary_rss
@@ -120,6 +140,9 @@ class ArticlesController < ApplicationController
                    Proc.new {|art| art.abstract}, 
                    Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})
     end
+    
+  rescue => details
+    general_rescue details
   end
   
   def comment_rss
@@ -133,5 +156,8 @@ class ArticlesController < ApplicationController
                    Proc.new {|cmn| cmn.body}, 
                    Proc.new {'http://' + request.host + ':' + request.port.to_s + '/articles/' + article.id.to_s})
     end
+    
+  rescue => details
+    general_rescue details
   end
 end

@@ -8,7 +8,7 @@ require 'digest/md5'
 class CPDConf
   def initialize
   end
-  
+    
   # articles per page
   def self.article_perp
     12
@@ -40,6 +40,10 @@ class CPDConf
   
   def self.access_denied_err
     'Sorry! NASA launched that page to Mars, yesterday! go find it there. :D'
+  end
+  
+  def self.general_exception_err
+    "Hey yo man, that's not cool!"
   end
   
   def self.article_update(user, article)
@@ -139,9 +143,15 @@ class ApplicationController < ActionController::Base
       end
       return
     end  
+    
+  rescue => details
+    general_rescue details
   end
 
   def check_input
+    # TODO
+  rescue => details
+    general_rescue details
   end
   
   def redirect_to_index
@@ -229,5 +239,12 @@ class ApplicationController < ActionController::Base
       # format.html
       format.xml  { render :xml => feed }
     end
+  rescue => details
+    general_rescue details
+  end
+  
+  def general_rescue details
+    flash[:error] = CPDConf.general_exception_err + ' -WTF: ' + details.to_s
+    redirect_to_index
   end
 end

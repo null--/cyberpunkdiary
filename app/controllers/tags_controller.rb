@@ -2,6 +2,9 @@ class TagsController < ApplicationController
   def index
     @tags = Tag.all
     @total_art = Article.count
+    
+  rescue => details
+    general_rescue details
   end
 
   def show
@@ -15,6 +18,9 @@ class TagsController < ApplicationController
 
     @n_page = @total / @perpage;
     @n_page = @n_page + 1 if @n_page * @perpage != @total
+    
+  rescue => details
+    general_rescue details
   end
   
   def tag_rss
@@ -28,5 +34,7 @@ class TagsController < ApplicationController
                    Proc.new {|art| art.abstract}, 
                    Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})
     end
+  rescue => details
+    general_rescue details
   end
 end

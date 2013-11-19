@@ -51,5 +51,8 @@ class VotesController < ApplicationController
       flash[:error] = "Story not found!"
       redirect_to_index
     end
+    
+  rescue => details
+    general_rescue details
   end
 end

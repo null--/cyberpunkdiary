@@ -14,6 +14,9 @@ class CommentsController < ApplicationController
     { 
       :body => params[:comment][:body]
     }
+    
+  rescue => details
+    general_rescue details
   end
 
   def create
@@ -35,6 +38,9 @@ class CommentsController < ApplicationController
       flash[:error] = CPDConf.unauth_err
     end
     redirect_to article_path(params[:article_id])
+    
+  rescue => details
+    general_rescue details
   end
 
   def destroy
@@ -54,5 +60,8 @@ class CommentsController < ApplicationController
     else
       redirect_to_index_error
     end
+    
+  rescue => details
+    general_rescue details
   end
 end

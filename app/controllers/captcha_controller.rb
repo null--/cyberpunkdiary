@@ -15,6 +15,12 @@ class CaptchaController < ApplicationController
     raw_jpg = raw_out[0, capt_pos]
 
     send_data raw_jpg, :type => 'image/jpg',:disposition => 'inline'
+    
+  rescue => details
+    general_rescue details
+    if not session[:captcha].nil? then
+      session.delete(:captcha)
+    end
   end
 
 end

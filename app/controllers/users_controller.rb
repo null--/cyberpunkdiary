@@ -22,11 +22,16 @@ class UsersController < ApplicationController
       @total_leet = @total_leet + article.leet
       @total_lame = @total_lame + article.lame
     end
-      
+    
+  rescue => details
+    general_rescue details
   end
 
   def new
     @user = User.new
+    
+  rescue => details
+    general_rescue details
   end
 
   def create
@@ -64,10 +69,16 @@ class UsersController < ApplicationController
       flash[:error] = CPDConf.captcha_err
       redirect_to_register
     end
+    
+  rescue => details
+    general_rescue details
   end
 
   def login
     @user = User.new;
+    
+  rescue => details
+    general_rescue details
   end
 
   def authenticate
@@ -85,6 +96,9 @@ class UsersController < ApplicationController
       flash[:error] = CPDConf.auth_faild_err
       redirect_to_login
     end
+    
+  rescue => details
+    general_rescue details
   end
 
   def logout
@@ -100,6 +114,9 @@ class UsersController < ApplicationController
       flash[:notice] = CPDConf.logout_msg
     end
     redirect_to_index
+    
+  rescue => details
+    general_rescue details
   end
 
   def user_rss
@@ -112,7 +129,10 @@ class UsersController < ApplicationController
                   Proc.new {|art| art.title}, 
                   Proc.new {|art| art.abstract}, 
                   Proc.new {|art| 'http://' + request.host + ':' + request.port.to_s + '/articles/' + art.id.to_s})
-   end
+    end
+  
+  rescue => details
+    general_rescue details
   end
   
   def recovery
@@ -163,10 +183,16 @@ class UsersController < ApplicationController
         redirect_to_recovery
       end
     end
+    
+  rescue => details
+    general_rescue details
   end
   
   def edit
     @user = User.find( params[:id] )
+    
+  rescue => details
+    general_rescue details
   end
   
   def update
@@ -217,5 +243,8 @@ class UsersController < ApplicationController
       flash[:error] = CPDConf.captcha_err
       redirect_to_edit_user
     end
+    
+  rescue => details
+    general_rescue details
   end
 end
