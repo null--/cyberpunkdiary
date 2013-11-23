@@ -1,7 +1,7 @@
 <div class="ddsmoothmenu" id="menu">
   <ul>
 	<% if @u then %>
-	  <li style="z-index: 99;"><a href="#" class="">#<%= @u.nickname %> &#x25BD;<span>$ sudo su -</span></a>
+	  <li style="z-index: 99;"><a href="#" class="">#<%=h @u.nickname %> &#x25BD;<span>$ sudo su -</span></a>
 	  <ul style="top: 62px; visibility: visible; left: 0px; width: 170px; display: none;">
 		<li><a href="/articles/new">New story...</a></li>
 		<li><%= link_to 'My [CPD] Profile', user_path(@u) %></li>

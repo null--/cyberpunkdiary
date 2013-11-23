@@ -117,6 +117,10 @@ class CPDConf
   def self.no_recov_qst_err
     "There is no recovery question! you are doomed!"
   end
+
+  def self.length_err
+    "You're talking too much, tommy!"
+  end
 end
 
 class ApplicationController < ActionController::Base
@@ -139,6 +143,7 @@ class ApplicationController < ActionController::Base
     then
       if not User.is_authorized session then
         flash[:error] = CPDConf.unauth_err
+        # fail
         redirect_to_index
       end
       return
@@ -149,7 +154,34 @@ class ApplicationController < ActionController::Base
   end
 
   def check_input
-    # TODO
+    if ((not params[:order].nil?) and params[:order].length > 4) or
+       ((not params[:page].nil?) and params[:page].length > 4) or
+       ((not params[:dir].nil?) and params[:dir].length > 4) or
+       ((not params[:id].nil?) and params[:id].length > 16) or
+       ((not params[:captcha].nil?) and params[:captcha].length > 16) or
+
+       ((not params[:article_id].nil?) and params[:article_id].length > 16) or
+       ((not params[:article].nil?) and (not params[:article][:icon].nil?) and params[:article][:icon].length > 4) or
+       ((not params[:article].nil?) and (not params[:article][:title].nil?) and params[:article][:title].length > 64) or
+       ((not params[:article].nil?) and (not params[:article][:abstract].nil?) and params[:article][:abstract].length > 256) or
+       ((not params[:article].nil?) and (not params[:article][:tag_list].nil?) and params[:article][:tag_list].length > 256) or
+
+       ((not params[:comment].nil?) and (not params[:comment][:body].nil?) and params[:comment][:body].length > 4) or
+
+       ((not params[:user].nil?) and (not params[:user][:username].nil?) and params[:user][:username].length > 16) or
+       ((not params[:username].nil?) and params[:username].length > 16) or
+       ((not params[:user].nil?) and (not params[:user][:password].nil?) and params[:user][:password].length > 64) or
+       ((not params[:user].nil?) and (not params[:user][:email].nil?) and params[:user][:email].length > 64) or
+       ((not params[:user].nil?) and (not params[:user][:nickname].nil?) and params[:user][:nickname].length > 16) or
+       ((not params[:user].nil?) and (not params[:user][:recov_qst].nil?) and params[:user][:recov_qst].length > 64) or
+       ((not params[:user].nil?) and (not params[:user][:recov_ans].nil?) and params[:user][:recov_ans].length > 64) or
+       ((not params[:answer].nil?) and params[:answer].length > 64)
+    then
+      flash[:error] = CPDConf.length_err
+      # fail
+      redirect_to_index
+    end
+    return
   rescue => details
     general_rescue details
   end
