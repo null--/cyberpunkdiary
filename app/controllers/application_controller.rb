@@ -11,11 +11,11 @@ class CPDConf
     
   # articles per page
   def self.article_perp
-    12
+    16
   end
   
   def self.tag_perp
-    8
+    12
   end
   
   def self.user_perp

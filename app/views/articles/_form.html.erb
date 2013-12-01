@@ -6,7 +6,7 @@
     ["Security Breach", 3],
     ["Broken lock", 4],
     ["Reverse Engineering", 5],
-    ["Anon Mask", 6],
+    ["Anonymous Mask", 6],
     ["The Hacker News: Hacktivism", 7],
     ["Whiskey", 8],
     ["Matrix: Trinity", 9],
@@ -26,20 +26,20 @@
     ["Troll Face 3", 23],
     ["Blackhat", 24],
     ["Batman Logo 2", 25],
-    ["Hacker Barcode", 26],
+    ["Hacked: Barcode", 26],
     ["Hacker Keyboard", 27],
     ["Hacktivism", 28],
     ["Hackball", 29],
     ["Access Granted", 30],
-    ["Anon: Expect Us", 31],
+    ["Anonymous: Expect Us", 31],
     ["Blackhat 2", 32],
     ["Smoking", 33],
     ["Smoking 2", 34],
     ["CSIRT", 35],
-    ["Hacker", 36],
-    ["Anon: Freedom Forever", 37],
+    ["Hacker 2", 36],
+    ["Anonymous: Freedom Forever", 37],
     ["Hack the Planet", 38],
-    ["Hacked!", 39],
+    ["Hacked", 39],
     ["Hacked 2", 40],
     ["Hacked: Site Down", 41],
     ["Kali", 42],
@@ -47,8 +47,8 @@
     ["Kali 2", 44],
     ["Hack the Planet 2", 45],
     ["Defcon", 46],
-    ["lulzsec", 47],
-    ["lulzsec: tpb", 48],
+    ["LulzSec", 47],
+    ["LulzSec: tpb", 48],
     ["Marijuana 2", 49],
     ["Matrix: The Architect", 50],
     ["Matrix: Morpheus", 51],
@@ -62,7 +62,16 @@
   ]
 
   icon_name = icon_name.sort_by { |e| e[0] }
-  icox = icon_name[@article.icon || 0][1]
+  icox = 0
+
+  if @article.icon then 
+    icon_name.length.times do |i|
+      if icon_name[i][1] == @article.icon then
+        icox = i
+        break
+      end
+    end
+  end
    %>
 
 <script language="javascript" type="text/javascript">
@@ -91,11 +100,11 @@
   <% end %>
   <p>
     <%= f.label "Select an Articon (alphabetical order)" %>
-    <%= f.select(:icon, options_for_select(icon_name, :selected => icon_name[@article.icon || 0]), {}, {:onchange => 'articon_change()'})  %>
+    <%= f.select(:icon, options_for_select(icon_name, :selected => icon_name[icox]), {}, {:onchange => 'articon_change()'})  %>
     <%# select_tag "article[icon]', %>
     <br>
     Articon: <br>
-    <img src="/images/articon/<%= icox %>.png" id="articon" catch="false"/><br>
+    <img src="/images/articon/<%= icon_name[icox][1] %>.png" id="articon" catch="false"/><br>
   </p>
   <p>
     <%= f.label :title %>
