@@ -20,7 +20,8 @@ class ArticlesController < ApplicationController
       :title => params[:article][:title], 
       :abstract => params[:article][:abstract],
       :body => params[:article][:body],
-      :tag_list => params[:article][:tag_list]
+      :tag_list => params[:article][:tag_list],
+      :source => params[:article][:source]
     }
   rescue => details
     general_rescue details

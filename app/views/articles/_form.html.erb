@@ -1,6 +1,6 @@
 <%
   icon_name = [
-    ["Cybersec News", 0],
+    ["Blackhat", 0],
     ["Crack", 1],
     ["Matrix: Neo", 2],
     ["Security Breach", 3],
@@ -24,7 +24,7 @@
     ["Troll Face", 21],
     ["Troll Face 2", 22],
     ["Troll Face 3", 23],
-    ["Blackhat", 24],
+    ["Digital Forensics", 32],
     ["Batman Logo 2", 25],
     ["Hacked: Barcode", 26],
     ["Hacker Keyboard", 27],
@@ -32,7 +32,7 @@
     ["Hackball", 29],
     ["Access Granted", 30],
     ["Anonymous: Expect Us", 31],
-    ["Blackhat 2", 32],
+    ["Blackhat 2", 24],
     ["Smoking", 33],
     ["Smoking 2", 34],
     ["CSIRT", 35],
@@ -62,7 +62,7 @@
   ]
 
   icon_name = icon_name.sort_by { |e| e[0] }
-  icox = 0
+  icox = 10
 
   if @article.icon then 
     icon_name.length.times do |i|
@@ -115,8 +115,12 @@
     <%=h f.text_area :tag_list %>
   </p>
   <p>
-    <%= f.label "Abstract (RSS description field)" %>
+    <%= f.label "Abstract (shown also inside RSS 'description' field)" %>
     <%=h f.text_area :abstract %>
+  </p>
+  <p>
+    <%= f.label "Source (optional: One http(s) link)" %>
+    <%=h f.text_field :source %>
   </p>
   <!--
   <p>

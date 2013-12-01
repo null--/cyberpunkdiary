@@ -5,6 +5,7 @@ Installation:
   chmod 755 app/controllers/captcha_controller.rb
 
 TODO:
+  check_input: redirect to same page
   XSSproof
   Delete user
   API

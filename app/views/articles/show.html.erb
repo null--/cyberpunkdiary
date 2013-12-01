@@ -4,20 +4,29 @@
 	<% u = @user %>
 
 	<h1><%=h @article.title %></h1>
+  <% if (not @article.source.nil?) and @article.source.length > 0 %>
+    <p>
+      <strong>Source: </strong>
+      <a href="<%= sanitize(@article.source) %>"><%= sanitize(@article.source) %></a>
+      <br>
+    </p>
+  <% end %>
+
 	<%= render :partial => 'rate' %>
 	<br><br>
+
+  <div class="post">
 	
 	<% if @article.abstract and @article.abstract.length > 0 then %>
 	<hr>
     <%= render :partial => 'articles/meta' %>
 	<div class="cleaner"></div>
 
-	<div class="post">
 	  <%= render :partial => 'score' %>
 	  
 	  <h2>Abstract</h2>
 	  <p class = "abstract"><%=h @article.abstract %></p>
-	  <% end %>
+ <% end %>
 
       <br>
       

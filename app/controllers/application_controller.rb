@@ -164,9 +164,10 @@ class ApplicationController < ActionController::Base
 
     msg = msg + ' - article_id.length > 4'          if ((not params[:article_id].nil?) and params[:article_id].length > 16)
     msg = msg + ' - icon.length > 4'                if ((not params[:article].nil?) and (not params[:article][:icon].nil?) and params[:article][:icon].length > 4)
-    msg = msg + ' - title.length > 64'              if ((not params[:article].nil?) and (not params[:article][:title].nil?) and params[:article][:title].length > 64)
+    msg = msg + ' - title.length > 128'              if ((not params[:article].nil?) and (not params[:article][:title].nil?) and params[:article][:title].length > 128)
     msg = msg + ' - abstract.length > 256'          if ((not params[:article].nil?) and (not params[:article][:abstract].nil?) and params[:article][:abstract].length > 256)
     msg = msg + ' - tag_list.length > 256'          if ((not params[:article].nil?) and (not params[:article][:tag_list].nil?) and params[:article][:tag_list].length > 256)
+    msg = msg + ' - source.length > 128'              if ((not params[:article].nil?) and (not params[:article][:source].nil?) and params[:article][:source].length > 128)
 
     msg = msg + ' - comment.body.length > 512'      if ((not params[:comment].nil?) and (not params[:comment][:body].nil?) and params[:comment][:body].length > 512)
 
