@@ -184,7 +184,7 @@ class ApplicationController < ActionController::Base
     msg = msg + ' - username.length > 16' 
       if ((not params[:user].nil?) and (not params[:user][:username].nil?) and params[:user][:username].length > 16)
     msg = msg + ' - username.length > 16' 
-      if ((not params[:username].nil?) and params[:username].length > 16) or
+      if ((not params[:username].nil?) and params[:username].length > 16)
     msg = msg + ' - password.length > 64' 
       if ((not params[:user].nil?) and (not params[:user][:password].nil?) and params[:user][:password].length > 64)
     msg = msg + ' - email.length > 64' 
@@ -192,9 +192,9 @@ class ApplicationController < ActionController::Base
     msg = msg + ' - nickname.length > 16' 
       if ((not params[:user].nil?) and (not params[:user][:nickname].nil?) and params[:user][:nickname].length > 16)
     msg = msg + ' - recovery_question.length > 64' 
-      if ((not params[:user].nil?) and (not params[:user][:recov_qst].nil?) and params[:user][:recov_qst].length > 64) or
+      if ((not params[:user].nil?) and (not params[:user][:recov_qst].nil?) and params[:user][:recov_qst].length > 64)
     msg = msg + ' - recovery_answer.length > 64' 
-      if ((not params[:user].nil?) and (not params[:user][:recov_ans].nil?) and params[:user][:recov_ans].length > 64) or
+      if ((not params[:user].nil?) and (not params[:user][:recov_ans].nil?) and params[:user][:recov_ans].length > 64)
     msg = msg + ' - answer.length > 64' 
       if ((not params[:answer].nil?) and params[:answer].length > 64)
       
