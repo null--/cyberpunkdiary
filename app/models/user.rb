@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
     end
 
     begin
+      # return true
       User.find(:all, :conditions => {:session_id => session[ :session_id ]}).length == 1
     rescue
       return false
@@ -28,7 +29,9 @@ class User < ActiveRecord::Base
   end
   
   def avatar_url(size = 75)
-    if self.email.nil? then
+    if self.nickname == 'punkbot' then
+      "/images/images/punkbot.png"    
+    elsif self.email.nil? then
       "/images/images/user.jpg"
     else
 	  gravatar_id = Digest::MD5.hexdigest(self.email.downcase.strip)

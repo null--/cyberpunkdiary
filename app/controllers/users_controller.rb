@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   end
 
   def create
-	orig_captcha = session[:captcha]
+	  orig_captcha = session[:captcha]
     session.delete(:captcha)
     
     if (not orig_captcha.nil?) and orig_captcha == params[:captcha] then
