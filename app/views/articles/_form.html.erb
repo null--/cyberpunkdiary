@@ -1,12 +1,68 @@
 <%
-   icon_name = []
-   icon_name[0] = "Cybersec News"
-   icon_name[1] = "Crack"
-   icon_name[2] = "Hack"
-   icon_name[3] = "Pentest"
-   icon_name[4] = "Web Hacking"
-   icon_name[5] = "Reverse Engineering"
-   icon_name[6] = "Hacktivism"
+  icon_name = [
+    ["Cybersec News", 0],
+    ["Crack", 1],
+    ["Matrix: Neo", 2],
+    ["Security Breach", 3],
+    ["Broken lock", 4],
+    ["Reverse Engineering", 5],
+    ["Anon Mask", 6],
+    ["The Hacker News: Hacktivism", 7],
+    ["Whiskey", 8],
+    ["Matrix: Trinity", 9],
+    ["Marijuana: Formula", 10],
+    ["Anarchy", 11],
+    ["Anarchy: Flag", 12],
+    ["Defcon: Chipset", 13],
+    ["Marijuana", 14],
+    ["Defcon: Flag", 15],
+    ["Hack a Day", 16],
+    ["Batman", 17],
+    ["Joker", 18],
+    ["Joker 2", 19],
+    ["Batman Logo", 20],
+    ["Troll Face", 21],
+    ["Troll Face 2", 22],
+    ["Troll Face 3", 23],
+    ["Blackhat", 24],
+    ["Batman Logo 2", 25],
+    ["Hacker Barcode", 26],
+    ["Hacker Keyboard", 27],
+    ["Hacktivism", 28],
+    ["Hackball", 29],
+    ["Access Granted", 30],
+    ["Anon: Expect Us", 31],
+    ["Blackhat 2", 32],
+    ["Smoking", 33],
+    ["Smoking 2", 34],
+    ["CSIRT", 35],
+    ["Hacker", 36],
+    ["Anon: Freedom Forever", 37],
+    ["Hack the Planet", 38],
+    ["Hacked!", 39],
+    ["Hacked 2", 40],
+    ["Hacked: Site Down", 41],
+    ["Kali", 42],
+    ["Hacker", 43],
+    ["Kali 2", 44],
+    ["Hack the Planet 2", 45],
+    ["Defcon", 46],
+    ["lulzsec", 47],
+    ["lulzsec: tpb", 48],
+    ["Marijuana 2", 49],
+    ["Matrix: The Architect", 50],
+    ["Matrix: Morpheus", 51],
+    ["Matrix: Neo 2", 52],
+    ["The Pirate Bay [TPB]", 53],
+    ["You Have Been Hacked", 54],
+    ["Ninja Skull", 55],
+    ["Matrix: Neo 3", 56],
+    ["Pentest", 57],
+    ["Troll Face 4", 58],
+  ]
+
+  icon_name = icon_name.sort_by { |e| e[0] }
+  icox = icon_name[@article.icon || 0][1]
    %>
 
 <script language="javascript" type="text/javascript">
@@ -14,7 +70,7 @@
   {
     var item = document.getElementById('articon');
     var sel = document.getElementById('article_icon');
-    document.getElementById('articon').src='/images/articon/' + sel.selectedIndex + '.png';
+    document.getElementById('articon').src='/images/articon/' + sel[ sel.selectedIndex ].value + '.png';
     
     if(item.value.length<3)
     {
@@ -34,12 +90,12 @@
     <li><%= error %></li>
   <% end %>
   <p>
-    <%= f.label "Select an Articon" %>
+    <%= f.label "Select an Articon (alphabetical order)" %>
     <%= f.select(:icon, options_for_select(icon_name, :selected => icon_name[@article.icon || 0]), {}, {:onchange => 'articon_change()'})  %>
     <%# select_tag "article[icon]', %>
     <br>
     Articon: <br>
-    <img src="/images/articon/<%= @article.icon || 0 %>.png" id="articon" catch="false"/><br>
+    <img src="/images/articon/<%= icox %>.png" id="articon" catch="false"/><br>
   </p>
   <p>
     <%= f.label :title %>

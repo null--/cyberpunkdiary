@@ -156,47 +156,28 @@ class ApplicationController < ActionController::Base
   def check_input
     msg = ''
 
-    msg = msg + ' - order.length > 4' 
-      if ((not params[:order].nil?) and params[:order].length > 4)
-    msg = msg + ' - page.length > 4' 
-      if ((not params[:page].nil?) and params[:page].length > 4)
-    msg = msg + ' - dir.length > 4' 
-      if ((not params[:dir].nil?) and params[:dir].length > 4)
-    msg = msg + ' - id.length > 16' 
-      if ((not params[:id].nil?) and params[:id].length > 16)
-    msg = msg + ' - captcha.length > 4' 
-      if ((not params[:captcha].nil?) and params[:captcha].length > 16)
+    msg = msg + ' - order.length > 4'               if ((not params[:order].nil?) and params[:order].length > 4)
+    msg = msg + ' - page.length > 4'                if ((not params[:page].nil?) and params[:page].length > 4)
+    msg = msg + ' - dir.length > 4'                 if ((not params[:dir].nil?) and params[:dir].length > 4)
+    msg = msg + ' - id.length > 16'                 if ((not params[:id].nil?) and params[:id].length > 16)
+    msg = msg + ' - captcha.length > 4'             if ((not params[:captcha].nil?) and params[:captcha].length > 16)
 
-    msg = msg + ' - article_id.length > 4' 
-      if ((not params[:article_id].nil?) and params[:article_id].length > 16)
-    msg = msg + ' - icon.length > 4'
-      if ((not params[:article].nil?) and (not params[:article][:icon].nil?) and params[:article][:icon].length > 4)
-    msg = msg + ' - title.length > 64' 
-      if ((not params[:article].nil?) and (not params[:article][:title].nil?) and params[:article][:title].length > 64)
-    msg = msg + ' - abstract.length > 256' 
-      if ((not params[:article].nil?) and (not params[:article][:abstract].nil?) and params[:article][:abstract].length > 256)
-    msg = msg + ' - tag_list.length > 256' 
-      if ((not params[:article].nil?) and (not params[:article][:tag_list].nil?) and params[:article][:tag_list].length > 256)
+    msg = msg + ' - article_id.length > 4'          if ((not params[:article_id].nil?) and params[:article_id].length > 16)
+    msg = msg + ' - icon.length > 4'                if ((not params[:article].nil?) and (not params[:article][:icon].nil?) and params[:article][:icon].length > 4)
+    msg = msg + ' - title.length > 64'              if ((not params[:article].nil?) and (not params[:article][:title].nil?) and params[:article][:title].length > 64)
+    msg = msg + ' - abstract.length > 256'          if ((not params[:article].nil?) and (not params[:article][:abstract].nil?) and params[:article][:abstract].length > 256)
+    msg = msg + ' - tag_list.length > 256'          if ((not params[:article].nil?) and (not params[:article][:tag_list].nil?) and params[:article][:tag_list].length > 256)
 
-    msg = msg + ' - comment.body.length > 512' 
-      if ((not params[:comment].nil?) and (not params[:comment][:body].nil?) and params[:comment][:body].length > 512)
+    msg = msg + ' - comment.body.length > 512'      if ((not params[:comment].nil?) and (not params[:comment][:body].nil?) and params[:comment][:body].length > 512)
 
-    msg = msg + ' - username.length > 16' 
-      if ((not params[:user].nil?) and (not params[:user][:username].nil?) and params[:user][:username].length > 16)
-    msg = msg + ' - username.length > 16' 
-      if ((not params[:username].nil?) and params[:username].length > 16)
-    msg = msg + ' - password.length > 64' 
-      if ((not params[:user].nil?) and (not params[:user][:password].nil?) and params[:user][:password].length > 64)
-    msg = msg + ' - email.length > 64' 
-      if ((not params[:user].nil?) and (not params[:user][:email].nil?) and params[:user][:email].length > 64)
-    msg = msg + ' - nickname.length > 16' 
-      if ((not params[:user].nil?) and (not params[:user][:nickname].nil?) and params[:user][:nickname].length > 16)
-    msg = msg + ' - recovery_question.length > 64' 
-      if ((not params[:user].nil?) and (not params[:user][:recov_qst].nil?) and params[:user][:recov_qst].length > 64)
-    msg = msg + ' - recovery_answer.length > 64' 
-      if ((not params[:user].nil?) and (not params[:user][:recov_ans].nil?) and params[:user][:recov_ans].length > 64)
-    msg = msg + ' - answer.length > 64' 
-      if ((not params[:answer].nil?) and params[:answer].length > 64)
+    msg = msg + ' - username.length > 16'           if ((not params[:user].nil?) and (not params[:user][:username].nil?) and params[:user][:username].length > 16)
+    msg = msg + ' - username.length > 16'           if ((not params[:username].nil?) and params[:username].length > 16)
+    msg = msg + ' - password.length > 64'           if ((not params[:user].nil?) and (not params[:user][:password].nil?) and params[:user][:password].length > 64)
+    msg = msg + ' - email.length > 64'              if ((not params[:user].nil?) and (not params[:user][:email].nil?) and params[:user][:email].length > 64)
+    msg = msg + ' - nickname.length > 16'           if ((not params[:user].nil?) and (not params[:user][:nickname].nil?) and params[:user][:nickname].length > 16)
+    msg = msg + ' - recovery_question.length > 64'  if ((not params[:user].nil?) and (not params[:user][:recov_qst].nil?) and params[:user][:recov_qst].length > 64)
+    msg = msg + ' - recovery_answer.length > 64'    if ((not params[:user].nil?) and (not params[:user][:recov_ans].nil?) and params[:user][:recov_ans].length > 64)
+    msg = msg + ' - answer.length > 64'             if ((not params[:answer].nil?) and params[:answer].length > 64)
       
     if msg.length > 0 then
       flash[:error] = CPDConf.length_err + msg
