@@ -252,26 +252,38 @@ class UsersController < ApplicationController
   
   def destroy
     @user = User.find( params[:id] )
-    @punkbot = User.find(:first, :conditions => {:username => 'punkbot'})
-    
-    @user.articles.each do |a|
-      a.abstract = a.abstract + CPDConf.deleted_user_tag
-      a.user = @punkbot
-      a.save
+    if @user.username == CPDConf.null or @user.username == CPDConf.punkbot then
+      flash[:error] = CPDConf.hacked
+      i = Info.new
+      i.title = 'UNAUTHORIZED ACCESS'
+      i.about = @user.username + " password was compromised - password wipped - change password manually"
+      @user.password = '<UNAUTHORIZED>'
+      @user.save
+      i.save
+      logout
+      return
+    else
+      @punkbot = User.find(:first, :conditions => {:username => CPDConf.punkbot})
+      
+      @user.articles.each do |a|
+        a.abstract = a.abstract + CPDConf.deleted_user_tag
+        a.user = @punkbot
+        a.save
+      end
+      
+      @user.comments.each do |c|
+        c.body = c.body + CPDConf.deleted_user_tag
+        c.user = @punkbot
+        c.save
+      end
+      
+      @punkbot.save
+      @user.destroy
+      
+      flash[:notice] = CPDConf.delete_user_msg
+      
+      redirect_to_index
     end
-    
-    @user.comments.each do |c|
-      c.body = c.body + CPDConf.deleted_user_tag
-      c.user = @punkbot
-      c.save
-    end
-    
-    @punkbot.save
-    @user.destroy
-    
-    flash[:notice] = CPDConf.delete_user_msg
-    
-    redirect_to_index
   rescue => details
     general_rescue details
   end

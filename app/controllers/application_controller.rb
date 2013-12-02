@@ -9,6 +9,18 @@ class CPDConf
   def initialize
   end
     
+  def self.null
+    '_null_'
+  end 
+  
+  def self.punkbot
+    'punkbot'
+  end
+  
+  def self.hacked
+    "WOW SOMEBODY HAS BALLS DOWN THERE, I'LL CUT IT OFF 8!7CH"
+  end
+  
   # articles per page
   def self.article_perp
     16
