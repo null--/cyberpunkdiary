@@ -18,7 +18,7 @@ class CPDConf
   end
   
   def self.hacked
-    "WOW SOMEBODY HAS BALLS DOWN THERE, I'LL CUT IT OFF 8!7CH"
+    "WOW... SOMEBODY HAS BALLS DOWN THERE, I'LL CUT IT OFF 8!7CH"
   end
   
   # articles per page

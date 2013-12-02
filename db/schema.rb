@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20131201094042) do
     t.integer  "leet",       :default => 0
     t.integer  "lame",       :default => 0
     t.integer  "icon",       :default => 0
-    t.string   "source"
+    t.string   "source",     :default => ""
   end
 
   create_table "comments", :force => true do |t|

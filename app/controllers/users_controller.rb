@@ -61,7 +61,7 @@ class UsersController < ApplicationController
       else
         flash[:error] = (flash[:error] + CPDConf.username_err + "<br>") if not vname
         flash[:error] = (flash[:error] + CPDConf.nickname_err + "<br>") if not vnick
-        flash[:error] = (flash[:error] + CPDConf.email_err if + "<br>") if not vmail
+        flash[:error] = (flash[:error] + CPDConf.email_err + "<br>") if not vmail
 
         redirect_to_register
       end
@@ -257,7 +257,7 @@ class UsersController < ApplicationController
       i = Info.new
       i.title = 'UNAUTHORIZED ACCESS'
       i.about = @user.username + " password was compromised - password wipped - change password manually"
-      @user.password = '<UNAUTHORIZED>'
+      @user.password = '<UNAUTHORIZED>' # It's not a sha256 hash, so this user account will be locked down! >:))
       @user.save
       i.save
       logout
