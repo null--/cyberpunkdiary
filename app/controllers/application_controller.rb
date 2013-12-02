@@ -121,6 +121,14 @@ class CPDConf
   def self.length_err
     "You're talking too much, tommy!"
   end
+  
+  def self.deleted_user_tag
+    " [A Deleted User Said]"
+  end
+  
+  def self.delete_user_msg
+    "TRACES: WIPED, LOGS: CLEARED, YOUR EXISTANCE GONNA BE DENIED"
+  end
 end
 
 class ApplicationController < ActionController::Base
@@ -183,12 +191,30 @@ class ApplicationController < ActionController::Base
     if msg.length > 0 then
       flash[:error] = CPDConf.length_err + msg
       # fail
-      # TODO REDIRECT TO SAME PAGE
-      redirect_to_index
+      reload_page
     end
     return
   rescue => details
     general_rescue details
+  end
+  
+  # More intelligent redirection
+  def reload_page
+    if params[:action] == 'recovery' then
+      redirect_to_recovery
+    elsif params[:action] == 'authenticate' then
+      redirect_to_login
+    elsif params[:action] == 'create' then
+      render :controlelr => params[:controller],  :action => 'new'
+    elsif params[:action] == 'update' then
+      redirect_to_edit_user if params[:controller] == 'users'
+      redirect_to_edit_article if params[:controller] == 'articles'
+    elsif params[:action] == 'destroy' then
+      redirect_to_user if params[:controller] == 'users'
+      redirect_to_article if params[:controller] == 'articles'
+    else
+      render :controlelr => params[:controller],  :action => params[:action]
+    end
   end
   
   def redirect_to_index
@@ -237,6 +263,13 @@ class ApplicationController < ActionController::Base
   def redirect_to_edit_user
     respond_to do |format|
       format.html { redirect_to edit_user_path( @user ) }
+      format.xml { head :ok }
+    end
+  end
+  
+  def redirect_to_edit_article
+    respond_to do |format|
+      format.html { redirect_to edit_article_path( @article ) }
       format.xml { head :ok }
     end
   end

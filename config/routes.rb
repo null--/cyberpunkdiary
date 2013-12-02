@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect "tags/:id/:page", :controller => 'tags', :action => 'show'
 
   map.connect "recovery/", :controller => "users", :action => "recovery"
+  map.connect "users/:id/delete", :controller => 'users', :action => 'destroy'
   map.connect "users/:id/edit", :controller => "users", :action => "edit"
   map.connect "users/:id/:page", :controller => 'users', :action => 'show'
   map.connect "users/login", :controller => 'users', :action => 'login'
@@ -39,6 +40,11 @@ ActionController::Routing::Routes.draw do |map|
     articles_map.resources :users
   end
 
+  map.resources :users do |users_map|
+    users_map.resources :comments
+    users_map.resources :articles
+  end
+  
   map.connect "articles/:id/edit", :controller => "articles", :action => "edit"
 
   # LAST LINE / Standard

@@ -6,6 +6,7 @@
   <h1>#whoami</h1>
   <% if u and (u.id == @user.id || u.priv == 10) then %>
     <%= button_to "Edit", {:controller => 'users', :action => 'edit', :id => @user.id}, :class => "submit_btn float_l" %>
+    <%= button_to "Delete", {:controller => 'users', :action => 'destroy', :id => @user.id}, :confirm => 'By deleting your profile, all your comments and articles will be transfered to #punkbot, Are you sure?', :class => "submit_btn float_l"%>
     <br><br>
   <% end %>
   

@@ -190,7 +190,9 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find( params[:id] )
-    
+    if @user.nil? then
+      fail
+    end
   rescue => details
     general_rescue details
   end
@@ -244,6 +246,32 @@ class UsersController < ApplicationController
       redirect_to_edit_user
     end
     
+  rescue => details
+    general_rescue details
+  end
+  
+  def destroy
+    @user = User.find( params[:id] )
+    @punkbot = User.find(:first, :conditions => {:username => 'punkbot'})
+    
+    @user.articles.each do |a|
+      a.abstract = a.abstract + CPDConf.deleted_user_tag
+      a.user = @punkbot
+      a.save
+    end
+    
+    @user.comments.each do |c|
+      c.body = c.body + CPDConf.deleted_user_tag
+      c.user = @punkbot
+      c.save
+    end
+    
+    @punkbot.save
+    @user.destroy
+    
+    flash[:notice] = CPDConf.delete_user_msg
+    
+    redirect_to_index
   rescue => details
     general_rescue details
   end
